@@ -47,7 +47,7 @@ export default function Certificacoes() {
               Segurança atestada por órgãos de engenharia
             </h3>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Desenvolvida sob rígidos padrões laboratoriais, a fórmula química da Hiper Liga passou por testes destrutivos de tração, compressão excêntrica e elasticidade estrutural, certificando que a segurança da obra é igual ou superior ao modelo tradicional de alvenaria.
+              Desenvolvida sob rígidos padrões laboratoriais, a fórmula química da Hiperliga passou por testes destrutivos de tração, compressão excêntrica e elasticidade estrutural, certificando que a segurança da obra é igual ou superior ao modelo tradicional de alvenaria.
             </p>
             
             <div className="space-y-2 pt-2 text-xs font-mono text-slate-500">

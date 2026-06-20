@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="flex items-center">
               <img
                 src="https://hiperliga.com.br/wp-content/uploads/2026/06/ChatGPT-Image-16-de-jun.-de-2026-14_05_11.png"
-                alt="Hiper Liga Logo"
+                alt="Hiperliga Logo"
                 className="h-32 sm:h-[160px] w-auto object-contain filter drop-shadow-[0_0_4px_rgba(255,255,255,0.98)] drop-shadow-[0_0_10px_rgba(255,255,255,0.92)]"
                 referrerPolicy="no-referrer"
               />
@@ -159,7 +159,7 @@ export default function Footer() {
         {/* Lower row: copyrights and institutional names */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500">
           <div>
-            © {new Date().getFullYear()} Hiper Liga Alvenaria Eficiente. Todos os direitos reservados.
+            © {new Date().getFullYear()} Hiperliga Alvenaria Eficiente. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-4">
             <span>CNPJ: 07.891.608/0001-00</span>

@@ -20,7 +20,7 @@ export default function Comparison() {
             <span>Comparação Direta de Engenharia</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-            Troque <span className="text-gray-400">60 kg de Cimento Convencional</span> por apenas <span className="text-primary">3 kg de Hiper Liga</span>
+            Troque <span className="text-gray-400">60 kg de Cimento Convencional</span> por apenas <span className="text-primary">3 kg de Hiperliga</span>
           </h2>
           <p className="text-gray-400 font-sans text-sm sm:text-base">
             Parece mágica, mas é física e química avançadas. A argamassa polimérica atua em película fina de altíssima adesão, eliminando o preenchimento de frestas e gerando rigidez estrutural sem peso morto.
@@ -72,7 +72,7 @@ export default function Comparison() {
                 </div>
               </div>
 
-              {/* The Innovation: Hiper Liga */}
+              {/* The Innovation: Hiperliga */}
               <div 
                 className="bg-primary/5 border border-primary/20 rounded-2xl p-6 relative overflow-hidden group"
                 id="comparison-innovation"
@@ -84,7 +84,7 @@ export default function Comparison() {
                     <Check className="w-5 h-5 animate-pulse" />
                   </div>
                   <div>
-                    <h3 className="font-display font-extrabold text-white text-base">Argamassa Hiper Liga</h3>
+                    <h3 className="font-display font-extrabold text-white text-base">Argamassa Hiperliga</h3>
                     <p className="text-primary font-mono text-[10px] tracking-widest uppercase">Polímeros de Alta Adesão</p>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export default function Comparison() {
               <div className="text-left space-y-1">
                 <h4 className="text-white font-display font-bold text-sm">Por que essa diferença matemática acontece?</h4>
                 <p className="text-gray-400 text-xs leading-relaxed">
-                  A argamassa tradicional serve como preenchimento de irregularidades nos blocos usando volume físico bruto. A Hiper Liga, por possuir alto teor de polímeros de ancoragem química de resinas acrílicas, deita-se em filetes autoadesivos densos, gerando resistência elástica superior com 90% menos espessura.
+                  A argamassa tradicional serve como preenchimento de irregularidades nos blocos usando volume físico bruto. A Hiperliga, por possuir alto teor de polímeros de ancoragem química de resinas acrílicas, deita-se em filetes autoadesivos densos, gerando resistência elástica superior com 90% menos espessura.
                 </p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export default function Comparison() {
                   1 Trinário Prático contra a logística pesada convencional.
                 </p>
                 <p className="text-slate-500 text-xs font-sans mt-1">
-                  Enquanto a argamassa convencional exige o transporte manual de quilos e quilos de sacos de cimento e latas de areia, a bisnaga de 3kg da Hiper Liga é carregada facilmente debaixo do braço pelo pedreiro.
+                  Enquanto a argamassa convencional exige o transporte manual de quilos e quilos de sacos de cimento e latas de areia, a bisnaga de 3kg da Hiperliga é carregada facilmente debaixo do braço pelo pedreiro.
                 </p>
               </div>
 

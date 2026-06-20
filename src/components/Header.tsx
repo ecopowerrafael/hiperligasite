@@ -62,7 +62,7 @@ export default function Header() {
           >
             <img
               src="https://hiperliga.com.br/wp-content/uploads/2026/06/ChatGPT-Image-16-de-jun.-de-2026-14_05_11.png"
-              alt="Hiper Liga Logo"
+              alt="Hiperliga Logo"
               className="h-24 sm:h-32 w-auto object-contain shrink-0 -my-4 sm:-my-6 filter drop-shadow-[0_0_4px_rgba(255,255,255,0.98)] drop-shadow-[0_0_10px_rgba(255,255,255,0.92)] transition-all duration-300 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />

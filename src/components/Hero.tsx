@@ -119,7 +119,7 @@ export default function Hero() {
               className="text-gray-300 font-sans text-base sm:text-lg max-w-xl leading-relaxed"
               id="hero-description"
             >
-              Conheça a Hiper Liga: a argamassa polimérica pronta para uso que substitui o cimento convencional. Reduza custos de logística, elimine infiltrações e economize até 50% no custo final da alvenaria estrutural e de vedação.
+              Conheça a Hiperliga: a argamassa polimérica pronta para uso que substitui o cimento convencional. Reduza custos de logística, elimine infiltrações e economize até 50% no custo final da alvenaria estrutural e de vedação.
             </motion.p>
 
             {/* Quick Metrics Line */}
@@ -202,7 +202,7 @@ export default function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-10 bg-black/40 blur-lg rounded-full transform scale-x-80" />
               <img
                 src="https://hiperliga.com.br/wp-content/uploads/2025/08/3-KG-800.png"
-                alt="Hiper Liga Bisnaga 3 Kg"
+                alt="Hiperliga Bisnaga 3 Kg"
                 className="w-full object-contain pointer-events-none transform -rotate-12"
                 referrerPolicy="no-referrer"
               />
@@ -223,12 +223,12 @@ export default function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-14 bg-black/50 blur-xl rounded-full transform scale-x-70" />
               <img
                 src="https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png"
-                alt="Hiper Liga Barrilha 40 Kg"
+                alt="Hiperliga Barrica 40 Kg"
                 className="w-full object-contain pointer-events-none scale-105"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -top-4 right-0 bg-slate-900 border border-white/10 text-white font-mono text-[10px] tracking-wider uppercase px-2.5 py-1.5 rounded bg-opacity-90">
-                Barrilha 40kg
+                Barrica 40kg
               </div>
             </motion.div>
 
@@ -244,12 +244,12 @@ export default function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-12 bg-black/45 blur-lg rounded-full transform scale-x-75" />
               <img
                 src="https://hiperliga.com.br/wp-content/uploads/2025/08/25-0KG-800.png"
-                alt="Hiper Liga Barrilha 25 Kg"
+                alt="Hiperliga Barrica 25 Kg"
                 className="w-full object-contain pointer-events-none transform rotate-6"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-3 -right-3 bg-emerald-500 text-slate-950 font-display text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                Barrilha 25kg
+                Barrica 25kg
               </div>
             </motion.div>
 

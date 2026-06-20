@@ -1,0 +1,23 @@
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
+// Default to port 3000, but allow environment override for general node hosting providers
+const PORT = process.env.PORT || 3000;
+
+// Serve static assets from the Vite build output folder ('dist')
+const distPath = path.join(__dirname, 'dist');
+app.use(express.static(distPath));
+
+// Handle client-side routing by returning index.html for any unhandled routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Node.js Production Server running on port ${PORT}`);
+});

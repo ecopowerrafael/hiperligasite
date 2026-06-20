@@ -70,7 +70,7 @@ export default function MediaSection() {
             <div className="mt-8 bg-brand-dark/40 border border-white/10 p-4 rounded-xl flex items-start gap-3">
               <Info className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
               <p className="text-gray-400 text-xs leading-relaxed font-sans">
-                💡 <strong className="text-white">Dica de Engenharia:</strong> Certifique-se de que os blocos estejam completamente limpos de resíduos ou poeira antes de estender os filetes da Hiper Liga. Isso garante ancoragem acrílica máxima imediata.
+                💡 <strong className="text-white">Dica de Engenharia:</strong> Certifique-se de que os blocos estejam completamente limpos de resíduos ou poeira antes de estender os filetes da Hiperliga. Isso garante ancoragem acrílica máxima imediata.
               </p>
             </div>
 

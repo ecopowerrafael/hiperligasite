@@ -1,11 +1,11 @@
 import { Product, BlockType } from './types';
 
-export const EXPERT_CONTACT_WHATSAPP = 'https://wa.me/554188883365?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+Argamassa+Polim%C3%A9rica+Hiper+Liga.';
+export const EXPERT_CONTACT_WHATSAPP = 'https://wa.me/554188883365?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+Argamassa+Polim%C3%A9rica+Hiperliga.';
 
 export const PRODUCTS_DATA: Product[] = [
   {
     id: 'hiperliga-3kg',
-    name: 'Hiper Liga Bisnaga 3 Kg',
+    name: 'Hiperliga Bisnaga 3 Kg',
     weight: '3 Kg',
     image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/3-KG-800.png',
     tagline: 'Ideal para pequenas reformas e reparos rápidos. Aperte e aplique!',
@@ -15,7 +15,7 @@ export const PRODUCTS_DATA: Product[] = [
       'Pequenas reformas residenciais',
       'Paredes de fechamento interno',
       'Instalações rápidas sem sujeira',
-      'Hobbistas e DIY (Faça Você Mesmo)'
+      'Hobbistas and DIY (Faça Você Mesmo)'
     ],
     specs: [
       { label: 'Embalagem', value: 'Bisnaga flexível de 3 Kg' },
@@ -27,7 +27,7 @@ export const PRODUCTS_DATA: Product[] = [
   },
   {
     id: 'hiperliga-25kg',
-    name: 'Hiper Liga Barrilha 25 Kg',
+    name: 'Hiperliga Barrica 25 Kg',
     weight: '25 Kg',
     image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/25-0KG-800.png',
     tagline: 'O equilíbrio perfeito para obras residenciais de médio e grande porte.',
@@ -49,7 +49,7 @@ export const PRODUCTS_DATA: Product[] = [
   },
   {
     id: 'hiperliga-40kg',
-    name: 'Hiper Liga Barrilha 40 Kg',
+    name: 'Hiperliga Barrica 40 Kg',
     weight: '40 Kg',
     image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
     tagline: 'Rendimento extremo para grandes obras e projetos de larga escala.',
@@ -57,7 +57,7 @@ export const PRODUCTS_DATA: Product[] = [
     yieldPerSqm: '1.5 kg/m²',
     idealFor: [
       'Grandes obras residenciais verticais e horizontais',
-      'Galpões industriais e condomínios fechados',
+      'Galpões industriais e condomínios confessados',
       'Construção civil de alta produtividade',
       'Sistemas de aplicação mecanizada'
     ],
@@ -67,6 +67,82 @@ export const PRODUCTS_DATA: Product[] = [
       { label: 'Aplicação', value: 'Mecanizada por bomba de argamassa ou aplicador profissional' },
       { label: 'Economia', value: 'Menor custo por quilo da categoria' },
       { label: 'Eco-Certificado', value: 'Gera resíduo zero na obra' }
+    ]
+  },
+  {
+    id: 'sela-trinca',
+    name: 'Sela Trinca',
+    weight: '1.5 Kg',
+    image: 'https://hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-16.png',
+    images: [
+      'https://hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-16.png',
+      'https://hiperliga.com.br/wp-content/uploads/2026/06/D_NQ_NP_2X_687392-MLU77434925922_072024-F.webp'
+    ],
+    tagline: 'Argamassa Sela Trinca E Pequenos Reparos Interno E Externo.',
+    description: 'Eficiência Imbatível: Desenvolvida com alta tecnologia, nossa Sela Trinca garante resultados rápidos e duradouros. Com uma densidade de 1,85 g/cm³, oferece uma aplicação robusta e eficaz de alto padrão.',
+    yieldPerSqm: 'Alto rendimento',
+    idealFor: [
+      'Sela trincas de alvenaria e concreto',
+      'Pequenos reparos internos e externos',
+      'Tratamento de fissuras dinâmicas e estáticas',
+      'Acabamento ultra-liso aceitando pintura'
+    ],
+    specs: [
+      { label: 'Densidade', value: '1.85 g/cm³' },
+      { label: 'Ambiente', value: 'Interno e Externo' },
+      { label: 'Textura', value: 'Fina e maleável' },
+      { label: 'Base', value: 'Acrílica elastomérica' },
+      { label: 'Resistência UV', value: 'Excelente contra intempéries' }
+    ]
+  },
+  {
+    id: 'reboco-polimerico',
+    name: 'Reboco Polimérico',
+    weight: '25 Kg',
+    image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
+    images: [
+      'https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
+      'https://hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-17.png'
+    ],
+    tagline: 'Vem pronta para o uso sem bater ou adicionar água.',
+    description: 'Vem pronta para o uso. Não necessita de água ou aditivos e elimina a necessidade de bater a massa à mão ou com equipamento mecânico. É de fácil aplicação e tem altíssimo rendimento em qualquer tipo de superfície áspera.',
+    yieldPerSqm: 'Rendimento excelente',
+    idealFor: [
+      'Reboco fino e direto sobre blocos',
+      'Eliminação total de betoneiras e poeiras',
+      'Agilidade em revestimentos de paredes',
+      'Obras limpas e sustentáveis de alto rendimento'
+    ],
+    specs: [
+      { label: 'Preparo', value: 'Nulo (pronta para uso)' },
+      { label: 'Consumo Água', value: 'Zero litros adicionais' },
+      { label: 'Equipamento', value: 'Dispensa misturador mecânico' },
+      { label: 'Aplicação', value: 'Desempenadeira ou pistola de projeção' }
+    ]
+  },
+  {
+    id: 'revestimento-telhas',
+    name: 'Revestimento para Telhas',
+    weight: '18 L',
+    image: 'https://hiperliga.com.br/wp-content/uploads/2026/06/Tinta-termica-para-telhado-fibrocimento-foto-Solucoes-Industriais-n3cfgCJXbxPrh59bgUxp8RA2cSFK7m.webp',
+    images: [
+      'https://hiperliga.com.br/wp-content/uploads/2026/06/Tinta-termica-para-telhado-fibrocimento-foto-Solucoes-Industriais-n3cfgCJXbxPrh59bgUxp8RA2cSFK7m.webp',
+      'https://hiperliga.com.br/wp-content/uploads/2026/06/Casa_telhado_branco_sol_forte_202605051352.webp'
+    ],
+    tagline: 'Impermeabilização e proteção térmica de alta performance.',
+    description: 'Produto premium à base de emulsões acrílicas e componentes hidro-repelentes de última geração, desenvolvido sob medida para impermeabilização profunda e refletância térmica em telhados de fibrocimento, asbesto, amianto ou acartonados.',
+    yieldPerSqm: 'Alta cobertura',
+    idealFor: [
+      'Impermeabilização de telhados de todos os tipos',
+      'Proteção térmica ativa contra calor solar intenso',
+      'Prevenção de infiltrações de água pluvial',
+      'Eliminação de fungos, algas e umidade em lajes'
+    ],
+    specs: [
+      { label: 'Base Hidro', value: 'Emulsões acrílicas com resinas' },
+      { label: 'Ação', value: 'Hidro-repelente e Refletor Térmico' },
+      { label: 'Diluição', value: 'Pronta para uso ou até 10% água' },
+      { label: 'Aplicação', value: 'Rolo, trincha ou airless profissional' }
     ]
   }
 ];
@@ -154,7 +230,7 @@ export const APPLICATION_STEPS = [
   {
     number: '02',
     title: 'Dois Cordões Continuos',
-    description: 'Aplique dois cordões paralelos de Hiper Liga sobre os blocos, com cerca de 1 cm de largura cada.'
+    description: 'Aplique dois cordões paralelos de Hiperliga sobre os blocos, com cerca de 1 cm de largura cada.'
   },
   {
     number: '03',

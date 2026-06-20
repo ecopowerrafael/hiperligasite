@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   weight: string;
   image: string;
+  images?: string[];
   tagline: string;
   description: string;
   yieldPerSqm: string; // Rendimento por m2 (ex: "1.5 kg/m²")

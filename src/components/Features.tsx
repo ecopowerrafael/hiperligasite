@@ -60,7 +60,7 @@ export default function Features() {
             Eficiência e Inovação na Construção Civil
           </span>
           <h2 className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight text-slate-900 leading-tight">
-            Por que construtoras e pedreiros preferem a <span className="text-primary">Hiper Liga</span>?
+            Por que construtoras e pedreiros preferem a <span className="text-primary">Hiperliga</span>?
           </h2>
           <p className="text-gray-600 font-sans text-base sm:text-lg">
             Substituir a argamassa convencional por polímeros não é apenas uma escolha sustentável, é um salto exponencial em produtividade e qualidade técnica para a sua parede.
@@ -118,7 +118,7 @@ export default function Features() {
               Sua obra com desperdício zero de material.
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Laudos técnicos comprovam que as paredes construídas com Hiper Liga resistem a cargas elevadas e estanqueidade à água de forma muito superior ao cimento ensacado tradicional.
+              Laudos técnicos comprovam que as paredes construídas com Hiperliga resistem a cargas elevadas e estanqueidade à água de forma muito superior ao cimento ensacado tradicional.
             </p>
           </div>
           <div className="relative z-10 w-full md:w-auto shrink-0 flex flex-col sm:flex-row gap-4">

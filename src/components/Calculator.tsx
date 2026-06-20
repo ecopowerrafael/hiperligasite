@@ -14,7 +14,7 @@ export default function EstimatorCalculator() {
     const selectedBlock = BLOCK_TYPES_DATA.find(b => b.id === blockTypeId) || BLOCK_TYPES_DATA[0];
     const consumptionPerSqm = selectedBlock.consumptionPerSqm;
 
-    // 1. Total Hiper Liga needed in Kg
+    // 1. Total Hiperliga needed in Kg
     const productQtyKg = Number((area * consumptionPerSqm).toFixed(1));
 
     // 2. Packages calculation (independent options)
@@ -29,10 +29,10 @@ export default function EstimatorCalculator() {
     // 4. Weight Saved
     const weightSavedKg = traditionalMortarWeightKg - productQtyKg;
 
-    // 5. Time Saved (traditional: ~0.8 hrs/m², Hiper Liga: ~0.25 hrs/m²)
+    // 5. Time Saved (traditional: ~0.8 hrs/m², Hiperliga: ~0.25 hrs/m²)
     const traditionalTime = area * 0.8;
-    const hiperLigaTime = area * 0.25;
-    const timeSavedHours = Math.max(1, Math.round(traditionalTime - hiperLigaTime));
+    const hiperligaTime = area * 0.25;
+    const timeSavedHours = Math.max(1, Math.round(traditionalTime - hiperligaTime));
 
     // 6. Water saved (conventional uses about 4.5 liters per sqm of wall)
     const waterSavedLiters = Math.round(area * 4.5);
@@ -59,7 +59,7 @@ export default function EstimatorCalculator() {
   const handleShareOnWhatsApp = () => {
     if (!results) return;
     const selected = BLOCK_TYPES_DATA.find(b => b.id === blockTypeId);
-    const text = `*Orçamento Estimado - Hiper Liga*
+    const text = `*Orçamento Estimado - Hiperliga*
 ----------------------------------
 📐 *Área de Paredes:* ${results.area} m²
 🧱 *Tipo de Bloco:* ${selected?.name}
@@ -67,10 +67,10 @@ export default function EstimatorCalculator() {
 ⏱️ *Tempo de Obra Salvo:* ~${results.timeSavedHours} Horas
 ⚖️ *Peso Aliviado na Obra:* ${results.weightSavedKg.toLocaleString('pt-BR')} Kg
 
-*Quantidade de Hiper Liga Média Necessária:*
+*Quantidade de Hiperliga Média Necessária:*
 - Opção Bisnaga 3kg: *${results.packages3kg} unidades*
-- Opção Barrilha 25kg: *${results.packages25kg} unidades*
-- Opção Barrilha 40kg: *${results.packages40kg} unidades*
+- Opção Barrica 25kg: *${results.packages25kg} unidades*
+- Opção Barrica 40kg: *${results.packages40kg} unidades*
 
 Gostaria de falar com um especialista sobre esses produtos!`;
 
@@ -239,7 +239,7 @@ Gostaria de falar com um especialista sobre esses produtos!`;
               {results && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   
-                  {/* Total Hiper Liga needed weight card */}
+                  {/* Total Hiperliga needed weight card */}
                   <div className="bg-white/5 border border-white/10 p-5 rounded-2xl text-left">
                     <span className="text-primary font-mono text-[10px] tracking-widest uppercase block mb-1">MÉDIA DE MATERIAL NECESSÁRIO</span>
                     <div className="flex items-baseline gap-2">
@@ -297,9 +297,9 @@ Gostaria de falar com um especialista sobre esses produtos!`;
                     {/* Pack 2: 25Kg */}
                     <div className="bg-white/5 hover:bg-white/10 border border-emerald-500/20 p-4 rounded-xl transition-all flex flex-col justify-between">
                       <div>
-                        <span className="text-xs font-mono font-bold text-emerald-400">BARRILHA 25 KG</span>
+                        <span className="text-xs font-mono font-bold text-emerald-400">BARRICA 25 KG</span>
                         <div className="font-display font-extrabold text-xl text-white mt-1 border-b border-white/5 pb-1 flex items-baseline gap-1">
-                          {results.packages25kg} <span className="text-xs text-emerald-400 font-medium font-sans">sacos</span>
+                          {results.packages25kg} <span className="text-xs text-emerald-400 font-medium font-sans">barricas</span>
                         </div>
                       </div>
                       <p className="text-[10px] text-gray-400 leading-relaxed mt-2">
@@ -310,9 +310,9 @@ Gostaria de falar com um especialista sobre esses produtos!`;
                     {/* Pack 3: 40Kg */}
                     <div className="bg-white/5 hover:bg-white/10 border border-primary/20 p-4 rounded-xl transition-all flex flex-col justify-between">
                       <div>
-                        <span className="text-xs font-mono font-bold text-primary">BARRILHA 40 KG</span>
+                        <span className="text-xs font-mono font-bold text-primary">BARRICA 40 KG</span>
                         <div className="font-display font-extrabold text-xl text-white mt-1 border-b border-white/5 pb-1 flex items-baseline gap-1">
-                          {results.packages40kg} <span className="text-xs text-primary font-medium font-sans">sacos</span>
+                          {results.packages40kg} <span className="text-xs text-primary font-medium font-sans">barricas</span>
                         </div>
                       </div>
                       <p className="text-[10px] text-gray-400 leading-relaxed mt-2">
@@ -375,7 +375,7 @@ Gostaria de falar com um especialista sobre esses produtos!`;
                 <span>Enviar Resultado para WhatsApp</span>
               </button>
               <span className="text-xs text-gray-500 max-w-sm text-center sm:text-left">
-                *Cálculo teórico de acordo com as especificações padrão Hiper Liga. Os resultados reais podem variar dependendo da qualidade de prumo e tipo de bloco.
+                *Cálculo teórico de acordo com as especificações padrão Hiperliga. Os resultados reais podem variar dependendo da qualidade de prumo e tipo de bloco.
               </span>
             </div>
 
