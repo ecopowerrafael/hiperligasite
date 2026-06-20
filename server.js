@@ -14,7 +14,12 @@ const distPath = path.join(__dirname, 'dist');
 app.use(express.static(distPath));
 
 // Handle client-side routing by returning index.html for any unhandled routes
-app.get('*', (req, res) => {
+// This excludes the /loja subpath so that external reverse proxies or web servers can handle the WordPress installation.
+app.get('*', (req, res, next) => {
+  const normalizedPath = req.path.toLowerCase();
+  if (normalizedPath === '/loja' || normalizedPath.startsWith('/loja/')) {
+    return next(); // Let it fall through, allowing the parent web server (Nginx/Apache) to intercept and run WordPress
+  }
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
