@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <img
-                src="https://hiperliga.com.br/wp-content/uploads/2026/06/ChatGPT-Image-16-de-jun.-de-2026-14_05_11.png"
+                src="https://loja.hiperliga.com.br/wp-content/uploads/2026/06/ChatGPT-Image-16-de-jun.-de-2026-14_05_11.png"
                 alt="Hiperliga Logo"
                 className="h-32 sm:h-[160px] w-auto object-contain filter drop-shadow-[0_0_4px_rgba(255,255,255,0.98)] drop-shadow-[0_0_10px_rgba(255,255,255,0.92)]"
                 referrerPolicy="no-referrer"
@@ -144,12 +144,12 @@ export default function Footer() {
             </p>
             
             <a
-              href="https://hiperliga.com.br"
+              href="https://loja.hiperliga.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-primary font-mono font-bold hover:underline"
             >
-              <span>Acessar portal original</span>
+              <span>Acessar Loja Online</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>

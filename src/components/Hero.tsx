@@ -157,12 +157,12 @@ export default function Hero() {
               </button>
               
               <a
-                href={EXPERT_CONTACT_WHATSAPP}
+                href="https://loja.hiperliga.com.br/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-sans font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-base"
               >
-                <MessageSquare className="w-5 h-5 text-emerald-400" />
+                <MessageSquare className="w-5 h-5 text-emerald-400 animate-pulse" />
                 <span>Solicitar Orçamento</span>
               </a>
             </motion.div>
@@ -201,7 +201,7 @@ export default function Hero() {
             >
               <div className="absolute inset-x-0 bottom-0 h-10 bg-black/40 blur-lg rounded-full transform scale-x-80" />
               <img
-                src="https://hiperliga.com.br/wp-content/uploads/2025/08/3-KG-800.png"
+                src="https://loja.hiperliga.com.br/wp-content/uploads/2025/08/3-KG-800.png"
                 alt="Hiperliga Bisnaga 3 Kg"
                 className="w-full object-contain pointer-events-none transform -rotate-12"
                 referrerPolicy="no-referrer"
@@ -222,7 +222,7 @@ export default function Hero() {
             >
               <div className="absolute inset-x-0 bottom-0 h-14 bg-black/50 blur-xl rounded-full transform scale-x-70" />
               <img
-                src="https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png"
+                src="https://loja.hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png"
                 alt="Hiperliga Barrica 40 Kg"
                 className="w-full object-contain pointer-events-none scale-105"
                 referrerPolicy="no-referrer"
@@ -243,7 +243,7 @@ export default function Hero() {
             >
               <div className="absolute inset-x-0 bottom-0 h-12 bg-black/45 blur-lg rounded-full transform scale-x-75" />
               <img
-                src="https://hiperliga.com.br/wp-content/uploads/2025/08/25-0KG-800.png"
+                src="https://loja.hiperliga.com.br/wp-content/uploads/2025/08/25-0KG-800.png"
                 alt="Hiperliga Barrica 25 Kg"
                 className="w-full object-contain pointer-events-none transform rotate-6"
                 referrerPolicy="no-referrer"

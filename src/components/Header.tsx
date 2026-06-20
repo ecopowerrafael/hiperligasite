@@ -15,7 +15,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems = [
+  const menuItems: { label: string; href: string; isExternal?: boolean }[] = [
     { label: 'Diferenciais', href: '#diferenciais' },
     { label: 'Comparativo', href: '#comparativo' },
     { label: 'Calculadora', href: '#calculadora' },
@@ -23,9 +23,14 @@ export default function Header() {
     { label: 'Como Aplicar', href: '#como-aplicar' }
   ];
 
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, item: { href: string; isExternal?: boolean }) => {
+    if (item.isExternal) {
+      // Let standard browser redirect happen or handle custom if we want, but returning so it runs default anchor tag action
+      setIsMobileMenuOpen(false);
+      return;
+    }
     e.preventDefault();
-    const element = document.querySelector(href);
+    const element = document.querySelector(item.href);
     if (element) {
       const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
@@ -56,12 +61,12 @@ export default function Header() {
           {/* Logo Brand Title */}
           <a 
             href="#" 
-            onClick={(e) => handleSmoothScroll(e, '#')}
+            onClick={(e) => handleSmoothScroll(e, { href: '#' })}
             className="flex items-center group h-full"
             id="brand-logo-link"
           >
             <img
-              src="https://hiperliga.com.br/wp-content/uploads/2026/06/ChatGPT-Image-16-de-jun.-de-2026-14_05_11.png"
+              src="https://loja.hiperliga.com.br/wp-content/uploads/2026/06/ChatGPT-Image-16-de-jun.-de-2026-14_05_11.png"
               alt="Hiperliga Logo"
               className="h-24 sm:h-32 w-auto object-contain shrink-0 -my-4 sm:-my-6 filter drop-shadow-[0_0_4px_rgba(255,255,255,0.98)] drop-shadow-[0_0_10px_rgba(255,255,255,0.92)] transition-all duration-300 group-hover:scale-105"
               referrerPolicy="no-referrer"
@@ -74,8 +79,14 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="text-white/80 hover:text-white transition-colors px-4 py-2 text-sm font-medium hover:bg-white/5 rounded-lg font-sans"
+                onClick={(e) => handleSmoothScroll(e, item)}
+                target={item.isExternal ? '_blank' : undefined}
+                rel={item.isExternal ? 'noopener noreferrer' : undefined}
+                className={`transition-colors px-4 py-2 text-sm font-medium rounded-lg font-sans ${
+                  item.isExternal
+                    ? 'text-primary hover:text-primary-light font-bold flex items-center gap-1 border border-primary/20 bg-primary/10 hover:bg-primary/20'
+                    : 'text-white/80 hover:text-white hover:bg-white/5'
+                }`}
               >
                 {item.label}
               </a>
@@ -83,7 +94,16 @@ export default function Header() {
           </nav>
 
           {/* CTA & Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://loja.hiperliga.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="header-cta-loja"
+              className="inline-flex items-center gap-1.5 border border-primary text-primary hover:bg-primary hover:text-white font-sans text-sm font-semibold px-4 py-2.5 rounded-full transition-all duration-300 shadow-sm"
+            >
+              <span>Loja Online</span>
+            </a>
             <a
               href={EXPERT_CONTACT_WHATSAPP}
               target="_blank"
@@ -110,7 +130,7 @@ export default function Header() {
             </button>
           </div>
 
-        </div>
+         </div>
       </div>
 
       {/* Mobile Drawer */}
@@ -128,13 +148,28 @@ export default function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={(e) => handleSmoothScroll(e, item.href)}
-                  className="block text-white/80 hover:text-white px-3 py-3 text-base font-medium rounded-lg hover:bg-white/10 transition-colors"
+                  onClick={(e) => handleSmoothScroll(e, item)}
+                  target={item.isExternal ? '_blank' : undefined}
+                  rel={item.isExternal ? 'noopener noreferrer' : undefined}
+                  className={`block px-3 py-3 text-base font-medium rounded-lg transition-colors ${
+                    item.isExternal
+                      ? 'text-primary font-bold bg-primary/10 border border-primary/20 hover:bg-primary/25'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                  }`}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="pt-4 border-t border-white/5">
+              <div className="pt-4 border-t border-white/5 space-y-3">
+                <a
+                  href="https://loja.hiperliga.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full border border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-4 rounded-xl transition-all"
+                  id="mobile-drawer-loja"
+                >
+                  <span>Loja Online</span>
+                </a>
                 <a
                   href={EXPERT_CONTACT_WHATSAPP}
                   target="_blank"

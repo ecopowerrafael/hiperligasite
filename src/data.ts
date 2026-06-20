@@ -7,7 +7,7 @@ export const PRODUCTS_DATA: Product[] = [
     id: 'hiperliga-3kg',
     name: 'Hiperliga Bisnaga 3 Kg',
     weight: '3 Kg',
-    image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/3-KG-800.png',
+    image: 'https://loja.hiperliga.com.br/wp-content/uploads/2025/08/3-KG-800.png',
     tagline: 'Ideal para pequenas reformas e reparos rápidos. Aperte e aplique!',
     description: 'A embalagem de 3 Kg é perfeita para o consumidor final, reformas rápidas, pequenos reparos ou paredes menores. Vem com o bico aplicador integrado: basta cortar a ponta e aplicar diretamente nos blocos.',
     yieldPerSqm: '1.5 kg/m²',
@@ -29,7 +29,7 @@ export const PRODUCTS_DATA: Product[] = [
     id: 'hiperliga-25kg',
     name: 'Hiperliga Barrica 25 Kg',
     weight: '25 Kg',
-    image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/25-0KG-800.png',
+    image: 'https://loja.hiperliga.com.br/wp-content/uploads/2025/08/25-0KG-800.png',
     tagline: 'O equilíbrio perfeito para obras residenciais de médio e grande porte.',
     description: 'A versão de 25 Kg atende perfeitamente a empreiteiros e construtores que buscam agilidade e alto rendimento. Fácil de manusear no canteiro de obras, reduz drasticamente o esforço físico da equipe e acelera o cronograma.',
     yieldPerSqm: '1.5 kg/m²',
@@ -51,7 +51,7 @@ export const PRODUCTS_DATA: Product[] = [
     id: 'hiperliga-40kg',
     name: 'Hiperliga Barrica 40 Kg',
     weight: '40 Kg',
-    image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
+    image: 'https://loja.hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
     tagline: 'Rendimento extremo para grandes obras e projetos de larga escala.',
     description: 'Desenvolvido especificamente para o segmento corporativo e construtoras de grande escala. O saco de 40 Kg maximiza a economia de escala, diminuindo o custo por metro quadrado assentado e garantindo produtividade astronômica.',
     yieldPerSqm: '1.5 kg/m²',
@@ -73,10 +73,10 @@ export const PRODUCTS_DATA: Product[] = [
     id: 'sela-trinca',
     name: 'Sela Trinca',
     weight: '1.5 Kg',
-    image: 'https://hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-16.png',
+    image: 'https://loja.hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-16.png',
     images: [
-      'https://hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-16.png',
-      'https://hiperliga.com.br/wp-content/uploads/2026/06/D_NQ_NP_2X_687392-MLU77434925922_072024-F.webp'
+      'https://loja.hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-16.png',
+      'https://loja.hiperliga.com.br/wp-content/uploads/2026/06/D_NQ_NP_2X_687392-MLU77434925922_072024-F.webp'
     ],
     tagline: 'Argamassa Sela Trinca E Pequenos Reparos Interno E Externo.',
     description: 'Eficiência Imbatível: Desenvolvida com alta tecnologia, nossa Sela Trinca garante resultados rápidos e duradouros. Com uma densidade de 1,85 g/cm³, oferece uma aplicação robusta e eficaz de alto padrão.',
@@ -99,10 +99,10 @@ export const PRODUCTS_DATA: Product[] = [
     id: 'reboco-polimerico',
     name: 'Reboco Polimérico',
     weight: '25 Kg',
-    image: 'https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
+    image: 'https://loja.hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
     images: [
-      'https://hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
-      'https://hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-17.png'
+      'https://loja.hiperliga.com.br/wp-content/uploads/2025/08/40-KG-800.png',
+      'https://loja.hiperliga.com.br/wp-content/uploads/2026/06/Design-sem-nome-17.png'
     ],
     tagline: 'Vem pronta para o uso sem bater ou adicionar água.',
     description: 'Vem pronta para o uso. Não necessita de água ou aditivos e elimina a necessidade de bater a massa à mão ou com equipamento mecânico. É de fácil aplicação e tem altíssimo rendimento em qualquer tipo de superfície áspera.',
@@ -124,10 +124,10 @@ export const PRODUCTS_DATA: Product[] = [
     id: 'revestimento-telhas',
     name: 'Revestimento para Telhas',
     weight: '18 L',
-    image: 'https://hiperliga.com.br/wp-content/uploads/2026/06/Tinta-termica-para-telhado-fibrocimento-foto-Solucoes-Industriais-n3cfgCJXbxPrh59bgUxp8RA2cSFK7m.webp',
+    image: 'https://loja.hiperliga.com.br/wp-content/uploads/2026/06/Tinta-termica-para-telhado-fibrocimento-foto-Solucoes-Industriais-n3cfgCJXbxPrh59bgUxp8RA2cSFK7m.webp',
     images: [
-      'https://hiperliga.com.br/wp-content/uploads/2026/06/Tinta-termica-para-telhado-fibrocimento-foto-Solucoes-Industriais-n3cfgCJXbxPrh59bgUxp8RA2cSFK7m.webp',
-      'https://hiperliga.com.br/wp-content/uploads/2026/06/Casa_telhado_branco_sol_forte_202605051352.webp'
+      'https://loja.hiperliga.com.br/wp-content/uploads/2026/06/Tinta-termica-para-telhado-fibrocimento-foto-Solucoes-Industriais-n3cfgCJXbxPrh59bgUxp8RA2cSFK7m.webp',
+      'https://loja.hiperliga.com.br/wp-content/uploads/2026/06/Casa_telhado_branco_sol_forte_202605051352.webp'
     ],
     tagline: 'Impermeabilização e proteção térmica de alta performance.',
     description: 'Produto premium à base de emulsões acrílicas e componentes hidro-repelentes de última geração, desenvolvido sob medida para impermeabilização profunda e refletância térmica em telhados de fibrocimento, asbesto, amianto ou acartonados.',

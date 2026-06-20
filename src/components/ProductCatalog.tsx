@@ -218,14 +218,14 @@ export default function ProductCatalog() {
                     {/* Click CTA & Actions */}
                     <div className="pt-6 border-t border-slate-100 mt-5">
                       <a
-                        href={`${EXPERT_CONTACT_WHATSAPP}&text=Ol%C3%A1%21+Gostaria+de+solicitar+um+or%C3%A7amento+espec%C3%ADfico+para+o+produto+*${encodeURIComponent(product.name)}*.`}
+                        href="https://loja.hiperliga.com.br/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark group-hover:bg-primary-dark text-white font-sans font-bold text-xs px-6 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md cursor-pointer hover:-translate-y-0.5"
                         id={`cta-buy-${product.id}`}
                       >
-                        <ShoppingBag className="w-3.5 h-3.5" />
-                        <span>Cotar no WhatsApp</span>
+                        <ShoppingBag className="w-3.5 h-3.5 animate-pulse" />
+                        <span>Visitar a Loja</span>
                         <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0.5" />
                       </a>
                     </div>

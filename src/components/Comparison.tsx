@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowLeftRight, Check, X, Scale, Flame, RefreshCcw } from 'lucide-react';
+import { LazyVideo } from './LazyVideo';
 
 export default function Comparison() {
   return (
@@ -126,7 +127,7 @@ export default function Comparison() {
 
           </div>
 
-          {/* Visual Showcase (Image Column) */}
+          {/* Visual Showcase (Video Column) */}
           <div className="lg:col-span-5 flex flex-col items-center">
             
             {/* Main Visual Comparison Frame with entering motion effects */}
@@ -136,33 +137,25 @@ export default function Comparison() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               className="bg-white p-4 rounded-3xl shadow-2xl relative overflow-hidden group border border-white/20 w-full"
-              id="comparison-image-frame"
+              id="comparison-video-frame"
             >
-              {/* Image Source Link */}
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-slate-100 flex items-center justify-center">
-                <img
-                  src="https://hiperliga.com.br/wp-content/uploads/2025/04/01.webp"
-                  alt="Troca de 60 Kg de Cimento por 3 Kg de argamassa"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
+              {/* Modern Portrait Video Display with Lazy Load */}
+              <div className="rounded-2xl overflow-hidden relative bg-slate-950">
+                <LazyVideo
+                  src="https://res.cloudinary.com/dmvinyayl/video/upload/v1781994207/ssstik.io_1781993985654_p6ooai.mp4"
+                  aspectRatio="aspect-[9/16]"
+                  label="Assentamento Hiperliga"
                 />
-                
-                {/* Image Overlay badges */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
-                
-                <div className="absolute top-4 left-4 bg-slate-900/90 text-white font-mono text-[10px] tracking-wider uppercase px-2.5 py-1.5 rounded-lg border border-white/10">
-                  Foto Real do Produto
-                </div>
               </div>
 
-              {/* Caption details below the image */}
-              <div className="mt-4 text-left">
-                <span className="text-primary font-mono text-xs uppercase tracking-widest font-semibold block">Equação da Produtividade</span>
+              {/* Caption details below the video */}
+              <div className="mt-4 text-left px-1">
+                <span className="text-primary font-mono text-xs uppercase tracking-widest font-semibold block">Demonstração Prática</span>
                 <p className="text-slate-900 font-display font-bold text-lg leading-snug mt-1">
-                  1 Trinário Prático contra a logística pesada convencional.
+                  Alta velocidade no assentamento de blocos.
                 </p>
                 <p className="text-slate-500 text-xs font-sans mt-1">
-                  Enquanto a argamassa convencional exige o transporte manual de quilos e quilos de sacos de cimento e latas de areia, a bisnaga de 3kg da Hiperliga é carregada facilmente debaixo do braço pelo pedreiro.
+                  Assista ao processo real de aplicação da Argamassa Polimérica Hiperliga diretamente na obra. Sem betoneiras, sem poeira e com rapidez insuperável.
                 </p>
               </div>
 

@@ -87,7 +87,7 @@ export default function MediaSection() {
               {/* Main Media Player Frame */}
               <div className="relative aspect-video rounded-3xl overflow-hidden bg-brand-dark border border-white/10 shadow-2xl group">
                 <img
-                  src="https://hiperliga.com.br/wp-content/uploads/2025/04/argamassa3-1.jpg"
+                  src="https://loja.hiperliga.com.br/wp-content/uploads/2025/04/argamassa3-1.jpg"
                   alt="Aplicação simples"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
