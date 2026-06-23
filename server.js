@@ -391,6 +391,306 @@ const NEW_THEME_DEFINITIONS = [
     problemDesc: 'Aguardar secagens pesadas de 14 dias antes do reboco e passar horas montando instalações úmidas emperra o cronograma inteiro.',
     solDesc: 'Hiperliga atinge a fixação de aderência em poucas horas, permitindo que a alvenaria seja rebocada e cunhada sem esperas gigantescas.',
     isProblemType: true
+  },
+  {
+    slug: 'argamassa-polimerica-solta-com-o-tempo',
+    title: 'Argamassa Polimérica Solta com o Tempo? Descubra a Verdade',
+    metaDesc: 'Entenda se a argamassa polimérica solta com o tempo ou se é durável. Veja testes de aderência, cura química e resistência a intempéries na Hiperliga.',
+    h1: 'Argamassa Polimérica Solta com o Tempo? Mitos e Verdades Técnicas',
+    tagline: 'Conheça os ensaios técnicos de durabilidade que desmistificam o medo de descolamento de blocos e tijolos na alvenaria.',
+    problemDesc: 'Muitos construtores e proprietários têm receio de que a argamassa polimérica, por ser aplicada em cordões muito finos, possa secar, trincar ou perder a liga sob a ação do tempo.',
+    solDesc: 'A Argamassa Polimérica Hiperliga é formulada com resinas de copolímeros acrílicos modificadas e cargas minerais selecionadas. Essa combinação exclusiva cria uma colagem flexível-estrutural permanente.',
+    isProblemType: true
+  },
+  {
+    slug: 'cola-bloco-aguenta-peso-de-laje',
+    title: 'Cola Bloco Aguenta o Peso de Laje? Veja Limites de Carga',
+    metaDesc: 'Descubra se a cola bloco suporta o peso de lajes ou coberturas na alvenaria. Entenda a diferença entre alvenaria de vedação, estrutural e cintamento com a Hiperliga.',
+    h1: 'Cola Bloco Aguenta Peso de Laje e Cargas Superiores?',
+    tagline: 'Entenda como funciona a distribuição de carga vertical e as corretas práticas de encunhamento e cintamento de apoio.',
+    problemDesc: 'Dúvida se a cola bloco, quando aplicada em juntas muito finas na divisória da alvenaria, não sofreria esmagamento físico, desmoronamento ou cisalhamento estrutural ao receber a pesada carga de uma laje.',
+    solDesc: 'Hiperliga suporta perfeitamente todas as forças remanescentes e compressões normais dessas paredes. Estruturas clássicas usam concreto armado de colunas/pilares e vigas para suporte e Hiperliga para fechamento.',
+    isProblemType: true
+  },
+  {
+    slug: 'massa-pronta-racha-a-parede',
+    title: 'Massa Pronta Racha a Parede? Evite Fissuras sob Dilatação',
+    metaDesc: 'Veja se o uso de massa pronta causa rachaduras ou fissuras na parede. Descubra os segredos da flexibilidade polimérica da Hiperliga diante de movimentos térmicos.',
+    h1: 'Massa Pronta Racha a Parede? Entendendo Trincas e Fissuras',
+    tagline: 'Zere o medo de fissuras estéticas no acabamento de reboco entendendo o comportamento de deformabilidade sob variações térmicas.',
+    problemDesc: 'Masseiras e argamassas convencionais rígidas formam uma placa cimentícia sem nenhuma elasticidade. Quando o bloco se move com calor e frio, ocorrem quebras nas juntas e trincas.',
+    solDesc: 'Sendo baseada em dispersões termoplásticas elastoméricas de alta qualidade, ela mantém uma capacidade excelente de absorver e atenuar as microdilatações térmicas horizontais e verticais dos tijolos.',
+    isProblemType: true
+  },
+  {
+    slug: 'riscos-de-usar-argamassa-polimerica-na-estrutura',
+    title: 'Riscos de Usar Argamassa Polimérica na Estrutura | Parecer Técnico',
+    metaDesc: 'Entenda quais são os riscos reais se você usar argamassa polimérica em funções estruturais. Saiba as limitações técnicas e recomendações de segurança Hiperliga.',
+    h1: 'Quais os Riscos de Usar Argamassa Polimérica em Elementos Estruturais?',
+    tagline: 'Segurança em primeiro lugar. Saiba por que a cola bloco é extraordinária para vedação mas não pode ser usada de fôrma estrutural primária.',
+    problemDesc: 'Alguns tentam aplicar a argamassa polimérica para colar ferragens de colunas, estruturar pilares de sustentação de casas de três pavimentos, o que gera sérios riscos de colapso estrutural por ignorar o aço.',
+    solDesc: 'A Hiperliga foi cientificamente projetada para funções de vedação, onde resiste com folga gigantesca. Não substitui vigas de sustentação ou sapatas de concreto armado.',
+    isProblemType: true
+  },
+  {
+    slug: 'o-que-acontece-se-molhar-cola-bloco-antes-de-secar',
+    title: 'O que Acontece se Molhar a Cola Bloco Antes de Secar? Cuidados',
+    metaDesc: 'Veja o impacto da chuva ou de umidade se molhar a cola bloco antes do processo de cura total. Aprenda a proteger as paredes levantadas com a Hiperliga.',
+    h1: 'O que Acontece se Molhar a Cola Bloco Antes de Secar?',
+    tagline: 'Esclareça o impacto de chuvas e umidades inesperadas nas paredes de alvenaria em fase de levantamento.',
+    problemDesc: 'Garantir que chuvas repentinas logo após erguer fiadas de alvenaria não lavem a junta de argamassa polimérica fresca, que é um composto à base de água antes da cura.',
+    solDesc: 'Diferente do cimento, a Hiperliga cura por simples evaporação física. Se a chuva vier horas depois ou houver cura primária, a junta polimérica torna-se inteiramente hidrofóbica e impermeável.',
+    isProblemType: true
+  },
+  {
+    slug: 'argamassa-polimerica-da-infiltracao',
+    title: 'Argamassa Polimérica dá Infiltração? Estudo sobre Umidade',
+    metaDesc: 'Saiba se a argamassa polimérica gera infiltração ou se previne mofo e umidade ascendente nas paredes. Entenda o papel impermeabilizante da Hiperliga.',
+    h1: 'Argamassa Polimérica dá Infiltração? Descubra o Comportamento',
+    tagline: 'Entenda como os compostos derivados do acrílico atuam bloqueando a subida capilar de água da umidade.',
+    problemDesc: 'A argamassa tradicional de cimento e areia é porosa e funciona como uma rede de tubos capilares que suga a umidade e espalha bolores pelos acabamentos.',
+    solDesc: 'A Hiperliga possui cargas poliméricas elastoméricas e impermeáveis de alta coesão hidrofóbica que criam uma verdadeira barreira física, bloqueando umidades.',
+    isProblemType: true
+  },
+  {
+    slug: 'desvantagens-argamassa-polimerica-relacao-tradicional',
+    title: 'Desvantagens da Argamassa Polimérica Frente à Tradicional',
+    metaDesc: 'Compare de forma realista e técnica as desvantagens da argamassa polimérica com a massa cimentícia tradicional de junta grossa. Saiba onde não usar.',
+    h1: 'Desvantagens da Argamassa Polimérica em Relação à Tradicional',
+    tagline: 'Um guia sem rodeios sobre as desvantagens reais e onde as massas convencionais ainda se fazem necessárias na obra.',
+    problemDesc: 'Vender a argamassa polimérica como solução mágica faz com que profissionais tentem usá-la em blocos extremamente tortos ou sem o nivelamento adequado na primeira fiada.',
+    solDesc: 'Exige blocos de qualidade regular e primeira fiada nivelada no cimento. O preço unitário por quilo é maior, embora o rendimento seja até 20 vezes superior por metro quadrado.',
+    isProblemType: true
+  },
+  {
+    slug: 'aplicador-de-argamassa-polimerica-caseiro',
+    title: 'Aplicador de Argamassa Polimérica Caseiro Funciona? Riscos e Dicas',
+    metaDesc: 'Descubra se improvisar um aplicador caseiro para cola bloco vale a pena. Entenda as alternativas de bisnaga, aplicadores mecânicos e a caixa de aplicação Hiperliga.',
+    h1: 'Aplicador de Argamassa Polimérica Caseiro: Vale a Pena Improvisar?',
+    tagline: 'Entenda os prós, contras e os riscos de perder rendimento e estragar material usando ferramentas improvisadas.',
+    problemDesc: 'Na intenção de economizar na compra de ferramentas profissionais ou agilizar o processo produtivo, alguns construtores tentam confeccionar aplicadores caseiros usando garrafas PET, sacos de confeiteiro improvisados de plástico fino ou canos de PVC cortados. Essas soluções costumam romper no meio do trabalho, soltar cordões grossos demais que desperdiçam o produto cara a cara ou travar por falta de pressão adequada.',
+    solDesc: 'A Hiperliga entrega a Bisnaga de 3kg armada de fábrica com uma ponteira plástica de saída perfeitamente calibrada de modo que o operador só precise cortar a ponta no diâmetro ideal para obter os cordões contínuos perfeitos de 1cm. Para grandes volumes, a utilização de aplicadores profissionais pneumáticos ou aplicadores manuais metálicos com gatilhos de força multiplicadora garante ergonomia sensacional, velocidade extrema e zero desperdício de massa residual.',
+    isProblemType: true
+  },
+  {
+    slug: 'pistola-aplicadora-de-cola-bloco-preco',
+    title: 'Pistola Aplicadora de Cola Bloco Preço e Onde Comprar',
+    metaDesc: 'Compare preços de pistolas aplicadoras de cola bloco. Conheça as versões manual, profissional reforçada e pneumática de alumínio para barricas.',
+    h1: 'Pistola Aplicadora de Cola Bloco: Modelos, Preços e Guia',
+    tagline: 'Encontre o modelo perfeito de aplicador profissional para otimizar o rendimento das barricas grandes na sua construção.',
+    problemDesc: 'Embora as bisnagas de 3kg sejam perfeitas para pequenas residências, levantar grandes galpões, condomínios verticais ou grandes áreas de alvenaria demanda o uso de barricas industriais de 25kg ou 40kg. Tentar recarregar saquinhos pequenos manualmente atrasa o cronograma e gera enorme perda de tempo.',
+    solDesc: 'As pistolas aplicadoras de cola bloco (estilo aplicadores de silicone gigante ou sachê de alta capacidade) possuem tubo de alumínio anodizado super resistente e gatilhos multiplicadores de força com alta taxa de compressão mecânica. O preço desses equipamentos profissionais varia em média entre R$ 80,00 e R$ 250,00 a depender da capacidade e marca, um investimento que se paga em pouquíssimos dias decorrente da produtividade gigantesca adquirida.',
+    isProblemType: true
+  },
+  {
+    slug: 'como-limpar-a-parede-antes-de-aplicar-argamassa-pronta',
+    title: 'Como Limpar a Parede para Aplicar Argamassa Pronta Corretamente',
+    metaDesc: 'Veja o passo a passo mecânico essencial de limpeza preventiva de poeiras sobre os blocos antes de aplicar argamassa pronta e cola bloco.',
+    h1: 'Como Limpar a Parede antes de Aplicar Argamassa Pronta?',
+    tagline: 'Não perca adesão química. O segredo mecânico de remoção de finos para maximizar o grip da cola nos blocos.',
+    problemDesc: 'Durante a estocagem no canteiro de obras, movimentação e caminhões de areia soprando vento, os tijolos e blocos acumulam uma fina camada microscópica de poeira e pó de cerâmica na sua face de contato superior. Se você aplicar a argamassa polimérica diretamente sobre esse pó, o produto cola apenas na poeira solta, o que reduz o agarre no tijolo firme e pode soltar fiadas.',
+    solDesc: 'A higienização preliminar é extremamente rápida e zera o perigo de descolamentos térmicos ou físicos. Basta passar uma vassoura simples de cerdas duras de nylon ou uma escova manual grossa sobre o topo da fiada assentada um segundo antes de aplicar os filetes adesivos da Hiperliga. Em dias de vento muito seco, uma borrifada minimalista de água remove a estática dos finos residuais sem encharcar o poro dos blocos.',
+    isProblemType: true
+  },
+  {
+    slug: 'pode-usar-argamassa-polimerica-com-bloco-molhado',
+    title: 'Pode Usar Argamassa Polimérica com Bloco Molhado? Guia Técnico',
+    metaDesc: 'Entenda se é permitido aplicar cola bloco em tijolos ou blocos molhados após chuvas. Veja as regras para garantir a cura química e física perfeita.',
+    h1: 'Pode Usar Argamassa Polimérica com Bloco Molhado de Chuva?',
+    tagline: 'Não cometa erros de secagem. Saiba o limite de umidade permitido nos blocos para assentamento seguro.',
+    problemDesc: 'Deixar os blocos descobertos sob temporais de fim de semana encharca os poros cerâmicos ou de concreto. Ao tentar assentar o tijolo molhado ou encharcado usando a argamassa polimérica, a água bloqueada nos poros do material cria uma camada de separação física que dissolve o polímero do gel antes da sua evaporação, atrasando ou impedindo a solidificação estrutural.',
+    solDesc: 'Para que a Argamassa Polimérica Hiperliga tenha o agarre inicial necessário e resista a puxões transversais, a face de assentamento do tijolo deve estar seca ao toque. Isso significa que o bloco pode ter umidade residual interna de queima, mas a face exterior deve possuir capacidade de absorver levemente o gel da cola bloco, promovendo a união mecânica profunda dos materiais após a evaporação natural da fase líquida.',
+    isProblemType: true
+  },
+  {
+    slug: 'qual-a-espessura-ideal-do-cordao-de-argamassa-polimerica',
+    title: 'Qual a Espessura Ideal do Cordão de Argamassa Polimérica?',
+    metaDesc: 'Descubra qual deve ser o diâmetro e espessura do cordão de cola bloco Hiperliga para garantir rendimento ótimo e ancoragem máxima do tijolo.',
+    h1: 'Qual a Espessura Ideal do Cordão de Argamassa Polimérica?',
+    tagline: 'Não perca material nem comprometa a resistência. A ciência do filete para juntas finas de alta performance.',
+    problemDesc: 'Alguns profissionais inexperientes aplicam cordões finos demais (como fios de linha de costura) achando que economizarão produto, o que gera frestas e falta de área de contato colador. Por outro lado, fazer cordões excessivamente grossos derrama massa pelas laterais da parede, gerando desperdícios desnecessários e encarecendo o custo global por metro quadrado.',
+    solDesc: 'A especificação de engenharia mecânica da Hiperliga determina que devem ser aplicados obrigatoriamente DOIS filetes paralelos contínuos com exatamente 1 centímetro (10mm) de diâmetro cada em toda a extensão do bloco. No momento em que o pedreiro assenta o bloco superior exercendo pressão leve mecânica, esses dois filetes se esparramam lateralmente sob a face plana do tijolo, promovendo uma junta fina final coladora perfeitamente contínua com cerca de 1mm a 2mm de espessura de altíssimo grip.',
+    isProblemType: true
+  },
+  {
+    slug: 'como-assentar-tijolo-baiano-com-massa-pronta',
+    title: 'Como Assentar Tijolo Baiano com Massa Pronta | Passo a Passo',
+    metaDesc: 'Aprenda as técnicas corretas para assentar tijolo baiano com massa de argamassa polimérica Hiperliga de forma rápida, limpa e produtiva.',
+    h1: 'Como Assentar Tijolo Baiano com Massa Pronta?',
+    tagline: 'O guia operacional definitivo para levantar paredes estruturais de vedação usando o tradicional tijolo cerâmico baiano.',
+    problemDesc: 'O tijolo baiano convencional possui seis ou oito furos longitudinais com septos finos de cerâmica. Construtores e pedreiros acostumados com a colher de pedreiro clássica têm receio de que a cola fina ou massa pronta escorra para dentro dos furos do tijolo, desaparecendo fisicamente e perdendo a capacidade de promover a fixação mecânica da parede.',
+    solDesc: 'A aplicação da Argamassa Polimérica Hiperliga nos tijolos baianos de fechamento é extremamente eficiente. Os filetes devem ser aplicados ao longo dos septos planos de argila horizontais superiores. Como a consistência pastosa da Hiperliga possui alta viscosidade e excelente tixotropia de laboratório, ela "para" perfeitamente sobre os filetes de contato planos superiores cerâmicos sem escorrer ou migrar para dentro do bloco baiano vazado, formando colagem limpa e garantindo 100% de rendimento físico e solidez nas paredes de vedação.',
+    isProblemType: true
+  },
+  {
+    slug: 'laudo-tecnico-de-resistencia-argamassa-polimerica',
+    title: 'Laudo Técnico de Resistência da Argamassa Polimérica | Baixe Já',
+    metaDesc: 'Consulte os laudos técnicos de resistência à tração, cisalhamento e compressão da Argamassa Polimérica Hiperliga de acordo com as normas brasileiras.',
+    h1: 'Laudo Técnico de Resistência da Argamassa Polimérica',
+    tagline: 'Embasamento científico e testes de ruptura laboratorial que atestam a segurança mecânica da nossa solda química.',
+    problemDesc: 'Engenheiros estruturais, peritos judiciais e responsáveis técnicos por grandes obras não tomam decisões com base em simples promessas ou discursos comerciais. Para especificar um composto inovador de junta fina de assentamento, é obrigatória a apresentação de documentação oficial, relatórios de ensaios mecânicos e laudos laboratoriais creditados que comprovem que a alvenaria montada resiste perfeitamente às forças de projeto.',
+    solDesc: 'A Hiperliga orgulha-se de possuir uma biblioteca completa de laudos de ensaios mecânicos emitidos por renomados institutos e laboratórios de engenharia civil do país. Nosso produto atende e supera todos os requisitos de ruptura por cisalhamento longitudinal e arrancamento transversal por tração direta em blocos cerâmicos e blocos de concreto. Os ensaios demonstram que, sob pressão limite extrema, a ruptura mecânica ocorre nos septos físicos do próprio tijolo, nunca na junta cimentícia de solda química Hiperliga, confirmando aderência excepcional.',
+    isProblemType: true
+  },
+  {
+    slug: 'nbr-para-assentamento-com-cola-bloco',
+    title: 'NBR para Assentamento com Cola Bloco | Normas e Diretrizes',
+    metaDesc: 'Conheça as normas NBR aplicadas ao assentamento com cola bloco e argamassa polimérica. Entenda o enquadramento na NBR 15575 de desempenho.',
+    h1: 'NBR para Assentamento com Cola Bloco e Argamassa Polimérica',
+    tagline: 'Construa de acordo com a legislação. Entenda as exigências de estanqueidade, resistência térmica e desempenho.',
+    problemDesc: 'Para construtores que prestam serviços a órgãos públicos, edificam empreendimentos financiados pela Caixa Econômica Federal ou buscam certificações internacionais, a conformidade de normas é um requisito eliminatório. Muitas equipes desconhecem sob qual NBR (Norma Brasileira Regulamentadora) a Argamassa Polimérica se encaixa e se o seu uso é aceito nos laudos de entrega de obra.',
+    solDesc: 'Diferente dos produtos baseados em cal e cimento puro, a Argamassa Polimérica é regulamentada por desempenhos sistêmicos de vedação vertical de acordo com a diretriz da NBR 15575 (Guia de Desempenho de Edificações Habitacionais). Essa norma foca em requisitos fundamentais que a parede pronta deve atender, como resistência mecânica mínima, resistência ao fogo, estanqueidade contra as águas de fora, atenuação acústica e isolamento térmico. O sistema construtivo Hiperliga atende amplamente todos esses parâmetros técnicos de desempenho exigidos por peritos e engenheiros.',
+    isProblemType: true
+  },
+  {
+    slug: 'ficha-tecnica-argamassa-polimerica-pdf',
+    title: 'Ficha Técnico da Argamassa Polimérica PDF | Downloader Oficial',
+    metaDesc: 'Baixe aqui a ficha técnica oficial da Argamassa Polimérica Hiperliga em PDF. Veja rendimento, composição, tempo de secagem e especificações de uso.',
+    h1: 'Ficha Técnica da Argamassa Polimérica (PDF)',
+    tagline: 'Consulte todos os dados químicos, físicos, rendimento por metro e instrução operacional em nosso manual corporativo compactado.',
+    problemDesc: 'Mesmo as embalagens mais bem impressas de bisnagas de cola bloco possuem espaço gráfico compacto limitado. Pintores, aplicadores, arquitetos de interiores ou técnicos de segurança do trabalho no canteiro frequentemente necessitam de planilhas de especificações físico-químicas em PDF para organizar compras ou redigir planos de riscos ocupacionais (FISPQ/PPRA).',
+    solDesc: 'A Hiperliga disponibiliza online os arquivos de Ficha Técnica (Technical Datasheet) e FISPQ (Ficha de Informações de Segurança de Produtos Químicos) estruturados em PDF para leitura imediata em smartphones ou impressão desktop. O documento descreve de forma matemática o consumo exato da argamassa por tipo de bloco, densidade aparente do gel úmido, tempo de cura primário (12h) e total de secagem (72h), solventes compatíveis de lavagem e regras de armazenagem segura para longevidade da estocagem.',
+    isProblemType: true
+  },
+  {
+    slug: 'ensaio-de-arrancamento-alvenaria-de-vedacao',
+    title: 'Ensaio de Arrancamento Alvenaria de Vedação | Laudos Técnicos',
+    metaDesc: 'Veja como funciona o ensaio de arrancamento por tração direta na alvenaria de vedação. Conheça as cargas de ruptura da Argamassa Polimérica Hiperliga.',
+    h1: 'Ensaio de Arrancamento na Alvenaria de Vedação: Entenda',
+    tagline: 'A prova definitiva de resistência adesiva. Saiba por que a nossa cola bloco supera o arrancamento mecânico convencional.',
+    problemDesc: 'Em edifícios altos, as paredes de fechamento dos andares superiores sofrem severas cargas dinâmicas geradas por rajadas de ventos intensos e diferenciais de pressão (sucção lateral). Caso a união entre os tijolos e a estrutura seja fraca, há riscos reais de desplacamento físico de blocos ou trincas catastróficas que expõem os moradores de apartamentos a perigos elevados de acidentes.',
+    solDesc: 'O ensaio técnico de arrancamento por tração direta simula a aplicação de uma força mecânica conjugada que puxa ou afasta perpendicularmente os blocos assentados para arrancar a junta de colagem. Enquanto as argamassas cimentícias tradicionais de cal apresentam ruptura por cisalhamento seco de matriz sob cargas iniciais médias, a parede edificada usando Argamassa Polimérica Hiperliga com copolímeros elastoméricos absorve essas forças exercidas e atinge índices de ruptura excelentes. O ensaio comprova robustez extraordinária, mantendo os blocos presos à estrutura sob grandes amplitudes de forças elásticas.',
+    isProblemType: true
+  },
+  {
+    slug: 'peso-por-metro-quadrado-de-parede-com-argamassa-polimera',
+    title: 'Peso por Metro Quadrado de Parede com Argamassa Polimérica',
+    metaDesc: 'Veja a redução drástica de peso morto por m² de parede ao substituir a massa de cimento tradicional pela Argamassa Polimérica Hiperliga de junta fina.',
+    h1: 'Peso por Metro Quadrado de Parede com Argamassa Polimérica',
+    tagline: 'Alivie a fundação de apoio estrutural. O impacto mecânico de usar juntas finas de apenas 2kg por metro de parede.',
+    problemDesc: 'Nas argamassas convencionais de cimento, areia e cal, a junta grossa de assentamento de parede possui média de 1,5cm a 2cm de espessura vertical. Esse volume representa toneladas de massa morta acrescidas ao peso global dos pavimentos em prédios e residências. Para suportar esse peso gigante estático, engenheiros são forçados a sobredimensionar e encarecer vigas de apoio, colunas e blocos de fundação com muito mais aço metálico e concreto pesado usinado.',
+    solDesc: 'Enquanto a argamassa tradicional rígida grossa consome em média 30kg a 40kg de massa de cimento por metro quadrado de parede levantada, o sistema de junta fina polimérica da Argamassa Hiperliga consome apenas cerca de 1,5kg a 2kg de produto químico pastoso acrílico por metro quadrado. Essa expressiva redução de mais de 90% no peso de ligação reduz drasticamente as cargas mortas calculadas sobre os pavimentos aéreos. O alívio decorrente permite projetar e diminuir consideravelmente a espessura de ferros estruturais de apoios de vigas, colunas sustentadoras e sapatas de sustentação, gerando uma redução de custo espetacular de toda a obra.',
+    isProblemType: true
+  },
+  {
+    slug: 'validade-da-argamassa-polimerica-na-embalagem',
+    title: 'Validade da Argamassa Polimérica na Embalagem | Guia Completo',
+    metaDesc: 'Descubra qual a validade da argamassa polimérica Hiperliga fechada e após aberta na obra. Aprenda a ler lotes e evitar prejuízos na estocagem.',
+    h1: 'Validade da Argamassa Polimérica na Embalagem: Durabilidade Real',
+    tagline: 'Evite desperdícios. Descubra as especificações de vida útil e conservação do produto no canteiro.',
+    problemDesc: 'Intercorrências no cronograma de construção, atrasos de outras equipes (como fundação ou elétrica) ou paradas sazonais por conta de chuvas frequentes são extremamente comuns. O construtor que comprou material antecipadamente teme que a cola bloco empedre, estrague ou perca o poder de colagem rapidamente na estocagem da obra, assim como acontece com os sacos de cimento comum que sofrem com a umidade.',
+    solDesc: 'A formulação química estabilizada da Argamassa Polimérica Hiperliga foi projetada para oferecer excelente durabilidade. Em sua embalagem original lacrada de fábrica, o produto mantém suas propriedades físicas de colagem intactas por até 12 meses a partir da data de fabricação. Diferente do cimento que "empedra" com qualquer umidade do ar, a nossa embalagem plástica hermética impede a perda da fase líquida e a reação de cura prematura, garantindo total aproveitamento do investimento.',
+    isProblemType: true
+  },
+  {
+    slug: 'como-armazenar-massa-pronta-em-bisnaga-na-obra',
+    title: 'Como Armazenar Massa Pronta em Bisnaga na Obra | Dicas',
+    metaDesc: 'Veja o passo a passo definitivo de como armazenar massa pronta em bisnaga no canteiro de obras. Garanta a conservação e evite perdas de produto.',
+    h1: 'Como Armazenar Massa Pronta em Bisnaga na Obra de Forma Segura',
+    tagline: 'Organize seu estoque com inteligência e preserve a qualidade original de fábrica das suas bisnagas Hiperliga.',
+    problemDesc: 'No dia a dia dinâmico de uma obra, materiais deixados de qualquer jeito no chão áspero estão expostos a furos acidentais por pregos, ferramentas pesadas que caem ou circulação de carrinhos de mão. Ao rasgar a bisnaga de plástico, a cola bloco entra em contato contínuo com o oxigênio do ar e sofre cura prematura, inutilizando o material para o assentamento.',
+    solDesc: 'Armazenar a massa pronta Hiperliga é incrivelmente simples e prático. As caixas de bisnagas de 3kg ou as barricas devem ser guardadas sob locais limpos e totalmente cobertos (como barracões de obra ou contêineres trancados). Elas devem ser empilhadas sobre paletes de madeira ou plástico elevado para evitar contato direto com o solo úmido e as caixas nunca devem ultrapassar o empilhamento máximo de segurança especificado na embalagem para não amassar e estourar os plásticos de baixo.',
+    isProblemType: true
+  },
+  {
+    slug: 'quantos-metros-quadrados-rende-uma-caixa-de-argamassa-polimerica',
+    title: 'Quantos Metros Rende uma Caixa de Argamassa Polimérica?',
+    metaDesc: 'Veja o rendimento exato por metro quadrado de uma caixa de argamassa polimérica Hiperliga. Tabelas de consumo para blocos e tijolos.',
+    h1: 'Quantos Metros Rende uma Caixa de Argamassa Polimérica?',
+    tagline: 'Planejamento de custos sem erros. Entenda a matemática do rendimento por m² das nossas caixas.',
+    problemDesc: 'Uma das maiores barreiras de compras de novos insumos na engenharia civil é a dificuldade de calcular com precisão a relação de consumo por metro de alvenaria. Orçamentistas temem comprar material a menos, paralisando a mão de obra no canteiro, ou errar comprando materiais em excesso gerando capital de giro parado na prateleira.',
+    solDesc: 'O rendimento de cada caixa de Argamassa Polimérica Hiperliga (composta por 2 bisnagas de 3kg, totalizando 6kg de material pronto) depende diretamente do tipo de bloco utilizado (cerâmica vazada, concreto de vedação ou bloco ecológico) e suas bitolas. Para o tijolo baiano comum de 9 furos (19x19cm com espessura de face de 9cm), o consumo médio é de apenas 1,5kg do gel por metro quadrado. Isso significa que uma única caixa unificada de 6kg da Hiperliga rende extraordinários 4 metros quadrados (4m²) de alvenaria de vedação concluída de forma extremamente rápida, limpa e prática!',
+    isProblemType: true
+  },
+  {
+    slug: 'espaco-necessario-para-estocar-argamassa-tradicional-x-polimerica',
+    title: 'Espaço de Estoque: Argamassa Tradicional vs Polimérica',
+    metaDesc: 'Compare a drástica economia de espaço físico de estocagem ao substituir areia, cimento e cal pela Argamassa Polimérica Hiperliga. Otimize sua obra.',
+    h1: 'Espaço de Estoque: Argamassa Tradicional vs Polimérica',
+    tagline: 'Otimize o layout do canteiro. Descubra a redução de até 95% no espaço de armazenamento de insumos.',
+    problemDesc: 'Reformas corporativas em prédios comerciais, construções residenciais em terrenos urbanos estreitos ou condomínios fechados sofrem frequentemente com a falta de espaço físico livre para estocar carradas de areia, montanhas de britas, pilhas de cal e dezenas de sacos pesados de cimento convencional. Esse material volumoso bloqueia a circulação de pedestres, atrai poeira sujando as calçadas e gera perdas sob chuvas severas.',
+    solDesc: 'A adoção da junta fina com a Argamassa Polimérica Hiperliga revoluciona a logística e o layout físico do canteiro. Pelo rendimento absurdo (onde 1,5kg substitui até 30kg de argamassa comum), o espaço necessário para estocar a Hiperliga é dezenas de vezes menor. Um único palete de madeira contendo caixas da nossa cola bloco é suficiente para erguer a mesma quantidade de parede de vedação que exigiria um depósito inteiro de areia e dezenas de sacos brutais de cimento e cal comum, otimizando o layout da obra de forma maravilhosa e mantendo tudo 100% limpo.',
+    isProblemType: true
+  },
+  {
+    slug: 'substituir-cal-e-areia-por-massa-pronta',
+    title: 'Substituir Cal e Areia por Massa Pronta? Prós e Contras',
+    metaDesc: 'Descubra as vantagens reais de substituir cal, cimento e areia pela massa polimérica pronta Hiperliga. Veja comparativos de custos e agilidade.',
+    h1: 'Substituir Cal e Areia por Massa Pronta: Guia de Transição',
+    tagline: 'Esqueça as masseiras pesadas. Entenda como funciona a substituição direta da mistura convencional pela solda química de junta fina.',
+    problemDesc: 'Bater massa de forma manual ou em betoneira utilizando pás, carregando carrinhos de mão pesados de areia úmida, sacos de cal que causam alergia respiratória e sacos de cimento de 50kg consome um tempo precioso e desgasta a saúde dos operários. Além disso, estima-se que até 30% de toda a massa convencional seja totalmente perdida por cura precoce no chão, respingos laterais ou excesso de dosagem nas juntas grossas.',
+    solDesc: 'Substituir a cal, areia e cimento pela Argamassa Polimérica Hiperliga simplifica a obra por completo. O produto já vem perfeitamente balanceado quimicamente e pronto para aplicação diretamente na parede, dispensando aditivos, água extra ou energia para misturar. Uma bisnaga de 3kg substitui o equivalente a até 60kg de massa de cimento tradicional de reboco ou junta, resultando em velocidade surreal de montagem e um canteiro de obras limpo de dar inveja.',
+    isProblemType: true
+  },
+  {
+    slug: 'diferenca-entre-argamassa-ac2-e-argamassa-polimerica',
+    title: 'Espaço Técnico: Diferença entre Argamassa AC2 e Argamassa Polimérica',
+    metaDesc: 'Entenda por que você não deve usar argamassa AC2 de assentamento cerâmico para erguer paredes e o papel correto da Argamassa Polimérica Hiperliga.',
+    h1: 'Argamassa AC2 vs Argamassa Polimérica: Principais Diferenças',
+    tagline: 'Não comete erros patológicos de colagem. Saiba por que cada material ocupa uma classe técnica exclusiva na obra.',
+    problemDesc: 'Alguns profissionais da construção tentam improvisar na alvenaria misturando argamassa colante do tipo AC2 (feita originalmente para fixação de revestimentos cerâmicos em pisos e paredes) com cimento comum para erguer de fiadas. O composto AC2 possui cinética de cura, retenção de água e tenacidade inadequadas para juntas horizontais de tijolos baianos, o que pode originar secagem falsa e posterior desplacamento da parede sob ventos.',
+    solDesc: 'A Argamassa Polimérica Hiperliga foi formulada exclusivamente para a união mecânica e química de blocos de alvenaria. Diferente do AC2 que exige mistura com água abundante e aplicação de dentes espessos, a Hiperliga é pronta para o uso, possui copolímeros acrílicos modificados de elevadíssima flexibilidade e ancoragem que colam os poros cerâmicos de forma duradoura. Ela é ultra resistente a intempéries e garante que as fiadas trabalhem juntas como uma parede monolítica estável.',
+    isProblemType: true
+  },
+  {
+    slug: 'argamassa-polimerica-substitui-o-reboco',
+    title: 'Argamassa Polimérica Substitui o Reboco? Saiba a Verdade',
+    metaDesc: 'Descubra as diferenças de funções entre colar blocos de alvenaria de vedação e a necessidade do reboco clássico ou gesso liso de acabamento.',
+    h1: 'Argamassa Polimérica Substitui o Reboco na Obra?',
+    tagline: 'Mitos e verdades construtivas. Entenda de uma vez as funções técnicas exclusivas e independentes de cada material.',
+    problemDesc: 'Buscando acelerar as etapas de fechamento e reboco, alguns proprietários de obras acreditam equivocadamente que, por ser impermeável e de alta aderência, a argamassa polimérica pode substituir completamente a camada de reboco, emboço ou chapisco das paredes erguidas, ou que o produto pode ser espalhado com espátula em toda a face externa dos blocos para protegê-los das chuvas.',
+    solDesc: 'A Argamassa Polimérica Hiperliga foi projetada especificamente com a função única de colar e unir os blocos e tijolos da parede. Ela não substitui e não deve ser usada como reboco de acabamento. O reboco tradicional (ou gesso liso decorativo em paredes internas) ainda é essencial para planejar e alisar a superfície, além de servir como barreira protetora final de pintura. Contudo, ao usar a Hiperliga, por obter juntas horizontais milimétricas regulares super organizadas, o consumo de massa de reboco cai consideravelmente devido à excelente linearidade do prumo.',
+    isProblemType: true
+  },
+  {
+    slug: 'massa-pronta-serve-para-chapisco',
+    title: 'Massa Pronta Serve para Chapisco? Saiba Como Fazer',
+    metaDesc: 'Descubra se a massa pronta convencional serve para chapisco e como a alvenaria erguida com a junta fina da Hiperliga recebe essa etapa com eficiência.',
+    h1: 'Massa Pronta Serve para Chapisco na Alvenaria?',
+    tagline: 'Esclareça suas dúvidas técnicas e garanta a perfeita ancoragem dos revestimentos nas suas paredes erguidas.',
+    problemDesc: 'Existem diversos tipos de massa pronta no mercado. Uma dúvida recorrente dos construtores é se a massa pronta clássica (geralmente embalada em sacos de cimento e areia pré-misturada) ou a argamassa polimérica coladora Hiperliga servem para realizar a etapa física de chapisco, que exige textura áspera e caldos fluidores.',
+    solDesc: 'Massa pronta de assentamento comum em sacos de pó cinzento de fato serve se acrescida de água abundante e aditivos de fixação (como polímeros líquidos acrilato). Contudo, a Argamassa Polimérica em bisnaga gel Hiperliga não serve e não deve ser usada de chapisco, pois sua função única é colagem estrutural interna das juntas de apoio. Nas paredes levantadas com a Hiperliga, o chapisco deve ser executado da forma clássica tradicional (cimento e areia 1:3 muito fluida) ou utilizando rolo de textura acrílica, o que confere aderência sensacional para o posterior reboco liso térmico.',
+    isProblemType: true
+  },
+  {
+    slug: 'fabrica-de-argamassa-polimerica-com-frete-gratis',
+    title: 'Fábrica de Argamassa Polimérica com Frete Grátis | Compre Já',
+    metaDesc: 'Compre argamassa polimérica direto da fábrica Hiperliga com frete grátis para sua região. Condições exclusivas para construtoras e depósitos.',
+    h1: 'Fábrica de Argamassa Polimérica com Frete Grátis',
+    tagline: 'Economize do frete à aplicação. Adquira a melhor cola bloco do país direto da nossa fábrica com frete por nossa conta.',
+    problemDesc: 'Uma das maiores dores ao comprar cimento, argila ou tijolos online é se deparar com taxas de frete interestaduais gigantescas que duplicam o preço final do produto. Na logística convencional de pós cimentícios, o peso absurdo da carga faz com que caminhões tradicionais custem uma fortuna, elevando severamente o custo por metro quadrado da sua parede antes mesmo de iniciar o levantamento de fiadas.',
+    solDesc: 'A Hiperliga estabeleceu parcerias logísticas sensacionais e possui frotas especiais distribuídas de forma a oferecer Frete Grátis na entrega de Argamassa Polimérica para compras programadas, construtoras parceiras e distribuidores qualificados em diversas regiões metropolitanas. Como nosso produto rende até 20 vezes mais do que o pó de cimento comum, as caixas são compactas, o transporte é liso e o benefício do custo de entrega reduzido é repassado inteiramente como economia para o seu orçamento de obra.',
+    isProblemType: true
+  },
+  {
+    slug: 'preco-do-metro-quadrado-assentado-com-cola-bloco',
+    title: 'Preço do Metro Quadrado Assentado com Cola Bloco | Orçamento',
+    metaDesc: 'Compare o preço por m² de parede assentada com cola bloco Hiperliga contra a argamassa de cimento comum. Descubra a real economia na sua obra.',
+    h1: 'Preço do Metro Quadrado Assentado com Cola Bloco',
+    tagline: 'Não compre barulho, compre resultados. Veja a planilha comparativa real de custos integrados por m² de alvenaria.',
+    problemDesc: 'Muitos compradores de primeira viagem de obras focam exclusivamente no custo de face de um saco de cimento de 50kg, ignorando todas os agregados indiretos que ele exige. Para fazer a masa tradicional funcionar, você deve adicionar cal hidráulica, metros cúbicos de areia grossa lavada de caminhão, água limpa em abundância, energia de betoneira e aceitar uma perda de até 30% do material batido.',
+    solDesc: 'Ao calcular o custo total do metro quadrado de parede pronta concluída de fechamento, a Argamassa Polimérica Hiperliga revela-se extremamente mais barata de forma global. Por necessitar de apenas 1,5kg de gel por metro de parede de vedação cerâmica (tijolo baiano), o custo de material por metro quadrado é extraordinariamente competitivo. Somando a agilidade 3 vezes maior do pedreiro (redução em folha de pagamento diária), a taxa de perda zero por não ressecar e a ausência de fretes pesados, a economia global de toda a alveneria ultrapassa com facilidade 35%!',
+    isProblemType: true
+  },
+  {
+    slug: 'argamassa-polimerica-direto-da-fabrica-atacado',
+    title: 'Argamassa Polimérica Direto da Fábrica no Atacado | Melhores Preços',
+    metaDesc: 'Adquira argamassa polimérica Hiperliga no atacado direto de nossa fábrica. Condições corporativas excelentes para lojistas de construção civil.',
+    h1: 'Argamassa Polimérica Direto da Fábrica (Atacado)',
+    tagline: 'Seja parceiro oficial da marca de cola bloco que revoluciona as construções nacionais com alta margem de rentabilidade.',
+    problemDesc: 'Donos de depósitos e lojistas de materiais de construção civil frequentemente enfrentam margens comerciais espremidas devido a cadeias industriais de distribuição longas com muitos intermediários. Os custos de logística pesada regional de argamassas úmidas em sacos de pó reduzem o ganho comercial das lojas, tornando os negócios vulneráveis à concorrência agressiva.',
+    solDesc: 'A Hiperliga disponibiliza uma estrutura focada de atendimento a lojas varejistas, revendedores de blocos de concreto, condomínios corporativos e grandes empreiteiras imobiliárias com política dedicada de faturamento FOB/CIF direto da nossa linha fabril. Nosso modelo comercial propõe excelente estabilidade de preços, fardamento padrão de caixas unificadas prontas para prateleiras de lojas, fornecimento constante de panfletos operacionais e canais diretos para envio de laudos de MPAs estruturais aos construtores da região.',
+    isProblemType: true
+  },
+  {
+    slug: 'comprar-massa-pronta-para-assentamento-em-grande-quantidade',
+    title: 'Comprar Massa Pronta para Assentamento em Grande Quantidade',
+    metaDesc: 'Economize comprando massa pronta para assentamento em grande quantidade direto para sua obra. Condições comerciais exclusivas Hiperliga.',
+    h1: 'Comprar Massa Pronta para Assentamento em Grande Quantidade',
+    tagline: 'Garantia de suprimentos do baldrame à cumeeira. Descontos agressivos de fábrica para empreendimentos de alta performance.',
+    problemDesc: 'Comprar argamassa polimérica fracionada em depósitos locais à medida que as fiadas sobem é um convite certo a atrasos caros de obras por falta de produtos na prateleira da região. A paralisação da equipe em canteiros residenciais por apenas 48 horas devido a furos de abastecimento gera custos severos irreversíveis na folha trabalhista diária do construtor.',
+    solDesc: 'A Hiperliga estruturou um setor técnico corporativo exclusivo para fornecer e monitorar o fluxo de massa pronta coladora para obras volumosas, edifícios ou condomínios verticais de grande escala de blocos estruturais/vedação. Nossa fábrica programa e agenda remessas de entregas na sua obra de acordo com o cronograma real das fiadas de andares, oferecendo tabelas agressivas de preços de maior peso corporativo e garantindo que suas betoneiras e serventes permaneçam focados em outras etapas de rebocos.',
+    isProblemType: true
   }
 ];
 

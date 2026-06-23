@@ -243,7 +243,14 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span>CNPJ: 07.891.608/0001-00</span>
             <span>|</span>
-            <span>Desenvolvido com Tecnologia Sustentável</span>
+            <a 
+              href="https://wa.me/5515997118125?text=Estou%20entrando%20em%20contato%20pq%20gostei%20do%20site%20da%20*Hiperliga*" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-primary transition-colors"
+            >
+              Desenvolvido por Augusto Dev
+            </a>
           </div>
         </div>
 

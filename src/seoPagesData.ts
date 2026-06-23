@@ -2,6 +2,12 @@ import { generateAdditionalPages } from './seoPagesDataNew';
 import { generateSolutionsPages } from './seoPagesDataSolutions';
 import { generateFAQsPages } from './seoPagesDataFAQs';
 import { generateSalesPages } from './seoPagesDataSales';
+import { generateObjectionsPages } from './seoPagesDataObjections';
+import { generateApplicationPages } from './seoPagesDataApplication';
+import { generateTechnicalPages } from './seoPagesDataTechnical';
+import { generateLogisticsPages } from './seoPagesDataLogistics';
+import { generateComparativePages } from './seoPagesDataComparative';
+import { generateCommercialPages } from './seoPagesDataCommercial';
 
 export interface FAQItem {
   question: string;
@@ -373,5 +379,11 @@ export const SEO_PAGES_DATA: Record<string, SEOPageContent> = {
   ...generateAdditionalPages(),
   ...generateSolutionsPages(),
   ...generateFAQsPages(),
-  ...generateSalesPages()
+  ...generateSalesPages(),
+  ...generateObjectionsPages(),
+  ...generateApplicationPages(),
+  ...generateTechnicalPages(),
+  ...generateLogisticsPages(),
+  ...generateComparativePages(),
+  ...generateCommercialPages()
 };
