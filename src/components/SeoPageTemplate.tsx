@@ -14,7 +14,15 @@ import {
   Clock, 
   Trash2, 
   Award,
-  ChevronDown
+  ChevronDown,
+  Wrench,
+  TrendingDown,
+  Hammer,
+  RotateCcw,
+  BadgeAlert,
+  HelpCircle,
+  TrendingUp,
+  Boxes
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { SEOPageContent } from '../seoPagesData';
@@ -25,13 +33,110 @@ interface SeoPageTemplateProps {
   onNavigate: (path: string) => void;
 }
 
+interface ThemeConfig {
+  type: 'technical' | 'commercial' | 'application' | 'objection' | 'standard';
+  bodyBg: string;
+  headerBg: string;
+  badgeBg: string;
+  badgeBorder: string;
+  badgeText: string;
+  accentText: string;
+  accentBg: string;
+  primaryButton: string;
+  cardBg: string;
+  cardBorder: string;
+  heroGlow: string;
+}
+
+// Dynamically classify and assign styles based on path slug keywords to prevent search engine layout footprint penalties
+function getThemeBySlug(path: string): ThemeConfig {
+  const s = path.toLowerCase();
+  
+  if (s.includes('tecnico') || s.includes('mpa') || s.includes('resistencia') || s.includes('compressao') || s.includes('laudo') || s.includes('normas') || s.includes('ac2') || s.includes('estrutura') || s.includes('arrancamento') || s.includes('cimento')) {
+    return {
+      type: 'technical',
+      bodyBg: 'bg-slate-50 text-slate-800',
+      headerBg: 'bg-slate-900',
+      badgeBg: 'bg-blue-500/10',
+      badgeBorder: 'border-blue-500/30',
+      badgeText: 'text-blue-600 dark:text-blue-400',
+      accentText: 'text-blue-600',
+      accentBg: 'bg-blue-50',
+      primaryButton: 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-500/10',
+      cardBg: 'bg-white',
+      cardBorder: 'border-slate-200/90 hover:border-blue-300',
+      heroGlow: 'bg-blue-500/10'
+    };
+  } else if (s.includes('preco') || s.includes('comprar') || s.includes('fabrica') || s.includes('atacado') || s.includes('quantidade') || s.includes('frete') || s.includes('loja') || s.includes('rendimento') || s.includes('venda') || s.includes('estocar') || s.includes('espaco')) {
+    return {
+      type: 'commercial',
+      bodyBg: 'bg-[#faf8f5] text-stone-800',
+      headerBg: 'bg-stone-950',
+      badgeBg: 'bg-amber-600/10',
+      badgeBorder: 'border-amber-600/30',
+      badgeText: 'text-amber-800 dark:text-amber-400',
+      accentText: 'text-amber-700',
+      accentBg: 'bg-amber-50',
+      primaryButton: 'bg-amber-700 hover:bg-amber-800 text-white shadow-amber-600/10',
+      cardBg: 'bg-white',
+      cardBorder: 'border-stone-200 hover:border-amber-400',
+      heroGlow: 'bg-amber-500/10'
+    };
+  } else if (s.includes('como-') || s.includes('passo-') || s.includes('aplicar') || s.includes('assentar') || s.includes('fazer') || s.includes('uso') || s.includes('guias') || s.includes('massa-pronta') || s.includes('chapisco') || s.includes('reboco')) {
+    return {
+      type: 'application',
+      bodyBg: 'bg-[#f6faf8] text-slate-800',
+      headerBg: 'bg-emerald-950',
+      badgeBg: 'bg-emerald-600/15',
+      badgeBorder: 'border-emerald-600/30',
+      badgeText: 'text-emerald-800 dark:text-emerald-400',
+      accentText: 'text-emerald-700',
+      accentBg: 'bg-emerald-50',
+      primaryButton: 'bg-emerald-700 hover:bg-emerald-800 text-white shadow-emerald-600/10',
+      cardBg: 'bg-white',
+      cardBorder: 'border-emerald-100/90 hover:border-emerald-400',
+      heroGlow: 'bg-emerald-500/10'
+    };
+  } else if (s.includes('problema') || s.includes('se-chover') || s.includes('infiltracao') || s.includes('trinca') || s.includes('risco') || s.includes('duvida') || s.includes('obeco') || s.includes('mitos') || s.includes('rejeitar')) {
+    return {
+      type: 'objection',
+      bodyBg: 'bg-[#0f172a] text-slate-100', // Immersion Slate Dark Mode for Objections handle
+      headerBg: 'bg-slate-950 border-b border-slate-800',
+      badgeBg: 'bg-teal-500/15',
+      badgeBorder: 'border-teal-500/30',
+      badgeText: 'text-teal-400',
+      accentText: 'text-teal-400',
+      accentBg: 'bg-teal-950/30 border border-teal-800/40',
+      primaryButton: 'bg-teal-500 hover:bg-teal-600 text-slate-950 font-bold',
+      cardBg: 'bg-slate-800/60',
+      cardBorder: 'border-slate-700/60 hover:border-teal-500/60',
+      heroGlow: 'bg-teal-500/10'
+    };
+  } else {
+    return {
+      type: 'standard',
+      bodyBg: 'bg-white text-slate-900',
+      headerBg: 'bg-slate-900',
+      badgeBg: 'bg-emerald-500/10',
+      badgeBorder: 'border-emerald-500/30',
+      badgeText: 'text-primary',
+      accentText: 'text-primary',
+      accentBg: 'bg-emerald-50/50',
+      primaryButton: 'bg-primary hover:bg-primary-dark text-white',
+      cardBg: 'bg-white',
+      cardBorder: 'border-slate-200/80 hover:border-primary/50',
+      heroGlow: 'bg-emerald-500/10'
+    };
+  }
+}
+
 export function SeoPageTemplate({ data, onNavigate }: SeoPageTemplateProps) {
+  const { type, bodyBg, headerBg, badgeBg, badgeBorder, badgeText, accentText, accentBg, primaryButton, cardBg, cardBorder, heroGlow } = getThemeBySlug(data.path);
+
   // Page Meta & SEO Headers Injection on Mount
   useEffect(() => {
-    // 1. Title
     document.title = data.title;
 
-    // 2. Meta Description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
@@ -40,7 +145,6 @@ export function SeoPageTemplate({ data, onNavigate }: SeoPageTemplateProps) {
     }
     metaDesc.setAttribute('content', data.metaDescription);
 
-    // 3. Canonical Link
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
@@ -49,7 +153,7 @@ export function SeoPageTemplate({ data, onNavigate }: SeoPageTemplateProps) {
     }
     canonicalLink.setAttribute('href', data.canonical);
 
-    // 4. JSON-LD Dynamic Injection
+    // Dynamic JSON-LD injection
     const scriptId = 'seo-json-ld-script';
     let jsonLdScript = document.getElementById(scriptId) as HTMLScriptElement;
     if (jsonLdScript) {
@@ -117,22 +221,20 @@ export function SeoPageTemplate({ data, onNavigate }: SeoPageTemplateProps) {
     jsonLdScript.text = JSON.stringify(schemaObject);
     document.head.appendChild(jsonLdScript);
 
-    // Scroll to top on load
     window.scrollTo({ top: 0, behavior: 'instant' });
 
     return () => {
-      // Remove JSON-LD on unmount to keep clean DOM
       const targetScript = document.getElementById(scriptId);
       if (targetScript) targetScript.remove();
     };
   }, [data]);
 
-  // Dynamic Widget Calculator State
-  const [calcArea, setCalcArea] = useState<number>(80);
+  // Dynamic Calculator States
+  const [calcArea, setCalcArea] = useState<number>(100);
   const [selectedBlockId, setSelectedBlockId] = useState<string>('ceramic_8_hole');
   const selectedBlock = BLOCK_TYPES_DATA.find(b => b.id === selectedBlockId) || BLOCK_TYPES_DATA[0];
 
-  // Calculadora Express formulas
+  // Output yield equations
   const requiredKg = Number((calcArea * selectedBlock.consumptionPerSqm).toFixed(1));
   const bisnagas3kg = Math.ceil(requiredKg / 3);
   const barricas25kg = Math.ceil(requiredKg / 25);
@@ -140,591 +242,75 @@ export function SeoPageTemplate({ data, onNavigate }: SeoPageTemplateProps) {
   const timeSavedHours = Math.max(1, Math.round((calcArea * 0.8) - (calcArea * 0.25)));
   const weightSavedKg = Math.max(10, Math.round((calcArea * 23) - requiredKg));
 
-  // FAQ Expanded index state (rendered semantic, so always searchable, but visual toggling for nice UI)
-  const [expandedFaqIndex, setExpandedFaqIndex] = useState<number | null>(null);
+  // Financial calculations for Commercial pages highlight
+  const estimatedCostDiff = Math.max(140, Math.round(calcArea * 18.5));
 
-  // Conversion Button Texts
-  const ctaBtnTexts = [
+  // Accordion indices
+  const [expandedFaqIndex, setExpandedFaqIndex] = useState<number | null>(0); // Initialize first FAQ as expanded for helpful immediate rendering
+
+  // Buttons customization
+  const ctaTranslations = [
     'Comprar na Loja Oficial',
-    'Ver Produtos Hiperliga',
-    'Calcular Rendimento',
-    'Solicitar Orçamento',
-    'Ver Opções para Minha Obra'
+    'Simular Rendimento Completo',
+    'Garantir Desconto de Fábrica',
+    'Solicitar Orçamento Especial',
+    'Ver Promoções Ativas'
   ];
+  const getCtaText = (seed: number) => ctaTranslations[seed % ctaTranslations.length];
 
-  const getCtaText = (index: number) => ctaBtnTexts[index % ctaBtnTexts.length];
-
-  return (
-    <article className="min-h-screen bg-white text-slate-900 font-sans" id="seo-page-main-container">
-      {/* 1. Header/Navigation Anchor & Dynamic Rich Breadcrumbs */}
-      <div className="bg-slate-900 border-b border-slate-800 pt-24 pb-4 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <nav className="flex" aria-label="Breadcrumb" id="seo-breadcrumbs-nav">
-            <ol className="inline-flex items-center space-x-1 md:space-x-2 text-xs font-mono text-gray-400">
-              <li className="inline-flex items-center">
-                <button 
-                  onClick={() => onNavigate('/')}
-                  className="inline-flex items-center hover:text-primary transition-colors cursor-pointer text-slate-300 font-bold"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <div className="flex items-center">
-                  <ChevronRight className="w-3 h-3 text-gray-500 shrink-0 mx-1" />
-                  <span className="text-gray-400 font-medium">Soluções</span>
-                </div>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <ChevronRight className="w-3 h-3 text-gray-500 shrink-0 mx-1" />
-                  <span className="text-white font-bold truncate max-w-[200px] sm:max-w-xs">{data.h1.split('|')[0]}</span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-          <button 
-            onClick={() => onNavigate('/')}
-            className="text-xs font-mono text-primary font-bold hover:underline self-start md:self-center flex items-center gap-1.5 cursor-pointer"
-          >
-            ← Voltar para a Página Principal
-          </button>
-        </div>
+  // Helper markup components to maintain code modularity & cleaner DOM trees
+  const Breadcrumbs = () => (
+    <div className={`${headerBg} border-b border-white/5 pt-24 pb-4 px-4 sm:px-6 lg:px-8`}>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <nav className="flex" aria-label="Breadcrumb">
+          <ol className="inline-flex items-center space-x-1 md:space-x-2 text-xs font-mono text-gray-400">
+            <li>
+              <button 
+                onClick={() => onNavigate('/')}
+                className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-300 font-bold"
+              >
+                Home
+              </button>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-3 h-3 text-gray-600 shrink-0 mx-1" />
+              <span className="text-gray-400">Hub Técnico</span>
+            </li>
+            <li className="flex items-center" aria-current="page">
+              <ChevronRight className="w-3 h-3 text-gray-600 shrink-0 mx-1" />
+              <span className="text-white font-bold truncate max-w-[220px] sm:max-w-xs">{data.h1.split('|')[0]}</span>
+            </li>
+          </ol>
+        </nav>
+        <button 
+          onClick={() => onNavigate('/')}
+          className="text-xs font-mono text-emerald-400 font-bold hover:underline flex items-center gap-1 cursor-pointer"
+        >
+          ← Voltar ao Início
+        </button>
       </div>
+    </div>
+  );
 
-      {/* 2. PREMIUM HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950 text-white py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-        {/* Glow Spheres */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-10 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
+  const HeroSection = () => {
+    let badgeLabel = "Selo de Garantia Hiperliga";
+    if (type === 'technical') badgeLabel = "Laudo Técnico e Certificações";
+    if (type === 'commercial') badgeLabel = "Preços Especiais Direto de Fábrica";
+    if (type === 'application') badgeLabel = "Guia Operacional Prático";
+    if (type === 'objection') badgeLabel = "Esclarecimento de Mitos do Canteiro";
 
+    return (
+      <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900 text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+        <div className={`absolute top-0 right-0 w-96 h-96 ${heroGlow} rounded-full blur-[120px] pointer-events-none`} />
         <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
-          <span className="text-primary font-mono text-xs font-extrabold uppercase tracking-widest bg-primary/15 border border-primary/30 px-3.5 py-1.5 rounded-full inline-block">
-            Selo de Confiabilidade Construtiva
+          <span className={`font-mono text-[10px] sm:text-xs font-black uppercase tracking-wider ${badgeBg} border ${badgeBorder} ${badgeText} px-4 py-1.5 rounded-full inline-block`}>
+            {badgeLabel}
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight leading-tight max-w-4xl mx-auto text-white">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-display font-black tracking-tight leading-tight max-w-4xl mx-auto text-white">
             {data.h1}
           </h1>
-          <p className="text-slate-300 font-sans text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-slate-300 font-sans text-xs sm:text-base max-w-3xl mx-auto leading-relaxed">
             {data.tagline}
-          </p>
-
-          <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://loja.hiperliga.com.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-sans font-extrabold text-sm px-8 py-4.5 rounded-xl transition-all shadow-lg hover:-translate-y-0.5"
-              id="hero-cta-btn"
-            >
-              <ShoppingBag className="w-4 h-4" />
-              <span>{getCtaText(0)}</span>
-              <ArrowUpRight className="w-4 h-4 ml-1" />
-            </a>
-            <a
-              href="#calculadora-seo"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-100 font-sans font-semibold text-sm px-8 py-4.5 rounded-xl transition-all border border-slate-700"
-            >
-              <Calculator className="w-4 h-4" />
-              <span>{getCtaText(2)}</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. CORE CONTENT MODULE: PROBLEM VS SOLUTION (BENTO-STYLE GRID) */}
-      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-            
-            {/* The Problem Block */}
-            <div className="bg-slate-50 border border-slate-100 p-8 sm:p-10 rounded-3xl flex flex-col justify-between shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-2 h-full bg-red-500" />
-              <div>
-                <span className="text-red-500 font-mono text-[10px] tracking-wider uppercase font-bold bg-red-100 px-2 py-1 rounded">Análise de Campo</span>
-                <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-4 leading-tight">
-                  {data.problemTitle}
-                </h2>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-5">
-                  {data.problemDescription}
-                </p>
-              </div>
-              <div className="mt-8 pt-6 border-t border-slate-200/60 flex items-center gap-3 text-red-600 text-xs font-semibold">
-                <X className="w-4 h-4" />
-                <span>Método tradicional: Cansaço, desperdício mecânico e custos de manutenção pós-obra.</span>
-              </div>
-            </div>
-
-            {/* The Hiperliga Solution Block */}
-            <div className="bg-slate-950 border border-slate-900 p-8 sm:p-10 rounded-3xl flex flex-col justify-between shadow-xl relative overflow-hidden text-white">
-              <div className="absolute top-0 left-0 w-2 h-full bg-primary" />
-              <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-              <div>
-                <span className="text-primary font-mono text-[10px] tracking-wider uppercase font-extrabold bg-primary/15 px-2.5 py-1 rounded border border-primary/30">Ciência Aplicada</span>
-                <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white mt-4 leading-tight">
-                  {data.solutionTitle}
-                </h2>
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-5">
-                  {data.solutionDescription}
-                </p>
-              </div>
-              <div className="mt-8 pt-6 border-t border-white/5 flex items-center gap-3 text-primary text-xs font-bold">
-                <Check className="w-4 h-4 text-emerald-400" />
-                <span>Modernidade Hiperliga: Pronto para uso, alto rendimento físico e aderência máxima de ancoragem.</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 4. PRACTICAL BENEFITS LISTING */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <span className="text-primary font-mono text-xs font-extrabold uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
-            Vantagens Operacionais
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-slate-900 mt-4 tracking-tight">
-            Por que trocar o cimento por Hiperliga?
-          </h2>
-          <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto mt-2 mb-12">
-            Métricas de desempenho reais comprovadas em ensaios laboratoriais e obras de incorporações de grande porte.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {data.benefits.map((benefit, idx) => (
-              <div 
-                key={idx}
-                className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col justify-between text-left group hover:border-primary transition-all duration-300"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-base mb-4 shrink-0 font-mono">
-                    0{idx + 1}
-                  </div>
-                  <h3 className="font-display font-bold text-slate-900 text-base mb-2 group-hover:text-primary transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 font-sans text-xs sm:text-sm leading-relaxed">
-                    {benefit.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. COMPARATIVE MATRIX (TABLE) */}
-      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center mb-12">
-          <span className="text-primary font-mono text-xs font-extrabold uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
-            Métricas Técnico-Financeiras
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-4">
-            Comparativo de Desempenho Construtivo
-          </h2>
-        </div>
-
-        <div className="max-w-4xl mx-auto border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-left text-sm font-sans">
-              <thead>
-                <tr className="bg-slate-900 text-white font-display border-b border-slate-800 text-xs tracking-wider uppercase font-bold">
-                  <th className="p-4 sm:p-5">Critério de Avaliação</th>
-                  <th className="p-4 sm:p-5">Método Tradicional (Cimento/Areia)</th>
-                  <th className="p-4 sm:p-5 text-primary">Argamassa Polimérica Hiperliga</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 text-slate-700 bg-white text-xs sm:text-sm">
-                <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-slate-900">Velocidade de assentamento</td>
-                  <td className="p-4 sm:p-5">Até 400 blocos por pedreiro/dia</td>
-                  <td className="p-4 sm:p-5 font-semibold text-emerald-600 bg-emerald-50/20">Até 1.500 blocos por pedreiro/dia</td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-slate-900">Desperdício de massa no chão</td>
-                  <td className="p-4 sm:p-5">Entre 20% e 25% de quebra nas masseiras</td>
-                  <td className="p-4 sm:p-5 font-semibold text-emerald-600 bg-emerald-50/20">Aproximadamente 0% (direto no bloco)</td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-slate-900">Peso aplicado à estrutura</td>
-                  <td className="p-4 sm:p-5">~23 kg por metro quadrado de alvenaria</td>
-                  <td className="p-4 sm:p-5 font-semibold text-emerald-600 bg-emerald-50/20">~1.5 kg por metro quadrado de alvenaria</td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-slate-900">Água e Energia no canteiro</td>
-                  <td className="p-4 sm:p-5">Abastecimento frequente de betoneiras</td>
-                  <td className="p-4 sm:p-5 font-semibold text-emerald-600 bg-emerald-50/20">Zero consumo. Produto pré-misturado</td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-slate-900">Espessura média de junta</td>
-                  <td className="p-4 sm:p-5 font-semibold">1,5 cm a 2,0 cm de vão grosseiro</td>
-                  <td className="p-4 sm:p-5 font-semibold text-emerald-600 bg-emerald-50/20">2 mm a 3 mm de união colada microfina</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. WHEN TO USE & WHEN NOT TO USE OR SAFETY MEASURES */}
-      <section className="py-20 bg-slate-950 text-white px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Decorative Grid vector in dark bg */}
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/5 to-transparent opacity-10 pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            {/* When to use block */}
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-lg border border-emerald-500/20 font-mono text-xs uppercase font-extrabold">
-                <Check className="w-3.5 h-3.5" />
-                <span>Recomendado & Indicado</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white">
-                Situações ideais: Quando usar?
-              </h2>
-              <p className="text-gray-400 text-sm">
-                Economize custos operacionais nos seguintes vãos estruturais e obras autorizadas:
-              </p>
-              <ul className="space-y-3.5 pt-2" id="seo-when-to-use-list">
-                {data.whenToUse.map((it, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-200 text-xs sm:text-sm">
-                    <span className="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
-                    <span>{it}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* When not to use / safety measures */}
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-500/10 text-red-400 rounded-lg border border-red-500/20 font-mono text-xs uppercase font-extrabold">
-                <Info className="w-3.5 h-3.5" />
-                <span>Restrições & Cuidados</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white">
-                Quando NÃO usar e cuidados essenciais
-              </h2>
-              <p className="text-gray-400 text-sm">
-                Garantir a integridade da parede exige seguir de forma ética as limitações técnicas e normativas:
-              </p>
-              <ul className="space-y-3.5 pt-2" id="seo-when-not-to-use-list">
-                {data.whenNotToUse.map((it, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-200 text-xs sm:text-sm">
-                    <span className="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
-                    <span>{it}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 7. STEP-BY-STEP APPLICATION GUIDE */}
-      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center mb-16">
-          <span className="text-primary font-mono text-xs font-extrabold uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
-            Procedimento Operacional
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-slate-900 mt-4 leading-tight">
-            Passo a passo de aplicação correto
-          </h2>
-          <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto mt-2">
-            Seguir os passos corretos garante estanqueidade, aprumo, ancoragem física total e conformidade técnica no canteiro.
-          </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {data.steps.map((step, idx) => (
-            <div key={idx} className="relative group text-left">
-              {/* Connector line for large screens */}
-              {idx < 3 && (
-                <div className="hidden lg:block absolute top-7 left-full w-full h-[1.5px] bg-slate-200 -translate-x-4 z-0" />
-              )}
-              
-              <div className="relative z-10 space-y-4">
-                <div className="w-14 h-14 rounded-2xl bg-slate-900 text-white font-mono font-black text-xl flex items-center justify-center shadow-md relative outline-offset-4 outline-slate-100 group-hover:bg-primary transition-colors">
-                  {step.step}
-                </div>
-                <h3 className="font-display font-bold text-slate-900 text-base leading-snug">
-                  {step.title}
-                </h3>
-                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 8. DYNAMIC CALCULATOR WIDGET FOR COMPATIBLE PAGES */}
-      <section 
-        id="calculadora-seo" 
-        className="py-20 bg-slate-50 border-t border-b border-slate-200/60 px-4 sm:px-6 lg:px-8"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-            
-            {/* Controls Block left */}
-            <div className="lg:col-span-5 bg-white border border-slate-200/80 p-6 sm:p-8 rounded-3xl flex flex-col justify-between shadow-xs">
-              <div className="space-y-6">
-                <div>
-                  <span className="text-primary font-mono text-[10px] tracking-wider uppercase font-bold bg-primary/10 px-2.5 py-1 rounded">Mecanismo de Métricas</span>
-                  <h3 className="text-xl sm:text-2xl font-display font-extrabold text-slate-900 mt-3">
-                    {data.calculatorTitle}
-                  </h3>
-                  <p className="text-gray-500 text-xs mt-1.5 leading-relaxed">
-                    Insira as dimensões estimadas de alvenaria para saber exatamente quanto comprar da fábrica, economizando em excesso e sobras de armazém.
-                  </p>
-                </div>
-
-                {/* Range Slider Area */}
-                <div className="space-y-2">
-                  <label htmlFor="seo-calc-area" className="text-xs sm:text-sm font-semibold text-slate-800 flex justify-between pr-1">
-                    <span>Área total de paredes (vedação)</span>
-                    <strong className="text-primary font-mono font-extrabold bg-primary/10 px-2 py-0.5 rounded text-sm shrink-0">
-                      {calcArea} m²
-                    </strong>
-                  </label>
-                  <input
-                    type="range"
-                    min="10"
-                    max="600"
-                    value={calcArea}
-                    onChange={(e) => setCalcArea(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-primary"
-                    id="seo-calc-area"
-                  />
-                  <div className="flex gap-2.5 mt-2 justify-between flex-wrap">
-                    {[30, 60, 100, 200, 350].map((val) => (
-                      <button
-                        key={val}
-                        onClick={() => setCalcArea(val)}
-                        className={`px-3 py-1 rounded font-mono text-[10px] border transition-colors cursor-pointer ${
-                          calcArea === val 
-                            ? 'bg-slate-900 text-white border-slate-900' 
-                            : 'bg-white text-slate-500 hover:bg-slate-50 border-slate-200'
-                        }`}
-                      >
-                        {val} m²
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Block select control */}
-                <div className="space-y-2">
-                  <label className="text-xs font-semibold text-slate-800">Tipo de Tijolo / Bloco a utilizar</label>
-                  <select
-                    value={selectedBlockId}
-                    onChange={(e) => setSelectedBlockId(e.target.value)}
-                    className="w-full border border-slate-200 bg-slate-50 rounded-xl px-3 py-3 text-xs sm:text-sm font-semibold text-slate-800 focus:outline-primary cursor-pointer"
-                  >
-                    {BLOCK_TYPES_DATA.map((block) => (
-                      <option key={block.id} value={block.id}>
-                        {block.name} (consumo: {block.consumptionPerSqm} kg/m²)
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              {/* Legal note */}
-              <div className="mt-8 bg-slate-50 border border-slate-100 p-4 rounded-xl flex items-start gap-2.5 text-[10px] text-gray-500">
-                <Info className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                <p>
-                  *O rendimento médio de 1,5 kg/m² é baseado em blocos perfeitamente homogêneos. Blocos quebrados ou com variações no tamanho podem gastar mais argamassa.
-                </p>
-              </div>
-            </div>
-
-            {/* Results Block right */}
-            <div className="lg:col-span-7 bg-slate-950 text-white p-6 sm:p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden border border-slate-900 shadow-xl">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
-
-              <div className="space-y-6">
-                <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                  <div>
-                    <h4 className="text-white font-display font-extrabold text-sm sm:text-base">Métricas sugeridas pela Engenharia</h4>
-                    <span className="text-gray-400 font-mono text-[9px] tracking-wide uppercase">CÁLCULO PARA PAREDES DE {calcArea} M²</span>
-                  </div>
-                  <span className="bg-primary/20 border border-primary/30 text-primary font-mono text-[9px] font-black px-2 py-0.5 rounded uppercase">Consumo Estimado</span>
-                </div>
-
-                {/* Main numbers callout */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-white/5 border border-white/10 p-5 rounded-2xl">
-                    <span className="text-primary font-mono text-[9px] tracking-wider uppercase block">Volume do Produto</span>
-                    <div className="flex items-baseline gap-1 mt-1">
-                      <span className="text-3xl font-display font-black text-white">{requiredKg}</span>
-                      <span className="text-lg font-display text-gray-400">Kilogramas</span>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/5 border border-white/10 p-5 rounded-2xl flex flex-col justify-between">
-                    <span className="text-emerald-400 font-mono text-[9px] tracking-wider uppercase block">Tempo de Mão de Obra Salvo</span>
-                    <div className="flex items-baseline gap-1 mt-1">
-                      <span className="text-3xl font-display font-black text-emerald-400">~{timeSavedHours}</span>
-                      <span className="text-lg font-display text-emerald-500">Horas</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Dynamic Package Options mapping */}
-                <div className="space-y-3 pt-2">
-                  <span className="text-slate-400 font-mono text-[9px] tracking-widest uppercase block">Volume de embalagens para a compra:</span>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    
-                    <div className="bg-white/5 border border-white/10 p-3.5 rounded-xl text-left">
-                      <span className="text-[10px] text-zinc-400 font-mono block">BISNAGA 3KG</span>
-                      <strong className="text-base font-display text-white mt-1 block">{bisnagas3kg} bisnagas</strong>
-                    </div>
-
-                    <div className="bg-white/5 border border-white/10 p-3.5 rounded-xl text-left">
-                      <span className="text-[10px] text-zinc-400 font-mono block">BARRICA 25KG</span>
-                      <strong className="text-base font-display text-white mt-1 block">{barricas25kg} barricas</strong>
-                    </div>
-
-                    <div className="bg-white/5 border border-white/10 p-3.5 rounded-xl text-left">
-                      <span className="text-[10px] text-zinc-400 font-mono block">BARRICA 40KG</span>
-                      <strong className="text-base font-display text-white mt-1 block">{barricas40kg} barricas</strong>
-                    </div>
-
-                  </div>
-                </div>
-
-                {/* Physical benefits saved */}
-                <div className="border-t border-white/5 pt-4 flex items-center justify-between text-xs sm:text-sm text-gray-400">
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-primary shrink-0" />
-                    <span>Conclusão em 1/3 do tempo</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <Trash2 className="w-4 h-4 text-red-400 shrink-0" />
-                    <span>-{weightSavedKg.toLocaleString('pt-BR')} kg de entulho no chão</span>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Button Action CTA */}
-              <div className="mt-8 pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center gap-4">
-                <a
-                  href="https://loja.hiperliga.com.br/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-sans font-bold text-xs sm:text-sm px-6 py-4 rounded-xl transition-all shadow-md cursor-pointer"
-                  id="seo-calc-cta-shop-btn"
-                >
-                  <ShoppingBag className="w-4 h-4" />
-                  <span>{getCtaText(1)}</span>
-                </a>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 9. BRAND AUTHORITY */}
-      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center mb-16">
-          <span className="text-primary font-mono text-xs font-extrabold uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
-            Autoridade & Confiança Industrial
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-slate-900 mt-4 leading-tight">
-            Tecnologia Brasileira com Garantia Industrial
-          </h2>
-          <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto mt-2">
-            Somos pioneiros na produção e distribuição de argamassa polimérica de alta aderência, com laboratório próprio de controle de qualidade e engenharia ativa.
-          </p>
-        </div>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-slate-50 border border-slate-100 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
-            <Award className="w-10 h-10 text-primary shrink-0" />
-            <h3 className="font-display font-bold text-lg text-slate-900 mt-4 mb-2">Padrão ISO e IPT</h3>
-            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Todos os lotes de resinas acrílicas que saem de nosso parque industrial passam por rigorosos ensaios de densidade e arrancamento de tração simulados em prensa hidráulica calibrada.
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-100 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
-            <ShieldCheck className="w-10 h-10 text-primary shrink-0" />
-            <h3 className="font-display font-bold text-lg text-slate-900 mt-4 mb-2">Desempenho Comprovado</h3>
-            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Utilizado por dezenas de grandes construtoras e empreiteiras em edifícios de múltiplos pavimentos ao redor do país, comprovando a alta segurança térmica e estabilidade construtiva de vedação.
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-100 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
-            <Layers className="w-10 h-10 text-primary shrink-0" />
-            <h3 className="font-display font-bold text-lg text-slate-900 mt-4 mb-2">Pronto para Grandes Obras</h3>
-            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Fornecemos em barricas de 40 kg com bicos sobressalentes ou sob a forma de paletes para descarga mecanizada ágil, perfeitamente integrados ao cronograma de suprimentos da engenharia.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 10. GOOGLE RICH FAQ ACCORDION SECTION (STATIC BUT INTERACTIVE DETAILS) */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200/60 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-primary font-mono text-xs font-extrabold uppercase tracking-widest bg-primary/10 px-3.5 py-1.5 rounded-full inline-block">
-              Perguntas Frequentes do Tema
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 mt-4">
-              Dúvidas Técnicas Esclarecidas
-            </h2>
-            <p className="text-gray-500 text-xs sm:text-sm max-w-xl mx-auto mt-2">
-              Informações transparentes e realistas da nossa equipe de engenharia para você planejar seu projeto com total confiança física e financeira.
-            </p>
-          </div>
-
-          {/* FAQ with details tag for perfect SEO crawling */}
-          <div className="space-y-4" id="seo-page-faq-accordion-container">
-            {data.faq.map((it, i) => (
-              <details 
-                key={i} 
-                className="bg-white border border-slate-200 rounded-xl overflow-hidden group shadow-2"
-                open={expandedFaqIndex === i}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setExpandedFaqIndex(expandedFaqIndex === i ? null : i);
-                }}
-              >
-                <summary className="p-4 sm:p-5 font-display font-bold text-sm sm:text-base text-slate-900 flex justify-between items-center cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
-                  <span>{it.question}</span>
-                  <span className="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center font-bold text-slate-400 group-hover:bg-primary group-hover:text-white transition-all transform group-open:rotate-180">
-                    <ChevronDown className="w-4 h-4" />
-                  </span>
-                </summary>
-                <div className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 border-t border-slate-50 leading-relaxed font-sans">
-                  {it.answer}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 11. MID & FINAL CTA (HIGH CONVERSION INTERMEDIARY BLOCKS) */}
-      <section className="py-20 bg-slate-900 text-white text-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Glow Spheres */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto space-y-6 relative z-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-black text-white uppercase tracking-tight">
-            Pronto para revolucionar as alvenarias da sua obra?
-          </h2>
-          <p className="text-gray-300 font-sans text-sm sm:text-base max-w-2xl mx-auto">
-            Experimente a praticidade original do bico aplicador da bisnaga de 3kg ou compre em escala as barricas estruturais de 25kg e 40kg na nossa Loja de Fábrica Online.
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -732,45 +318,652 @@ export function SeoPageTemplate({ data, onNavigate }: SeoPageTemplateProps) {
               href="https://loja.hiperliga.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-sans font-extrabold text-sm px-8 py-4.5 rounded-xl transition-all shadow-md cursor-pointer"
-              id="final-cta-btn"
+              className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 ${primaryButton} font-sans font-bold text-xs sm:text-sm px-8 py-3.5 rounded-xl transition-all shadow-md hover:-translate-y-0.5`}
             >
               <ShoppingBag className="w-4 h-4" />
-              <span>{getCtaText(3)}</span>
+              <span>{getCtaText(0)}</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
             <a
-              href="https://wa.me/554188883365"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-100 font-sans font-semibold text-sm px-8 py-4.5 rounded-xl transition-all border border-slate-700"
+              href="#estimativa-rendimento"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-100 font-sans font-medium text-xs sm:text-sm px-6 py-3.5 rounded-xl transition-all border border-slate-700"
             >
-              <span>Falar com Assessor Tecnico</span>
+              <Calculator className="w-4 h-4" />
+              <span>Simular Meu Rendimento</span>
             </a>
           </div>
         </div>
       </section>
+    );
+  };
 
-      {/* 12. INTERNAL RELATED LINKS WRAPPER */}
-      <section className="py-12 bg-white border-t border-slate-100 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-left space-y-4">
-          <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">Páginas Relacionadas e Guias Úteis:</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4" id="seo-related-internal-links">
-            {data.relatedLinks.map((link, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  onNavigate(link.href);
-                }}
-                className="p-4 rounded-xl border border-slate-200/70 hover:border-primary bg-slate-50 text-slate-800 hover:text-black transition-all text-xs font-semibold text-left flex items-center justify-between group cursor-pointer"
-              >
-                <span>{link.label}</span>
-                <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary transition-colors shrink-0" />
-              </button>
-            ))}
+  const ProblemSolutionGrid = () => {
+    // Customize text slightly contextually inside the boxes for some extra variety
+    const isObjection = type === 'objection';
+
+    return (
+      <section className="py-16 bg-transparent px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            
+            {/* The Problem/Myth Block */}
+            <div className={`${cardBg} border ${cardBorder} p-8 rounded-3xl flex flex-col justify-between shadow-xs relative overflow-hidden transition-all duration-300`}>
+              <div className="absolute top-0 left-0 w-2 h-full bg-red-500" />
+              <div>
+                <span className="text-red-500 font-mono text-[9px] tracking-wider uppercase font-bold bg-red-100 dark:bg-red-950/40 px-2 py-0.5 rounded">
+                  {isObjection ? 'Dúvida Comum / Mito Inicial' : 'Obstáculo Tradicional'}
+                </span>
+                <h2 className={`text-xl sm:text-2xl font-display font-extrabold mt-4 leading-tight ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+                  {data.problemTitle}
+                </h2>
+                <p className={`text-xs sm:text-sm leading-relaxed mt-4 ${type === 'objection' ? 'text-slate-300' : 'text-slate-600'}`}>
+                  {data.problemDescription}
+                </p>
+              </div>
+              <div className="mt-8 pt-6 border-t border-slate-200/50 dark:border-slate-800 flex items-center gap-2 text-red-500 text-xs font-semibold">
+                <X className="w-4 h-4 shrink-0" />
+                <span>Impacto: Desperdício de tempo faturado, perdas materiais e dores logísticas.</span>
+              </div>
+            </div>
+
+            {/* The Solution/Truth Block */}
+            <div className="bg-slate-950 border border-slate-900 p-8 rounded-3xl flex flex-col justify-between shadow-lg relative overflow-hidden text-white">
+              <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500" />
+              <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+              <div>
+                <span className="text-emerald-400 font-mono text-[9px] tracking-wider uppercase font-extrabold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                  {isObjection ? 'Fato Científico Comprovado' : 'Solução Polimérica Hiperliga'}
+                </span>
+                <h2 className="text-xl sm:text-2xl font-display font-extrabold text-white mt-4 leading-tight">
+                  {data.solutionTitle}
+                </h2>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mt-4">
+                  {data.solutionDescription}
+                </p>
+              </div>
+              <div className="mt-8 pt-6 border-t border-white/5 flex items-center gap-2 text-emerald-400 text-xs font-bold">
+                <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Resultado: Colagem segura, prumo garantido e obra até 3x mais limpa.</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
+    );
+  };
+
+  const BenefitsGrid = () => (
+    <section className="py-16 bg-slate-100/40 dark:bg-slate-900/60 border-y border-slate-200/40 dark:border-slate-800 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto text-center">
+        <span className={`font-mono text-[10px] tracking-widest uppercase font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 px-3 py-1.5 rounded-full inline-block`}>
+          Vantagens de Alto Impacto
+        </span>
+        <h2 className={`text-2xl sm:text-3xl font-display font-black mt-4 max-w-xl mx-auto tracking-tight ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+          Por que profissionais preferem a Hiperliga?
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 text-left">
+          {data.benefits.map((benefit, idx) => (
+            <div 
+              key={idx}
+              className={`${cardBg} ${cardBorder} p-6 rounded-2xl shadow-xs border flex flex-col justify-between group transition-all duration-300`}
+            >
+              <div>
+                <span className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs font-mono mb-4">
+                  0{idx + 1}
+                </span>
+                <h3 className={`font-display font-bold text-base mb-2 group-hover:text-emerald-500 transition-colors ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+                  {benefit.title}
+                </h3>
+                <p className={`font-sans text-xs sm:text-sm leading-relaxed ${type === 'objection' ? 'text-slate-300' : 'text-gray-600'}`}>
+                  {benefit.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  const ComparativeTable = () => (
+    <section className="py-16 bg-transparent px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-10">
+          <span className="font-mono text-[9px] tracking-wider uppercase font-bold bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded">
+            Análise Operacional de Canteiro
+          </span>
+          <h2 className={`text-2xl font-display font-bold mt-2 ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+            Comparação Direta: Tradicional vs Hiperliga
+          </h2>
+        </div>
+
+        <div className="border border-slate-200/80 dark:border-slate-800 rounded-2xl overflow-hidden shadow-xs">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs sm:text-sm font-sans">
+              <thead>
+                <tr className="bg-slate-900 text-white font-display text-[10px] tracking-wider uppercase">
+                  <th className="p-4">Índice Comparado</th>
+                  <th className="p-4">Argamassa de Cal e Pó</th>
+                  <th className="p-4 text-emerald-400">Polimérica Hiperliga</th>
+                </tr>
+              </thead>
+              <tbody className={`divide-y divide-slate-100 dark:divide-slate-800 ${type === 'objection' ? 'bg-slate-900/40 text-slate-300' : 'bg-white text-slate-700'}`}>
+                <tr>
+                  <td className="p-4 font-semibold text-emerald-500">Massa por m² levantado</td>
+                  <td className="p-4">Até 35 kg / m²</td>
+                  <td className="p-4 font-bold text-emerald-600 bg-emerald-500/5">Apenas 1,5 kg a 2,0 kg</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-emerald-500">Velocidade de Processamento</td>
+                  <td className="p-4">Lento (exige betoneira)</td>
+                  <td className="p-4 font-bold text-emerald-600 bg-emerald-500/5">Instantâneo (bisnagas prontas)</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-emerald-500">Entulho e Perda Seca</td>
+                  <td className="p-4">Cerca de 20% de perda no chão</td>
+                  <td className="p-4 font-bold text-emerald-600 bg-emerald-500/5">Praticamente 0% desperdiçado</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-emerald-500">Espessura da Junta Coberta</td>
+                  <td className="p-4">Espessa (1,5 cm a 2,0 cm)</td>
+                  <td className="p-4 font-bold text-emerald-600 bg-emerald-500/5">Fina (2 mm a 3 mm)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+  const UsageMeasures = () => (
+    <section className="py-16 bg-slate-950 text-white px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/5 to-transparent opacity-10 pointer-events-none" />
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/10 text-emerald-400 rounded-lg border border-emerald-500/20 font-mono text-[9px] uppercase font-bold">
+              <Check className="w-3.5 h-3.5 shrink-0" />
+              <span>Onde se Consagra</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-display font-black text-white">
+              Aplicações e Cenários Recomendados
+            </h2>
+            <ul className="space-y-3 pt-2">
+              {data.whenToUse.map((it, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-slate-300 text-xs sm:text-sm">
+                  <span className="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span>{it}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/10 text-amber-400 rounded-lg border border-amber-500/20 font-mono text-[9px] uppercase font-bold">
+              <Info className="w-3.5 h-3.5 shrink-0" />
+              <span>Limitações e Cuidados</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl font-display font-black text-white">
+              Onde NÃO aplicar e advertências
+            </h2>
+            <ul className="space-y-3 pt-2">
+              {data.whenNotToUse.map((it, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-slate-300 text-xs sm:text-sm">
+                  <span className="w-5 h-5 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✕</span>
+                  <span>{it}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+
+  const StepByStepGuide = () => {
+    // Determine card structure for Application Guide pages to ensure unique layouts
+    const isApplication = type === 'application';
+
+    return (
+      <section className="py-16 bg-transparent px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <span className="font-mono text-[9px] tracking-widest uppercase font-bold bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded">
+            Manual de Boas Práticas
+          </span>
+          <h2 className={`text-2xl font-display font-bold mt-2 ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+            Procedimento Correto de Aplicação
+          </h2>
+          <p className="text-gray-500 text-xs sm:text-sm mt-1 max-w-lg mx-auto">
+            Siga estas diretrizes do laboratório de engenharia para atingir a resistência de colagem ideal especificada.
+          </p>
+        </div>
+
+        {isApplication ? (
+          // Creative Alternating Bento-Style list for application guides
+          <div className="max-w-3xl mx-auto space-y-6">
+            {data.steps.map((step, idx) => (
+              <div 
+                key={idx} 
+                className="flex flex-col sm:flex-row gap-6 bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-emerald-100 hover:border-emerald-400 transition-all shadow-xs"
+              >
+                <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white font-mono font-black text-xl flex items-center justify-center shrink-0">
+                  {step.step}
+                </div>
+                <div className="space-y-1.5">
+                  <h4 className="font-display font-extrabold text-base text-slate-900 dark:text-white">{step.title}</h4>
+                  <p className="text-slate-500 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          // Clean Horizontal Columns for standard technical listings
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+            {data.steps.map((step, idx) => (
+              <div key={idx} className="relative z-10 space-y-3 p-4 bg-white/50 rounded-xl border border-slate-100 dark:border-slate-800">
+                <div className="w-10 h-10 rounded-lg bg-slate-950 text-white font-mono font-black text-sm flex items-center justify-center">
+                  {step.step}
+                </div>
+                <h3 className={`font-display font-bold text-sm ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+                  {step.title}
+                </h3>
+                <p className="text-gray-500 text-xs leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  };
+
+  const EstimatorCalculatorWidget = () => (
+    <section 
+      id="estimativa-rendimento" 
+      className="py-16 bg-slate-100/60 dark:bg-slate-950 border-t border-b border-slate-200/50 dark:border-slate-900 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          {/* Controls column */}
+          <div className="lg:col-span-5 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-6 sm:p-8 rounded-3xl flex flex-col justify-between shadow-xs">
+            <div className="space-y-6">
+              <div>
+                <span className="text-emerald-600 font-mono text-[9px] tracking-wider uppercase font-bold bg-emerald-50 px-2 py-0.5 rounded">
+                  Simulação de Demanda
+                </span>
+                <h3 className="text-lg sm:text-2xl font-display font-black text-slate-950 dark:text-white mt-1">
+                  {data.calculatorTitle}
+                </h3>
+                <p className="text-gray-500 text-xs leading-relaxed mt-1">
+                  Estime o rendimento de bisnagas ou barricas de cola de forma totalmente customizada de acordo com a metragem da sua alvenaria de tijolos.
+                </p>
+              </div>
+
+              {/* Slider area */}
+              <div className="space-y-2">
+                <label htmlFor="area-slider" className="text-xs font-semibold text-slate-800 dark:text-slate-200 flex justify-between">
+                  <span>Metragem total da parede</span>
+                  <strong className="text-emerald-700 dark:text-emerald-300 font-mono bg-emerald-100 dark:bg-emerald-950 px-2 py-0.5 rounded text-xs">
+                    {calcArea} m²
+                  </strong>
+                </label>
+                <input
+                  id="area-slider"
+                  type="range"
+                  min="5"
+                  max="500"
+                  value={calcArea}
+                  onChange={(e) => setCalcArea(Number(e.target.value))}
+                  className="w-full h-1 bg-slate-200 rounded appearance-none cursor-pointer accent-emerald-600"
+                />
+                <div className="flex gap-2 justify-between flex-wrap">
+                  {[20, 50, 100, 200, 400].map((val) => (
+                    <button
+                      key={val}
+                      onClick={() => setCalcArea(val)}
+                      className={`px-2 py-0.5 rounded font-mono text-[9px] border transition-colors cursor-pointer ${
+                        calcArea === val 
+                          ? 'bg-emerald-600 text-white border-emerald-600' 
+                          : 'bg-white text-slate-500 hover:bg-slate-100 border-slate-200'
+                      }`}
+                    >
+                      {val} m²
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Selector */}
+              <div className="space-y-1.5">
+                <label htmlFor="block-selector" className="text-xs font-medium text-slate-700 dark:text-slate-300">Formato / Formato do Bloco</label>
+                <select
+                  id="block-selector"
+                  value={selectedBlockId}
+                  onChange={(e) => setSelectedBlockId(e.target.value)}
+                  className="w-full border border-slate-200 bg-slate-50 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-emerald-600 cursor-pointer"
+                >
+                  {BLOCK_TYPES_DATA.map((block) => (
+                    <option key={block.id} value={block.id}>
+                      {block.name} (consumo: {block.consumptionPerSqm} kg/m²)
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Micro disclaimer */}
+            <div className="mt-6 bg-slate-50 border border-slate-100 p-3.5 rounded-lg flex gap-2 text-[10px] text-gray-500">
+              <Info className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <p>
+                *Rendimento ideal baseado em blocos limpos, sem quebras grosseiras nas frentes de assentamento das fiadas.
+              </p>
+            </div>
+          </div>
+
+          {/* Results column */}
+          <div className="lg:col-span-12 xl:col-span-7 bg-slate-950 text-white p-6 sm:p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden border border-slate-900 shadow-xl">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
+
+            <div className="space-y-6 relative z-10">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                <div>
+                  <h4 className="text-white font-display font-medium text-xs sm:text-sm">Consumo Estimado Técnico</h4>
+                  <span className="text-gray-400 font-mono text-[9px]">CÁLCULO ATUALIZADO</span>
+                </div>
+                <span className="bg-emerald-500/20 text-emerald-400 font-mono text-[9px] px-2 py-0.5 rounded">
+                  Economia Gerada
+                </span>
+              </div>
+
+              {/* Displaying numbers */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-white/5 border border-white/5 p-4 rounded-xl">
+                  <span className="text-slate-400 font-mono text-[9px] uppercase tracking-wider block">Peso Estimado Total</span>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className="text-2xl font-display font-black text-emerald-400">{requiredKg}</span>
+                    <span className="text-sm font-display text-gray-400">Kilogramas</span>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 border border-white/5 p-4 rounded-xl">
+                  <span className="text-emerald-400 font-mono text-[9px] uppercase tracking-wider block">Tempo de Mão de Obra Salvo</span>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className="text-2xl font-display font-black text-white">~{timeSavedHours}</span>
+                    <span className="text-sm text-gray-400">Horas Úteis</span>
+                  </div>
+                </div>
+              </div>
+
+              {type === 'commercial' && (
+                // Extra custom visual element specifically for commercial intents
+                <div className="bg-emerald-950/20 border border-emerald-500/30 p-4 rounded-xl flex items-center justify-between text-left">
+                  <div className="space-y-0.5">
+                    <span className="text-emerald-400 font-mono text-[9px] font-bold block uppercase">Preço / Payback Total Estimado</span>
+                    <h5 className="text-white font-display font-bold text-sm">Economia financeira direta estimada:</h5>
+                    <p className="text-slate-300 text-[11px]">Substituindo masseiras tradicionais no canteiro.</p>
+                  </div>
+                  <strong className="text-emerald-400 font-display text-lg sm:text-xl font-black bg-emerald-500/10 px-3 py-1.5 rounded-lg shrink-0">
+                    ~ R$ {estimatedCostDiff.toLocaleString('pt-BR')}
+                  </strong>
+                </div>
+              )}
+
+              {/* Package quantities mapping */}
+              <div className="space-y-3 pt-2">
+                <span className="text-slate-400 font-mono text-[9px] tracking-wider uppercase block">Embalagens recomendadas:</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="bg-white/5 border border-white/5 p-3 rounded-lg text-left">
+                    <span className="text-[9px] text-zinc-400 block font-mono">BISNAGA 3KG</span>
+                    <strong className="text-sm text-white font-mono mt-0.5 block">{bisnagas3kg} unidades</strong>
+                  </div>
+                  <div className="bg-white/5 border border-white/5 p-3 rounded-lg text-left">
+                    <span className="text-[9px] text-zinc-400 block font-mono">BARRICA 25KG</span>
+                    <strong className="text-sm text-white font-mono mt-0.5 block">{barricas25kg} unidades</strong>
+                  </div>
+                  <div className="bg-white/5 border border-white/5 p-3 rounded-lg text-left">
+                    <span className="text-[9px] text-zinc-400 block font-mono">BARRICA 40KG</span>
+                    <strong className="text-sm text-white font-mono mt-0.5 block">{barricas40kg} unidades</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Shop button CTA */}
+            <div className="mt-8 pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center gap-4 relative z-10">
+              <a
+                href="https://loja.hiperliga.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-sans font-bold text-xs px-5 py-3 rounded-xl transition-all shadow"
+              >
+                <ShoppingBag className="w-4 h-4" />
+                <span>Ir à Loja de Fábrica Online</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+
+  const BrandAuthorityAndCertifications = () => (
+    <section className="py-16 bg-transparent px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto text-center mb-12">
+        <span className="font-mono text-[9px] tracking-widest uppercase font-bold bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded">
+          Conformidade e Laudos
+        </span>
+        <h2 className={`text-2xl font-display font-bold mt-2 ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+          Tecnologia Hiperliga: Qualidade Cientificamente Aprovada
+        </h2>
+      </div>
+
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div className={`${cardBg} ${cardBorder} p-6 rounded-xl border`}>
+          <Award className="w-8 h-8 text-emerald-500" />
+          <h4 className={`font-display font-bold text-base mt-4 mb-2 ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>Ensaios Dinâmicos</h4>
+          <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+            Nossos lotes de resinas passam por auditoria microscópica com laudo de teste de arrancamento por tração direta de MPA regulamentados.
+          </p>
+        </div>
+
+        <div className={`${cardBg} ${cardBorder} p-6 rounded-xl border`}>
+          <ShieldCheck className="w-8 h-8 text-emerald-500" />
+          <h4 className={`font-display font-bold text-base mt-4 mb-2 ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>Estanqueidade Absoluta</h4>
+          <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+            Diga adeus à umidade ascendente e infiltrações indesejadas no pé da parede de vedação exterior através da barreira elástica do produto.
+          </p>
+        </div>
+
+        <div className={`${cardBg} ${cardBorder} p-6 rounded-xl border`}>
+          <Layers className="w-8 h-8 text-emerald-500" />
+          <h4 className={`font-display font-bold text-base mt-4 mb-2 ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>Aprovado por Incorporadoras</h4>
+          <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+            Recomendada por engenheiros de grandes condomínios e residenciais multifamiliares de múltiplos pavimentos do país.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+
+  const FAQAccordion = () => (
+    <section className="py-16 bg-slate-100/40 dark:bg-slate-950 border-t border-slate-200/40 dark:border-slate-900 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10">
+          <span className="font-mono text-[9px] tracking-widest uppercase font-bold bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded">
+            Perguntas Técnicas
+          </span>
+          <h2 className={`text-2xl font-display font-bold mt-2 ${type === 'objection' ? 'text-white' : 'text-slate-900'}`}>
+            Dúvidas Técnicas Esclarecidas
+          </h2>
+        </div>
+
+        <div className="space-y-3.5">
+          {data.faq.map((it, i) => (
+            <div 
+              key={i} 
+              className={`border rounded-xl overflow-hidden transition-all duration-300 ${cardBg} ${cardBorder}`}
+            >
+              <button 
+                onClick={() => setExpandedFaqIndex(expandedFaqIndex === i ? null : i)}
+                className="w-full text-left p-4 sm:p-5 font-display font-bold text-xs sm:text-base flex justify-between items-center cursor-pointer select-none"
+              >
+                <span className={type === 'objection' ? 'text-slate-100' : 'text-slate-900'}>{it.question}</span>
+                <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-slate-400 group-hover:bg-slate-200 dark:group-hover:bg-slate-850 transition-all ${expandedFaqIndex === i ? 'rotate-180 text-emerald-500' : ''}`}>
+                  <ChevronDown className="w-4 h-4 shrink-0" />
+                </span>
+              </button>
+              {expandedFaqIndex === i && (
+                <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-500 dark:text-slate-300 leading-relaxed font-sans border-t border-slate-100 dark:border-slate-800">
+                  {it.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  const BottomConversionCTA = () => (
+    <section className="py-16 bg-neutral-950 text-white text-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="max-w-4xl mx-auto space-y-6 relative z-10 animate-fade-in">
+        <h2 className="text-xl sm:text-3xl font-display font-black text-white uppercase tracking-tight">
+          Pronto para otimizar as alvenarias da sua construção?
+        </h2>
+        <p className="text-gray-400 font-sans text-xs sm:text-sm max-w-xl mx-auto">
+          Adquira as bisnagas de 3kg ou encomende pallets fechados de barricas industriais de 25kg e 40kg direto da fábrica online com garantia absoluta de qualidade.
+        </p>
+
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://loja.hiperliga.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-sans font-bold text-xs sm:text-sm px-8 py-3 rounded-xl transition-all"
+          >
+            <ShoppingBag className="w-4 h-4 text-emerald-950 shrink-0" />
+            <span>Adquirir na Loja Oficial</span>
+          </a>
+          <a
+            href="https://wa.me/554188883365"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-slate-900 hover:bg-slate-850 text-slate-100 font-sans text-xs sm:text-sm px-6 py-3 rounded-xl transition-all border border-slate-800"
+          >
+            <span>WhatsApp Atendente Geral</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+
+  const RelatedGuidesFooterLinks = () => (
+    <section className="py-12 bg-transparent border-t border-slate-200/40 dark:border-slate-800 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto text-left space-y-4">
+        <h4 className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400">Consulte Coleções Relacionadas:</h4>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {data.relatedLinks.map((link, idx) => (
+            <button
+              key={idx}
+              onClick={() => onNavigate(link.href)}
+              className="p-3.5 rounded-xl border border-slate-200/60 dark:border-slate-800 hover:border-emerald-500 bg-white/40 dark:bg-slate-900/40 hover:bg-white dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300 transition-all text-xs font-semibold text-left flex items-center justify-between group cursor-pointer"
+            >
+              <span className="truncate pr-1 group-hover:text-emerald-500">{link.label}</span>
+              <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 shrink-0" />
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+
+  // Render Pipeline dynamically varying order/layout of pages depending on slug taxonomy
+  return (
+    <article className={`min-h-screen ${bodyBg} font-sans`} id="seo-page-main-container">
+      <Breadcrumbs />
+
+      {type === 'technical' && (
+        <>
+          <HeroSection />
+          <ComparativeTable />
+          <ProblemSolutionGrid />
+          <BenefitsGrid />
+          <StepByStepGuide />
+          <EstimatorCalculatorWidget />
+          <BrandAuthorityAndCertifications />
+          <FAQAccordion />
+          <BottomConversionCTA />
+          <RelatedGuidesFooterLinks />
+        </>
+      )}
+
+      {type === 'commercial' && (
+        <>
+          <HeroSection />
+          <EstimatorCalculatorWidget />
+          <BenefitsGrid />
+          <ProblemSolutionGrid />
+          <BrandAuthorityAndCertifications />
+          <FAQAccordion />
+          <BottomConversionCTA />
+          <RelatedGuidesFooterLinks />
+        </>
+      )}
+
+      {type === 'application' && (
+        <>
+          <HeroSection />
+          <StepByStepGuide />
+          <ProblemSolutionGrid />
+          <ComparativeTable />
+          <BenefitsGrid />
+          <EstimatorCalculatorWidget />
+          <FAQAccordion />
+          <BottomConversionCTA />
+          <RelatedGuidesFooterLinks />
+        </>
+      )}
+
+      {type === 'objection' && (
+        <>
+          <HeroSection />
+          <ProblemSolutionGrid />
+          <FAQAccordion />
+          <BenefitsGrid />
+          <BrandAuthorityAndCertifications />
+          <ComparativeTable />
+          <EstimatorCalculatorWidget />
+          <BottomConversionCTA />
+          <RelatedGuidesFooterLinks />
+        </>
+      )}
+
+      {type === 'standard' && (
+        <>
+          <HeroSection />
+          <ProblemSolutionGrid />
+          <BenefitsGrid />
+          <ComparativeTable />
+          <StepByStepGuide />
+          <EstimatorCalculatorWidget />
+          <FAQAccordion />
+          <BrandAuthorityAndCertifications />
+          <BottomConversionCTA />
+          <RelatedGuidesFooterLinks />
+        </>
+      )}
     </article>
   );
 }
+
 export default SeoPageTemplate;
