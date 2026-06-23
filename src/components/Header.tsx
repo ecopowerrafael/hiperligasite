@@ -25,10 +25,16 @@ export default function Header() {
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, item: { href: string; isExternal?: boolean }) => {
     if (item.isExternal) {
-      // Let standard browser redirect happen or handle custom if we want, but returning so it runs default anchor tag action
       setIsMobileMenuOpen(false);
       return;
     }
+    
+    // Fallback redirect if user is browsing an SEO page
+    if (window.location.pathname !== '/' && window.location.pathname !== '') {
+      setIsMobileMenuOpen(false);
+      return; // Let standard element link carry them to e.g. /#diferenciais
+    }
+
     e.preventDefault();
     const element = document.querySelector(item.href);
     if (element) {
@@ -60,8 +66,14 @@ export default function Header() {
           
           {/* Logo Brand Title */}
           <a 
-            href="#" 
-            onClick={(e) => handleSmoothScroll(e, { href: '#' })}
+            href="/" 
+            onClick={(e) => {
+              if (window.location.pathname !== '/' && window.location.pathname !== '') {
+                // Return and perform default link action to navigate home '/'
+                return;
+              }
+              handleSmoothScroll(e, { href: '#' });
+            }}
             className="flex items-center group h-full"
             id="brand-logo-link"
           >

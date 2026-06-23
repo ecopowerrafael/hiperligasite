@@ -1,6 +1,6 @@
 {
-  "name": "Hiper Liga",
-  "description": "Nova home moderna e institucional da Hiper Liga, fabricante de argamassa polimérica de alto rendimento.",
+  "name": "Hiperliga",
+  "description": "Nova home moderna e institucional da Hiperliga, fabricante de argamassa polimérica de alto rendimento.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

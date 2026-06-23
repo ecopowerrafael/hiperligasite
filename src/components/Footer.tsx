@@ -134,30 +134,109 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Institutional validation Column */}
+          {/* Institutional validation Column - SEO Directory */}
           <div className="space-y-4">
             <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary">
-              Compromisso Técnico
+              Soluções Construtivas
             </h4>
-            <p className="text-gray-400 text-xs leading-relaxed">
-              Investimos de forma robusta em pesquisa e qualificação química do nosso polímero de ancoragem de forma a fornecer aos nossos clientes e parceiros segurança técnica total, reduzindo o desperdício de insumos ao mesmo tempo que asseguramos lucros saudáveis às construtoras.
-            </p>
-            
-            <a
-              href="https://loja.hiperliga.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-primary font-mono font-bold hover:underline"
-            >
-              <span>Acessar Loja Online</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
+            <nav className="flex flex-col gap-2 text-slate-400 text-xs sm:text-sm">
+              <a href="/argamassa-polimerica" className="hover:text-primary transition-colors flex items-center gap-1.5">
+                <span>Argamassa Polimérica Cola Bloco</span>
+              </a>
+              <a href="/massa-pronta" className="hover:text-primary transition-colors flex items-center gap-1.5">
+                <span>Massa Pronta e Sem Cimento</span>
+              </a>
+              <a href="/cola-bloco" className="hover:text-primary transition-colors flex items-center gap-1.5">
+                <span>Cola Bloco e Tijolo Premium</span>
+              </a>
+              <a href="/como-assentar-bloco-mais-rapido" className="hover:text-primary transition-colors flex items-center gap-1.5">
+                <span>Técnicas: Como Assentar Rápido</span>
+              </a>
+              <a href="/como-reduzir-custo-da-obra" className="hover:text-primary transition-colors flex items-center gap-1.5">
+                <span>Como Reduzir Custos da Obra</span>
+              </a>
+              <a href="/argamassa-polimerica-funciona" className="hover:text-primary transition-colors flex items-center gap-1.5">
+                <span>Laudos: Cola Bloco Funciona?</span>
+              </a>
+              <a href="/comprar-argamassa-polimerica" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold text-white">
+                <span>Preços e Compras online →</span>
+              </a>
+            </nav>
           </div>
 
         </div>
 
+        {/* Directory/SEO Guides section */}
+        <div className="pt-10 mt-10 border-t border-white/5 text-left" id="footer-seo-directory-section">
+          <h4 className="font-display font-extrabold text-[11px] uppercase tracking-widest text-primary mb-4">
+            Guias Técnicos de Eficiência e Economia na Alvenaria
+          </h4>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 text-slate-400 text-xs text-left" id="footer-seo-directory-grid">
+            <a href="/como-assentar-bloco-mais-rapido" className="hover:text-primary transition-colors">Como Assentar Bloco Mais Rápido</a>
+            <a href="/como-reduzir-custo-da-obra" className="hover:text-primary transition-colors">Como Reduzir o Custo da Obra</a>
+            <a href="/como-economizar-cimento" className="hover:text-primary transition-colors">Como Economizar Cimento</a>
+            <a href="/como-economizar-areia" className="hover:text-primary transition-colors">Como Economizar Areia</a>
+            <a href="/como-aumentar-produtividade-na-construcao" className="hover:text-primary transition-colors">Produtividade na Construção</a>
+            <a href="/como-fazer-assentamento-de-blocos" className="hover:text-primary transition-colors">Como Fazer Assentamento</a>
+            <a href="/como-fazer-alvenaria-mais-rapido" className="hover:text-primary transition-colors">Alvenaria Mais Rápida</a>
+            <a href="/como-evitar-desperdicio-na-obra" className="hover:text-primary transition-colors">Evitar Desperdício na Obra</a>
+            <a href="/como-reduzir-entulho-na-construcao" className="hover:text-primary transition-colors">Como Reduzir Entulho</a>
+            <a href="/como-construir-com-mais-eficiencia" className="hover:text-primary transition-colors">Construir com Mais Eficiência</a>
+            <a href="/como-melhorar-a-qualidade-da-alvenaria" className="hover:text-primary transition-colors">Qualidade da Alvenaria</a>
+            <a href="/como-acelerar-o-cronograma-da-obra" className="hover:text-primary transition-colors">Acelerar Cronograma da Obra</a>
+          </div>
+        </div>
+
+        {/* FAQ SEO Directory section */}
+        <div className="pt-8 mt-8 border-t border-white/5 text-left" id="footer-seo-faq-section">
+          <h4 className="font-display font-extrabold text-[11px] uppercase tracking-widest text-primary mb-4">
+            Dúvidas Técnicas Respondidas (FAQ de Obra)
+          </h4>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 text-slate-400 text-xs text-left" id="footer-seo-faq-grid">
+            <a href="/o-que-e-argamassa-polimerica" className="hover:text-primary transition-colors">O que é argamassa polimérica?</a>
+            <a href="/argamassa-polimerica-funciona" className="hover:text-primary transition-colors">Argamassa polimérica funciona?</a>
+            <a href="/argamassa-polimerica-e-resistente" className="hover:text-primary transition-colors">Argamassa é resistente?</a>
+            <a href="/argamassa-polimerica-substitui-cimento" className="hover:text-primary transition-colors">Substitui o cimento?</a>
+            <a href="/massa-pronta-substitui-areia" className="hover:text-primary transition-colors">Substitui a areia fina?</a>
+            <a href="/como-usar-argamassa-polimerica" className="hover:text-primary transition-colors font-semibold text-slate-300">Como usar argamassa</a>
+            <a href="/quantos-blocos-rende-um-saco" className="hover:text-primary transition-colors">Rendimento por saco/barrica</a>
+            <a href="/pode-usar-em-area-externa" className="hover:text-primary transition-colors">Pode usar em área externa?</a>
+            <a href="/pode-usar-em-muro" className="hover:text-primary transition-colors">Pode usar em muro?</a>
+            <a href="/pode-usar-em-sobrado" className="hover:text-primary transition-colors">Pode usar em sobrado?</a>
+            <a href="/qual-a-resistencia-da-argamassa-polimerica" className="hover:text-primary transition-colors">Qual a resistência real?</a>
+            <a href="/qual-a-diferenca-entre-biomassa-e-argamassa-polimerica" className="hover:text-primary transition-colors">Biomassa vs Polimérica</a>
+            <a href="/cola-bloco-e-melhor-que-argamassa-tradicional" className="hover:text-primary transition-colors">Cola Bloco é melhor?</a>
+            <a href="/qual-a-economia-gerada-na-obra" className="hover:text-primary transition-colors font-semibold text-slate-300">Economia gerada na obra</a>
+            <a href="/quanto-tempo-demora-a-cura" className="hover:text-primary transition-colors">Quanto tempo demora a cura?</a>
+            <a href="/pode-usar-em-bloco-estrutural" className="hover:text-primary transition-colors font-semibold text-amber-400">Pode usar em bloco estrutural?</a>
+          </div>
+        </div>
+
+        {/* Commercial & Factory Bottom-of-Funnel Directory section */}
+        <div className="pt-8 mt-8 border-t border-white/5 text-left" id="footer-seo-commercial-section">
+          <h4 className="font-display font-extrabold text-[11px] uppercase tracking-widest text-primary mb-4">
+            Departamento Comercial e Vendas (Atacado e Varejo)
+          </h4>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 text-slate-400 text-xs text-left" id="footer-seo-commercial-grid">
+            <a href="/comprar-argamassa-polimerica" className="hover:text-primary transition-colors font-semibold text-slate-300">Comprar Argamassa</a>
+            <a href="/preco-argamassa-polimerica" className="hover:text-primary transition-colors">Preço Argamassa Polimérica</a>
+            <a href="/distribuidor-de-argamassa-polimerica" className="hover:text-primary transition-colors">Distribuidor Autorizado</a>
+            <a href="/revenda-argamassa-polimerica" className="hover:text-primary transition-colors">Seja uma Revenda</a>
+            <a href="/argamassa-polimerica-25kg" className="hover:text-primary transition-colors">Embalagem Caixa 25kg</a>
+            <a href="/argamassa-polimerica-40kg" className="hover:text-primary transition-colors">Barrica Industrial 40kg</a>
+            <a href="/onde-comprar-massa-pronta" className="hover:text-primary transition-colors">Onde Comprar Massa Pronta</a>
+            <a href="/cola-bloco-preco" className="hover:text-primary transition-colors">Preço de Cola Bloco</a>
+            <a href="/argamassa-para-bloco-de-concreto-preco" className="hover:text-primary transition-colors">Bloco de Concreto Preço</a>
+            <a href="/argamassa-para-bloco-ceramico-preco" className="hover:text-primary transition-colors">Bloco Cerâmico Preço</a>
+            <a href="/orcamento-argamassa-polimerica" className="hover:text-primary transition-colors font-semibold text-emerald-400">Solicitar Orçamento Online</a>
+            <a href="/fabrica-de-argamassa-polimerica" className="hover:text-primary transition-colors">Fábrica de Argamassa</a>
+            <a href="/fabricante-de-massa-pronta" className="hover:text-primary transition-colors">Fabricante de Massa Pronta</a>
+            <a href="/representante-comercial-argamassa" className="hover:text-primary transition-colors font-semibold text-slate-300">Seja um Representante</a>
+          </div>
+        </div>
+
         {/* Lower row: copyrights and institutional names */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500">
+        <div className="pt-8 mt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500">
           <div>
             © {new Date().getFullYear()} Hiperliga Alvenaria Eficiente. Todos os direitos reservados.
           </div>
