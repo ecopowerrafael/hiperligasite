@@ -19,7 +19,7 @@ const SEO_METADATA = {
   '/argamassa-polimerica': {
     title: 'Argamassa Polimérica Hiperliga | Cola Bloco Pronta para Alvenaria',
     description: 'Conheça a Argamassa Polimérica Hiperliga, a evolução para o assentamento de blocos e tijolos. Alta durabilidade, sem sujeira, pronta para uso e rendimento até 20x maior.',
-    canonical: 'https://loja.hiperliga.com.br/argamassa-polimerica',
+    canonical: 'https://hiperliga.com.br/argamassa-polimerica',
     h1: 'Argamassa Polimérica Industrializada para Assentamento Eficiente',
     tagline: 'Esqueça a argamassa convencional. Reduza custos, zere o desperdício e acelere o cronograma da sua obra com a tecnologia Hiperliga.',
     problem: 'O assentamento de blocos convencional usando cimento, areia, cal e água exige logística pesada, misturadores barulhentos e resulta em até 25% de desperdício de material. Além do cansaço físico extremo da equipe na preparação da massa tradicional, a alvenaria avança lentamente, gerando pilhas de entulho e atrasando o andamento geral do projeto.',
@@ -29,7 +29,7 @@ const SEO_METADATA = {
   '/massa-pronta': {
     title: 'Massa Pronta para Obra | Argamassa Pronta Hiperliga',
     description: 'Elimine a betoneira e a sujeira. A Massa Pronta Hiperliga vem pronta para aplicação sem necessidade de água ou aditivos. Altíssimo rendimento e rapidez.',
-    canonical: 'https://loja.hiperliga.com.br/massa-pronta',
+    canonical: 'https://hiperliga.com.br/massa-pronta',
     h1: 'Massa Pronta e Sem Cimento Tradicional: Alvenaria Instantânea',
     tagline: 'Sua obra limpa, eficiente e organizada de verdade. Conheça a massa pronta que não precisa bater e já vem na consistência perfeita para assentamento de alvenarias.',
     problem: 'Fazer massa de cimento e areia no canteiro esconde custos absurdos: quebra de sacos de cimento, desperdício de areia fina empilhada sob sol e chuva, variação no traço que enfraquece a parede, consumo elétrico contínuo de betoneiras e o tempo que o pedreiro gasta batendo massa em vez de levantar as paredes.',
@@ -38,8 +38,8 @@ const SEO_METADATA = {
   },
   '/cola-bloco': {
     title: 'Cola Bloco Hiperliga | Cola para Assentamento de Tijolo',
-    description: 'A melhor cola bloco do Brasil. Alto rendimento para colagem de blocos cerâmicos e de concreto. Veja testes técnicos de aderência e use na sua obra.',
-    canonical: 'https://loja.hiperliga.com.br/cola-bloco',
+    description: 'A melhor cola bloco do Brasil. Alto rendimento para colagem de blocos cerâmicos and de concreto. Veja testes técnicos de aderência e use na sua obra.',
+    canonical: 'https://hiperliga.com.br/cola-bloco',
     h1: 'Cola Bloco de Alta Performance para Assentamento Eficiente',
     tagline: 'Economize tempo, espaço e dinheiro com o adesivo estrutural polimérico que revolucionou os canteiros de obras profissionais.',
     problem: 'Manter pilhas de areia e sacos de cimento ocupa espaço físico precioso na calçada e nas garagens da obra. Além de estarem sujeitos a furto, chuvas fortes levam a areia pelo bueiro, entupindo o sistema pluvial do loteamento e gerando multas pesadas. Sacos de cimento absorvem a umidade do ar e empedram antes mesmo de serem usados.',
@@ -49,7 +49,7 @@ const SEO_METADATA = {
   '/como-assentar-bloco-mais-rapido': {
     title: 'Como Assentar Bloco Mais Rápido | Guia Passo a Passo Hiperliga',
     description: 'Descubra as principais técnicas e ferramentas para triplicar a velocidade de assentamento de blocos e tijolos na alvenaria de forma correta e segura.',
-    canonical: 'https://loja.hiperliga.com.br/como-assentar-bloco-mais-rapido',
+    canonical: 'https://hiperliga.com.br/como-assentar-bloco-mais-rapido',
     h1: 'Como Assentar Bloco e Tijolo com Produtividade Máxima',
     tagline: 'O segredo dos grandes construtores revelado. Conheça o passo a passo definitivo e a tecnologia que permite assentar até 1.500 blocos por dia por pedreiro.',
     problem: 'Nas construtoras e obras residenciais, o tempo de erguimento de paredes é o maior gargalo crítico do cronograma. O pedreiro tradicional despende 60% do seu tempo de trabalho misturando as matérias-primas na masseira, transportando baldes pesados, limpando pingos no chão e ajeitando espessuras grosseiras de massa na colher de pedreiro. Um processo repetitivo, cansativo e arcaico.',
@@ -59,7 +59,7 @@ const SEO_METADATA = {
   '/como-reduzir-custo-da-obra': {
     title: 'Como Reduzir o Custo da Obra de Alvenaria | Hiperliga',
     description: 'Economize até 40% na alvenaria da sua construção. Reduza desperdício, cimento, areia e ganhe produtividade no canteiro de obras com a Hiperliga.',
-    canonical: 'https://loja.hiperliga.com.br/como-reduzir-custo-da-obra',
+    canonical: 'https://hiperliga.com.br/como-reduzir-custo-da-obra',
     h1: 'Como Reduzir o Custo Construtivo da Alvenaria com Tecnologia',
     tagline: 'O custo total de erguer uma parede não está só no preço dos sacos de cimento. Veja as métricas e o comparativo de economia de ponta a ponta.',
     problem: 'Ao calcular o custo do assentamento tradicional de alvenaria por metro quadrado, a maioria dos compradores comete o erro clássico de cotar apenas sacos de areia e cimento nas lojas. Eles esquecem das perdas: cimento estragado por umidade (10%), areia levada por chuvas (15%), entulho que exige caçamba para descarte (25%), cansaço de operários levando a afastamentos e o enorme consumo de água e energia elétrica da betoneira.',
@@ -69,7 +69,7 @@ const SEO_METADATA = {
   '/argamassa-polimerica-funciona': {
     title: 'Argamassa Polimérica Funciona? Veja Testes de Resistência | Hiperliga',
     description: 'Descubra a verdade sobre a resistência da argamassa polimérica. Testes mecânicos, ensaios de rompimento no tijolo e por que engenheiros confiam na Hiperliga.',
-    canonical: 'https://loja.hiperliga.com.br/argamassa-polimerica-funciona',
+    canonical: 'https://hiperliga.com.br/argamassa-polimerica-funciona',
     h1: 'Argamassa Polimérica Funciona e é Resistente? Esclarecendo Tudo',
     tagline: 'Colocar a parede em risco é inaceitável. Descubra as evidências químicas e científicas que garantem o desempenho estrutural da argamassa acrílica Hiperliga.',
     problem: 'Pedreiros assentos e engenheiros de ponta estão acostumados a usar juntas grossas de cimento e areia há dezenas de anos. É natural duvidar que cordões de cola fina contendo resinas de polímeros acrílicos aplicados com bisnaga consigam de fato suportar cargas físicas e estabilizar paredes frente a abalos de portas batendo e incidência extrema de ventos mecânicos fortes.',
@@ -79,7 +79,7 @@ const SEO_METADATA = {
   '/comprar-argamassa-polimerica': {
     title: 'Comprar Argamassa Polimérica | Preço Direto de Fábrica Hiperliga',
     description: 'Adquira Argamassa Polimérica Hiperliga com os melhores preços. Venda para todo o Brasil. Barricas de 25kg, 40kg e bisnagas de 3kg em estoque imediato.',
-    canonical: 'https://loja.hiperliga.com.br/comprar-argamassa-polimerica',
+    canonical: 'https://hiperliga.com.br/comprar-argamassa-polimerica',
     h1: 'Comprar Argamassa Polimérica Hiperliga: Desconto na Loja Oficial',
     tagline: 'Garanta suprimento contínuo para sua obra de forma ultra rápida com envio direto ou canais oficiais de distribuição nacional.',
     problem: 'Comprar insumos de construção sob demanda nas lojas físicas locais costuma implicar em taxas e comissões pesadas, além de atrasos de frete devido a transportadoras sem estoques adequados de materiais industriais técnicos avançados.',
@@ -418,7 +418,7 @@ app.get('*', (req, res, next) => {
       meta = {
         title: def.title,
         description: def.metaDesc,
-        canonical: `https://loja.hiperliga.com.br/${def.slug}`,
+        canonical: `https://hiperliga.com.br/${def.slug}`,
         h1: def.h1,
         tagline: def.tagline,
         problem: def.problemDesc,

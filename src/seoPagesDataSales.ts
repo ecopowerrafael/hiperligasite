@@ -607,7 +607,7 @@ export function generateSalesPages(): Record<string, SEOPageContent> {
       path: `/${def.slug}`,
       title: def.title,
       metaDescription: def.metaDescription,
-      canonical: `https://loja.hiperliga.com.br/${def.slug}`,
+      canonical: `https://hiperliga.com.br/${def.slug}`,
       h1: def.h1,
       tagline: def.tagline,
       problemTitle: def.problemTitle,
