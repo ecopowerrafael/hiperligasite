@@ -55,10 +55,10 @@ export default function Header() {
   return (
     <header
       id="header-navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/90 ${
         isScrolled
-          ? 'bg-brand-dark/95 backdrop-blur-md border-b border-white/10 shadow-lg py-1 sm:py-2'
-          : 'bg-transparent py-2 sm:py-3'
+          ? 'shadow-md py-1.5 sm:py-2'
+          : 'shadow-xs py-2 sm:py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,9 +78,9 @@ export default function Header() {
             id="brand-logo-link"
           >
             <img
-              src="https://loja.hiperliga.com.br/wp-content/uploads/2026/06/ChatGPT-Image-16-de-jun.-de-2026-14_05_11.png"
+              src="https://loja.hiperliga.com.br/wp-content/uploads/2026/09/hiperliga-logo.png"
               alt="Hiperliga Logo"
-              className="h-24 sm:h-32 w-auto object-contain shrink-0 -my-4 sm:-my-6 filter drop-shadow-[0_0_4px_rgba(255,255,255,0.98)] drop-shadow-[0_0_10px_rgba(255,255,255,0.92)] transition-all duration-300 group-hover:scale-105"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain shrink-0 transition-all duration-300 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
           </a>
@@ -94,10 +94,10 @@ export default function Header() {
                 onClick={(e) => handleSmoothScroll(e, item)}
                 target={item.isExternal ? '_blank' : undefined}
                 rel={item.isExternal ? 'noopener noreferrer' : undefined}
-                className={`transition-colors px-4 py-2 text-sm font-medium rounded-lg font-sans ${
+                className={`transition-colors px-3.5 py-2 text-sm font-semibold rounded-lg font-sans ${
                   item.isExternal
                     ? 'text-primary hover:text-primary-light font-bold flex items-center gap-1 border border-primary/20 bg-primary/10 hover:bg-primary/20'
-                    : 'text-white/80 hover:text-white hover:bg-white/5'
+                    : 'text-slate-700 hover:text-primary hover:bg-slate-100/80'
                 }`}
               >
                 {item.label}
@@ -112,7 +112,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               id="header-cta-loja"
-              className="inline-flex items-center gap-1.5 border border-primary text-primary hover:bg-primary hover:text-white font-sans text-sm font-semibold px-4 py-2.5 rounded-full transition-all duration-300 shadow-sm"
+              className="inline-flex items-center gap-1.5 border border-primary text-primary hover:bg-primary hover:text-white font-sans text-sm font-semibold px-4 py-2.5 rounded-full transition-all duration-300 shadow-xs"
             >
               <span>Loja Online</span>
             </a>
@@ -121,7 +121,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               id="header-cta-whatsapp"
-              className="relative inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-sans text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(242,90,36,0.4)] group overflow-hidden"
+              className="relative inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-sans text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(242,90,36,0.4)] group overflow-hidden shadow-sm"
             >
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               <MessageSquare className="w-4 h-4 text-white relative z-10" />
@@ -134,7 +134,7 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-primary transition-colors p-2"
+              className="text-slate-800 hover:text-primary transition-colors p-2"
               aria-label="Toggle menu"
               id="mobile-menu-toggle-btn"
             >
@@ -152,7 +152,7 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-brand-dark border-b border-white/10"
+            className="md:hidden bg-white border-b border-slate-200 shadow-xl"
             id="mobile-navigation-drawer"
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
@@ -163,16 +163,16 @@ export default function Header() {
                   onClick={(e) => handleSmoothScroll(e, item)}
                   target={item.isExternal ? '_blank' : undefined}
                   rel={item.isExternal ? 'noopener noreferrer' : undefined}
-                  className={`block px-3 py-3 text-base font-medium rounded-lg transition-colors ${
+                  className={`block px-3 py-3 text-base font-semibold rounded-lg transition-colors ${
                     item.isExternal
                       ? 'text-primary font-bold bg-primary/10 border border-primary/20 hover:bg-primary/25'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                      : 'text-slate-700 hover:text-primary hover:bg-slate-50'
                   }`}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="pt-4 border-t border-white/5 space-y-3">
+              <div className="pt-4 border-t border-slate-100 space-y-3">
                 <a
                   href="https://loja.hiperliga.com.br/"
                   target="_blank"
@@ -186,7 +186,7 @@ export default function Header() {
                   href={EXPERT_CONTACT_WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-4 rounded-xl transition-all"
+                  className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-4 rounded-xl transition-all shadow-sm"
                   id="mobile-drawer-cta"
                 >
                   <MessageSquare className="w-5 h-5 text-white" />
