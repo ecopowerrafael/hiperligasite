@@ -12,7 +12,7 @@ import {
   ArrowUpRight
 } from 'lucide-react';
 import { ADVANTAGES_DATA } from '../data';
-import { LazyVideo } from './LazyVideo';
+import YouTubeVideo from './YouTubeVideo';
 
 // Map icon names to lucide components
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -125,11 +125,12 @@ export default function Features() {
 
             {/* Video Container at top */}
             <div className="relative w-full rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-black">
-              <LazyVideo
-                src="https://res.cloudinary.com/dmvinyayl/video/upload/v1781993684/ssstik.io_1781892388695_f8ux7g.mp4"
-                aspectRatio="aspect-[9/16]"
-                label="Sela Trinca em Ação"
-              />
+              <div className="aspect-[9/16]">
+                <YouTubeVideo
+                  videoId="z34oKE1tQeU"
+                  title="Eficiência e inovação na construção civil"
+                />
+              </div>
             </div>
 
             {/* Product Meta details */}

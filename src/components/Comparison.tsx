@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowLeftRight, Check, X, Scale, Flame, RefreshCcw } from 'lucide-react';
-import { LazyVideo } from './LazyVideo';
+import YouTubeVideo from './YouTubeVideo';
 
 export default function Comparison() {
   return (
@@ -141,11 +141,12 @@ export default function Comparison() {
             >
               {/* Modern Portrait Video Display with Lazy Load */}
               <div className="rounded-2xl overflow-hidden relative bg-slate-950">
-                <LazyVideo
-                  src="https://res.cloudinary.com/dmvinyayl/video/upload/v1781994207/ssstik.io_1781993985654_p6ooai.mp4"
-                  aspectRatio="aspect-[9/16]"
-                  label="Assentamento Hiperliga"
-                />
+                <div className="aspect-[9/16]">
+                  <YouTubeVideo
+                    videoId="LMtAwZTlG0c"
+                    title="Comparação direta de engenharia"
+                  />
+                </div>
               </div>
 
               {/* Caption details below the video */}
