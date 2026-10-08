@@ -1,25 +1,8 @@
-import React from 'react';
 import { MessageSquare, Phone, Mail, MapPin, Building2, ExternalLink } from 'lucide-react';
 import { EXPERT_CONTACT_WHATSAPP } from '../data';
+import { MAIN_NAVIGATION } from '../navigation';
 
 export default function Footer() {
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <footer 
       id="institutional-footer" 
@@ -52,47 +35,23 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick links to internal sections */}
+          {/* Main navigation */}
           <div className="space-y-4">
             <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary">
               Navegação
             </h4>
-            <nav className="flex flex-col gap-2.5 text-slate-400 text-sm">
-              <a 
-                href="#diferenciais" 
-                onClick={(e) => handleSmoothScroll(e, '#diferenciais')}
-                className="hover:text-white transition-colors"
-              >
-                Diferenciais Técnicos
-              </a>
-              <a 
-                href="#comparativo" 
-                onClick={(e) => handleSmoothScroll(e, '#comparativo')}
-                className="hover:text-white transition-colors"
-              >
-                Tabela Comparativa
-              </a>
-              <a 
-                href="#calculadora" 
-                onClick={(e) => handleSmoothScroll(e, '#calculadora')}
-                className="hover:text-white transition-colors"
-              >
-                Simulador de Alvenaria
-              </a>
-              <a 
-                href="#produtos" 
-                onClick={(e) => handleSmoothScroll(e, '#produtos')}
-                className="hover:text-white transition-colors"
-              >
-                Nossos Produtos
-              </a>
-              <a 
-                href="#como-aplicar" 
-                onClick={(e) => handleSmoothScroll(e, '#como-aplicar')}
-                className="hover:text-white transition-colors"
-              >
-                Passo a Passo de Aplicação
-              </a>
+            <nav className="flex flex-col gap-2.5 text-slate-400 text-sm" aria-label="Navegação do rodapé">
+              {MAIN_NAVIGATION.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
+                  className="hover:text-white transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
             </nav>
           </div>
 

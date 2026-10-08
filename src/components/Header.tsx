@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MessageSquare, ShieldCheck, Zap } from 'lucide-react';
+import { Menu, X, MessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { EXPERT_CONTACT_WHATSAPP } from '../data';
+import { MAIN_NAVIGATION, NavigationItem, normalizePath } from '../navigation';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,42 +16,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems: { label: string; href: string; isExternal?: boolean }[] = [
-    { label: 'Diferenciais', href: '#diferenciais' },
-    { label: 'Comparativo', href: '#comparativo' },
-    { label: 'Calculadora', href: '#calculadora' },
-    { label: 'Produtos', href: '#produtos' },
-    { label: 'Como Aplicar', href: '#como-aplicar' }
-  ];
-
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, item: { href: string; isExternal?: boolean }) => {
-    if (item.isExternal) {
-      setIsMobileMenuOpen(false);
-      return;
-    }
-    
-    // Fallback redirect if user is browsing an SEO page
-    if (window.location.pathname !== '/' && window.location.pathname !== '') {
-      setIsMobileMenuOpen(false);
-      return; // Let standard element link carry them to e.g. /#diferenciais
-    }
-
-    e.preventDefault();
-    const element = document.querySelector(item.href);
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      setIsMobileMenuOpen(false);
-    }
+  const handleNavigation = (_e: React.MouseEvent<HTMLAnchorElement>, _item: NavigationItem) => {
+    setIsMobileMenuOpen(false);
   };
+
+  const currentPath = normalizePath(window.location.pathname);
 
   return (
     <header
@@ -72,7 +42,7 @@ export default function Header() {
                 // Return and perform default link action to navigate home '/'
                 return;
               }
-              handleSmoothScroll(e, { href: '#' });
+              setIsMobileMenuOpen(false);
             }}
             className="flex items-center group h-full"
             id="brand-logo-link"
@@ -87,16 +57,17 @@ export default function Header() {
 
           {/* Desktop Links */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-            {menuItems.map((item) => (
+            {MAIN_NAVIGATION.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                onClick={(e) => handleSmoothScroll(e, item)}
-                target={item.isExternal ? '_blank' : undefined}
-                rel={item.isExternal ? 'noopener noreferrer' : undefined}
+                onClick={(e) => handleNavigation(e, item)}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
+                aria-current={!item.external && normalizePath(item.href) === currentPath ? 'page' : undefined}
                 className={`transition-colors px-3.5 py-2 text-sm font-semibold rounded-lg font-sans ${
-                  item.isExternal
-                    ? 'text-primary hover:text-primary-light font-bold flex items-center gap-1 border border-primary/20 bg-primary/10 hover:bg-primary/20'
+                  !item.external && normalizePath(item.href) === currentPath
+                    ? 'bg-slate-100 text-primary'
                     : 'text-slate-700 hover:text-primary hover:bg-slate-100/80'
                 }`}
               >
@@ -156,16 +127,17 @@ export default function Header() {
             id="mobile-navigation-drawer"
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
-              {menuItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => handleSmoothScroll(e, item)}
-                  target={item.isExternal ? '_blank' : undefined}
-                  rel={item.isExternal ? 'noopener noreferrer' : undefined}
+            {MAIN_NAVIGATION.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                  onClick={(e) => handleNavigation(e, item)}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noopener noreferrer' : undefined}
+                  aria-current={!item.external && normalizePath(item.href) === currentPath ? 'page' : undefined}
                   className={`block px-3 py-3 text-base font-semibold rounded-lg transition-colors ${
-                    item.isExternal
-                      ? 'text-primary font-bold bg-primary/10 border border-primary/20 hover:bg-primary/25'
+                    !item.external && normalizePath(item.href) === currentPath
+                      ? 'text-primary bg-primary/10 border border-primary/20'
                       : 'text-slate-700 hover:text-primary hover:bg-slate-50'
                   }`}
                 >
