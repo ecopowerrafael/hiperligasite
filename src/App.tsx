@@ -13,6 +13,7 @@ import ProductCatalog from './components/ProductCatalog';
 import MediaSection from './components/MediaSection';
 import Certificacoes from './components/Certificacoes';
 import Footer from './components/Footer';
+import Marketplaces from './components/Marketplaces';
 import { SEO_PAGES_DATA } from './seoPagesData';
 import SeoPageTemplate from './components/SeoPageTemplate';
 import InstitutionalPage from './components/InstitutionalPage';
@@ -125,6 +126,9 @@ export default function App() {
 
           {/* Structural Certification & Lab Compliance */}
           <Certificacoes />
+
+          {/* Marketplace purchase channels */}
+          <Marketplaces />
         </main>
       )}
 
