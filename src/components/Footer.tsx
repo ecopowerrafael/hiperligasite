@@ -1,6 +1,29 @@
-import { MessageSquare, Phone, Mail, MapPin, Building2, ExternalLink } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, MessageSquare, Music2, Phone, Youtube } from 'lucide-react';
 import { EXPERT_CONTACT_WHATSAPP } from '../data';
 import { MAIN_NAVIGATION } from '../navigation';
+
+const SOCIAL_LINKS = [
+  {
+    label: 'Instagram da Hiperliga',
+    href: 'https://www.instagram.com/hiperligatecnologiaemargamassa/',
+    Icon: Instagram,
+  },
+  {
+    label: 'Facebook da Hiperliga',
+    href: 'https://www.facebook.com/share/17jEWMffE3/',
+    Icon: Facebook,
+  },
+  {
+    label: 'TikTok — loja123tudo',
+    href: 'https://www.tiktok.com/@loja123tudo',
+    Icon: Music2,
+  },
+  {
+    label: 'YouTube da Hiperliga',
+    href: 'https://www.youtube.com/@hiperligatecnologiaemargam5316',
+    Icon: Youtube,
+  },
+];
 
 export default function Footer() {
   return (
@@ -124,6 +147,33 @@ export default function Footer() {
           </div>
 
         </div>
+
+        <section className="border-b border-white/5 py-8" aria-labelledby="footer-social-heading">
+          <h4 id="footer-social-heading" className="text-center font-display text-[11px] font-extrabold uppercase tracking-widest text-primary">
+            Redes sociais
+          </h4>
+          <nav className="mt-4 flex flex-wrap justify-center gap-3" aria-label="Redes sociais da Hiperliga">
+            {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                title={label}
+                className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-sm text-slate-300 transition-colors hover:border-primary hover:bg-white/5 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-brand-dark"
+              >
+                <Icon className="h-5 w-5" aria-hidden="true" />
+                <span>{label}</span>
+              </a>
+            ))}
+          </nav>
+        </section>
+
+        <a href="/rejunte-polimerico/" className="mx-auto mt-8 flex min-h-12 max-w-xs flex-col items-center justify-center rounded-2xl border border-secondary/40 bg-secondary/10 px-5 py-3 text-center transition-colors hover:border-secondary hover:bg-secondary/20 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-brand-dark">
+          <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-secondary">Novidade</span>
+          <strong className="font-display text-sm text-white">Rejunte Polimérico</strong>
+        </a>
 
         {/* Directory/SEO Guides section */}
         <div className="pt-10 mt-10 border-t border-white/5 text-left" id="footer-seo-directory-section">

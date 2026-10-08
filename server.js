@@ -16,6 +16,56 @@ app.use(express.static(distPath));
 
 // SEO Pages Database for Server-Side Meta Injection
 const SEO_METADATA = {
+  '/solucoes': {
+    title: 'Soluções para sua obra | Hiperliga',
+    description: 'Conheça produtos do Grupo Hiperliga para assentamento, acabamento e reparos. Veja a solução indicada para cada necessidade da sua obra.',
+    canonical: 'https://hiperliga.com.br/solucoes/',
+    h1: 'Soluções para sua obra',
+    tagline: 'Conheça produtos do Grupo Hiperliga para assentamento, acabamento e reparos.',
+    problem: 'Encontre orientações para assentamento de blocos e tijolos, regularização e acabamento de pisos e lajes, preparação de paredes internas, correção de imperfeições e pequenos reparos.',
+    solution: 'A página apresenta cinco soluções com seus produtos, descrições oficiais e canais de orientação da Hiperliga.',
+    schemaType: 'WebPage'
+  },
+  '/empresa': {
+    title: 'Conheça o Grupo Hiperliga | Hiperliga, Massa Mais e Granfinalle',
+    description: 'Conheça a história do Grupo Hiperliga e suas marcas Hiperliga, Massa Mais e Granfinalle, com soluções para assentamento, acabamento e reparos.',
+    canonical: 'https://hiperliga.com.br/empresa/',
+    h1: 'Conheça o Grupo Hiperliga',
+    tagline: 'Tecnologia nacional e soluções prontas para tornar a construção mais prática.',
+    problem: 'Quem vive o canteiro de obras conhece o cenário de pilhas de areia, cimento desperdiçado, misturas complexas e o relógio correndo contra o lucro.',
+    solution: 'A Hiperliga nasceu há 16 anos para buscar uma construção civil mais inteligente por meio de tecnologia nacional e soluções prontas.',
+    schemaType: 'WebPage'
+  },
+  '/conteudos': {
+    title: 'Conteúdos Hiperliga | Dicas e Aplicações para sua Obra',
+    description: 'Explore artigos, dicas de aplicação e informações sobre os produtos do Grupo Hiperliga para assentamento, acabamento e reparos.',
+    canonical: 'https://hiperliga.com.br/conteudos/',
+    h1: 'Conteúdos Hiperliga',
+    tagline: 'Dicas, aplicações e informações sobre produtos para ajudar no planejamento e na execução da sua obra.',
+    problem: 'Encontre artigos existentes sobre planejamento, assentamento, acabamento, reparos e produtividade na obra.',
+    solution: 'A página reúne os artigos técnicos já publicados no projeto, com seus títulos, resumos e links originais.',
+    schemaType: 'WebPage'
+  },
+  '/contato': {
+    title: 'Contato Hiperliga | Fale com nossa equipe',
+    description: 'Fale com a Hiperliga pelo WhatsApp, e-mail ou formulário de atendimento por setor.',
+    canonical: 'https://hiperliga.com.br/contato/',
+    h1: 'Fale com a Hiperliga',
+    tagline: 'Escolha um canal de atendimento ou inicie uma conversa com o setor certo para sua necessidade.',
+    problem: 'Encontre rapidamente os canais oficiais da Hiperliga para suporte, atendimento comercial e orientação sobre produtos.',
+    solution: 'Use os contatos rápidos ou preencha o formulário para abrir uma conversa no WhatsApp direcionada ao setor escolhido.',
+    schemaType: 'WebPage'
+  },
+  '/rejunte-polimerico': {
+    title: 'Rejunte Polimérico Hiperliga | Calculadora de Consumo',
+    description: 'Conheça o Rejunte Polimérico Hiperliga e estime a quantidade de embalagens de 1 kg conforme a área, o formato da cerâmica e a largura das juntas.',
+    canonical: 'https://hiperliga.com.br/rejunte-polimerico/',
+    h1: 'Rejunte Polimérico Hiperliga',
+    tagline: 'Rejunte polimérico pronto para uso na cor branca, com calculadora de consumo baseada na tabela fornecida pela Hiperliga.',
+    problem: 'Escolher a quantidade de rejunte exige relacionar a área, o formato da cerâmica, a espessura e a largura das juntas.',
+    solution: 'A página reúne as informações do produto e uma estimativa baseada exclusivamente na tabela de consumo fornecida pela Hiperliga.',
+    schemaType: 'WebPage'
+  },
   '/argamassa-polimerica': {
     title: 'Argamassa Polimérica Hiperliga | Cola Bloco Pronta para Alvenaria',
     description: 'Conheça a Argamassa Polimérica Hiperliga, a evolução para o assentamento de blocos e tijolos. Alta durabilidade, sem sujeira, pronta para uso e rendimento até 20x maior.',
@@ -694,9 +744,47 @@ const NEW_THEME_DEFINITIONS = [
   }
 ];
 
+const CONTENT_ARTICLE_SLUGS = [
+  'como-assentar-bloco-mais-rapido', 'como-reduzir-custo-da-obra', 'parede-torta', 'trinca-na-alvenaria', 'rachadura-na-parede',
+  'argamassa-soltando', 'tijolo-soltando', 'parede-desalinhada', 'excesso-de-desperdicio-na-obra', 'obra-atrasada',
+  'baixa-produtividade-na-construcao', 'alto-custo-de-mao-de-obra', 'consumo-excessivo-cimento', 'falta-de-qualidade-no-assentamento',
+  'problemas-de-infiltracao', 'falhas-na-alvenaria', 'construcao-lenta', 'como-economizar-cimento', 'como-economizar-areia',
+  'como-aumentar-produtividade-na-construcao', 'como-fazer-assentamento-de-blocos', 'como-fazer-alvenaria-mais-rapido',
+  'como-evitar-desperdicio-na-obra', 'como-reduzir-entulho-na-construcao', 'como-construir-com-mais-eficiencia',
+  'como-melhorar-a-qualidade-da-alvenaria', 'como-acelerar-o-cronograma-da-obra'
+];
+
+const CONTENT_ARTICLE_OVERRIDES = {
+  'como-assentar-bloco-mais-rapido': ['Como Assentar Bloco Mais Rápido | Guia Passo a Passo Hiperliga', 'Descubra as principais técnicas e ferramentas para triplicar a velocidade de assentamento de blocos e tijolos na alvenaria de forma correta e segura.'],
+  'como-reduzir-custo-da-obra': ['Como Reduzir o Custo da Obra de Alvenaria | Hiperliga', 'Economize até 40% na alvenaria da sua construção. Reduza desperdício, cimento, areia e ganhe produtividade no canteiro de obras com a Hiperliga.'],
+  'como-economizar-cimento': ['Como Economizar Cimento na Obra de Alvenaria | Hiperliga', 'Descubra as melhores estratégias e tecnologias para economizar cimento no canteiro de obras. Saiba como substituir a argamassa tradicional por polimérica.'],
+  'como-economizar-areia': ['Como Economizar Areia no Canteiro de Obras | Hiperliga', 'Descubra as principais estratégias para economizar areia no canteiro de obras da alvenaria. Reduza perdas por vento e chuva usando o adesivo Hiperliga.'],
+  'como-aumentar-produtividade-na-construcao': ['Como Aumentar a Produtividade na Construção Civil | Hiperliga', 'Dicas práticas baseadas em cronogramas reais para aumentar a produtividade na construção civil em até 3x. Saiba como a argamassa polimérica acelera a alvenaria.'],
+  'como-fazer-assentamento-de-blocos': ['Como Fazer Assentamento de Blocos Passo a Passo | Hiperliga', 'Aprenda o passo a passo correto de como fazer assentamento de blocos cerâmicos de vedação ou concreto com a rapidez da cola Hiperliga.'],
+  'como-fazer-alvenaria-mais-rapido': ['Como Fazer Alvenaria Mais Rápido | Técnicas Construtivas | Hiperliga', 'Zere as perdas e acelere cronogramas. Veja as melhores técnicas práticas para fazer alvenaria mais rápido utilizando argamassa pronta polimérica.'],
+  'como-evitar-desperdicio-na-obra': ['Como Evitar Desperdício na Obra de Alvenaria | Hiperliga', 'Reduza em até 25% a quebra de materiais na construção. Aprenda as técnicas mais eficazes de gerenciamento para evitar desperdícios com Hiperliga.'],
+  'como-reduzir-entulho-na-construcao': ['Como Reduzir Entulho na Construção Civil | Sustentabilidade', 'Mantenha seu canteiro limpo e diminua os custos de caçambas. Saiba como reduzir o entulho gerado no levantamento de paredes de alvenaria.'],
+  'como-construir-com-mais-eficiencia': ['Como Construir com Mais Eficiência Técnica e Financeira | Hiperliga', 'Melhore faturamento e prazos da sua construção. Aprenda o papel da engenharia de processos e use a fita colante líquida Hiperliga.'],
+  'como-melhorar-a-qualidade-da-alvenaria': ['Como Melhorar a Qualidade da Alvenaria de Vedação | Hiperliga', 'Elimine trincas, descolamentos e umidade nas paredes. Veja técnicas de engenharia civil para melhorar a qualidade das paredes de vedação.'],
+  'como-acelerar-o-cronograma-da-obra': ['Como Acelerar o Cronograma da Obra na Fase Bruta | Hiperliga', 'Confira as melhores técnicas para acelerar o cronograma da sua obra e entregar as chaves mais cedo. Saiba o impacto da alvenaria com a Hiperliga.']
+};
+
+function getContentArticlesForSSR() {
+  return CONTENT_ARTICLE_SLUGS.map((slug) => {
+    const override = CONTENT_ARTICLE_OVERRIDES[slug];
+    const definition = NEW_THEME_DEFINITIONS.find((item) => item.slug === slug);
+    const metadata = SEO_METADATA[`/${slug}`];
+    return {
+      slug,
+      title: override?.[0] ?? definition?.title ?? metadata?.h1 ?? slug,
+      summary: override?.[1] ?? definition?.metaDesc ?? metadata?.description ?? ''
+    };
+  });
+}
+
 // Handle client-side routing by returning index.html (or pre-rendered index.html) for any unhandled routes
 app.get('*', (req, res, next) => {
-  const normalizedPath = req.path.toLowerCase();
+  const normalizedPath = req.path.toLowerCase().replace(/\/+$/, '') || '/';
   
   if (normalizedPath === '/loja' || normalizedPath.startsWith('/loja/')) {
     return next(); // Let it fall through, allowing parent web servers to intercept WordPress
@@ -738,7 +826,7 @@ app.get('*', (req, res, next) => {
       // 2. Build structured SEO heads and schema markup
       const schemaMarkup = {
         '@context': 'https://schema.org',
-        '@type': meta.schemaType === 'FAQPage' ? 'FAQPage' : (meta.schemaType === 'Product' ? 'Product' : 'NewsArticle'),
+        '@type': meta.schemaType === 'FAQPage' ? 'FAQPage' : (meta.schemaType === 'Product' ? 'Product' : (meta.schemaType === 'WebPage' ? 'WebPage' : 'NewsArticle')),
         'name': meta.h1,
         'description': meta.description,
         'url': meta.canonical,
@@ -756,6 +844,37 @@ app.get('*', (req, res, next) => {
       html = html.replace('</head>', `${injectHeads}</head>`);
 
       // 3. Insert raw crawlable HTML blocks to guarantee robot indexability without relying on JS execution
+      const companyPrerender = normalizedPath === '/empresa' ? `
+      <h2>Nossa história</h2>
+      <p>Deixamos o “sempre foi assim” no passado. Quem vive o canteiro de obras conhece bem o cenário: pilhas de areia, cimento desperdiçado, misturas complexas e o relógio correndo contra o lucro. A Hiperliga nasceu há 16 anos justamente porque não aceitávamos mais esse cenário.</p>
+      <p>Nossa história começou com uma pergunta simples: Como tornar a construção civil mais inteligente?</p>
+      <p>A resposta veio através da tecnologia nacional e do alto desempenho. Especializamo-nos em argamassas poliméricas que já chegam prontas para o combate. Não entregamos apenas um produto em baldes; entregamos agilidade. Onde antes havia desperdício, hoje há rendimento. Onde havia demora, hoje há fluidez.</p>
+      <p>O Grupo Hiperliga não olha apenas para paredes levantadas; olhamos para o futuro de uma construção mais leve, sustentável e acessível para todos.</p>
+      <h2>Hiperliga em vídeo</h2>
+      <p><a href="https://youtube.com/shorts/3k4MttZpzEA">Assistir no YouTube</a></p>
+      <h2>Marcas que fazem parte da nossa história</h2>
+      <ul><li>Hiperliga</li><li>Massa Mais</li><li>Granfinalle</li></ul>` : '';
+      const solutionsPrerender = normalizedPath === '/solucoes' ? `
+      <h2>Catálogo de soluções</h2>
+      <p>Consulte as artes oficiais das soluções e necessidades apresentadas para a obra.</p>
+      <p><a href="https://wa.me/554188883365?text=Ol%C3%A1%21%20Gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20as%20solu%C3%A7%C3%B5es%20Hiperliga.">Precisa de ajuda para escolher?</a></p>` : '';
+      const contentPrerender = normalizedPath === '/conteudos' ? `
+      <h2>Artigos</h2>
+      ${getContentArticlesForSSR().map((article) => `<article><h3><a href="/${article.slug}/">${article.title}</a></h3><p>${article.summary}</p></article>`).join('')}
+      <h2>Produtos em destaque</h2>
+      <p><a href="/solucoes/">Conhecer as soluções</a></p>` : '';
+      const contactPrerender = normalizedPath === '/contato' ? `
+      <h2>Contatos Rápidos</h2>
+      <ul><li><a href="https://wa.me/554188883365?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+Argamassa+Polim%C3%A9rica+Hiperliga.">WhatsApp Suporte: +55 41 8888-3365</a></li><li><a href="mailto:contato@hiperliga.com.br">E-mail Comercial: contato@hiperliga.com.br</a></li><li>Fábrica Matriz: R. Antônio Camargo, 122 - Areias, Alm. Tamandaré - PR, 83514-140</li></ul>
+      <h2>Inicie uma conversa</h2>
+      <form><label for="contact-name">Nome</label><input id="contact-name" name="name" required /><label for="contact-sector">Setor</label><select id="contact-sector" name="sector" required><option>Compras</option><option>Vendas</option><option>Reclamações</option><option>Dúvidas</option></select><button type="submit">Iniciar conversa no WhatsApp</button></form>` : '';
+      const groutPrerender = normalizedPath === '/rejunte-polimerico' ? `
+      <h2>Rejunte Polimérico Hiperliga</h2>
+      <p>Rejunte polimérico pronto para uso na cor branca, indicado para áreas internas e externas. Dispensa mistura com água, com alta aderência, flexibilidade e resistência a mofo e manchas.</p>
+      <p>Embalagem: 1 kg.</p>
+      <h2>Calculadora de consumo</h2>
+      <p>Informe a área, o formato da cerâmica e a largura da junta para estimar as embalagens de 1 kg conforme a tabela de consumo fornecida pela Hiperliga.</p>
+      <form><label for="grout-area">Área a rejuntar (m²)</label><input id="grout-area" name="area" /><label for="grout-format">Tamanho da cerâmica</label><select id="grout-format" name="format"></select><label for="grout-joint">Largura da junta (mm)</label><select id="grout-joint" name="joint"></select><button type="submit">Calcular quantidade</button></form>` : '';
       const semanticPreRenderBody = `
     <div id="seo-crawlable-prerender-layer" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0.01;">
       <nav><a href="/">Home</a> &gt; <a href="${normalizedPath}">${meta.h1}</a></nav>
@@ -766,6 +885,11 @@ app.get('*', (req, res, next) => {
       <h2>A Solução Eficiente da Hiperliga</h2>
       <p>${meta.solution}</p>
       <p>Compre produtos Hiperliga e economize até 40% na alvenaria: <a href="https://loja.hiperliga.com.br/">loja.hiperliga.com.br</a></p>
+      ${companyPrerender}
+      ${solutionsPrerender}
+      ${contentPrerender}
+      ${contactPrerender}
+      ${groutPrerender}
     </div>
       `;
       

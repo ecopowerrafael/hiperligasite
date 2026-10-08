@@ -12,6 +12,8 @@ export default function InstitutionalPage({ title, description }: InstitutionalP
     const existingDescription = document.querySelector('meta[name="description"]');
     const robots = existingRobots ?? document.createElement('meta');
     const metaDescription = existingDescription ?? document.createElement('meta');
+    const previousRobotsContent = existingRobots?.getAttribute('content');
+    const previousDescriptionContent = existingDescription?.getAttribute('content');
 
     document.title = `${title} | Hiperliga`;
     robots.setAttribute('name', 'robots');
@@ -23,8 +25,10 @@ export default function InstitutionalPage({ title, description }: InstitutionalP
 
     return () => {
       document.title = previousTitle;
-      if (!existingRobots) robots.remove();
-      if (!existingDescription) metaDescription.remove();
+      if (existingRobots && previousRobotsContent !== null) robots.setAttribute('content', previousRobotsContent);
+      else robots.remove();
+      if (existingDescription && previousDescriptionContent !== null) metaDescription.setAttribute('content', previousDescriptionContent);
+      else metaDescription.remove();
     };
   }, [title]);
 

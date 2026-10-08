@@ -17,21 +17,14 @@ import Marketplaces from './components/Marketplaces';
 import { SEO_PAGES_DATA } from './seoPagesData';
 import SeoPageTemplate from './components/SeoPageTemplate';
 import InstitutionalPage from './components/InstitutionalPage';
+import SolutionsPage from './components/SolutionsPage';
+import CompanyPage from './components/CompanyPage';
+import ContentPage from './components/ContentPage';
+import ContactPage from './components/ContactPage';
+import GroutProductPage from './components/GroutProductPage';
 import { normalizePath } from './navigation';
 
 const INSTITUTIONAL_PAGES: Record<string, { title: string; description: string }> = {
-  '/solucoes': {
-    title: 'Soluções Hiperliga',
-    description: 'Esta área está sendo preparada para apresentar as soluções construtivas da Hiperliga.',
-  },
-  '/empresa': {
-    title: 'Conheça a Hiperliga',
-    description: 'Esta área está sendo preparada para apresentar a Hiperliga e sua atuação.',
-  },
-  '/conteudos': {
-    title: 'Conteúdos Hiperliga',
-    description: 'Acesse esta área para acompanhar os conteúdos técnicos e orientações da Hiperliga.',
-  },
   '/contato': {
     title: 'Contato Hiperliga',
     description: 'Entre em contato com a Hiperliga pelos canais oficiais disponíveis no site.',
@@ -99,6 +92,26 @@ export default function App() {
       {seoData ? (
         <main id="seo-pages-wrapper">
           <SeoPageTemplate data={seoData} onNavigate={handleNavigate} />
+        </main>
+      ) : normalizedPath === '/solucoes' ? (
+        <main id="solutions-page-wrapper">
+          <SolutionsPage />
+        </main>
+      ) : normalizedPath === '/empresa' ? (
+        <main id="company-page-wrapper">
+          <CompanyPage />
+        </main>
+      ) : normalizedPath === '/conteudos' ? (
+        <main id="content-page-wrapper">
+          <ContentPage />
+        </main>
+      ) : normalizedPath === '/contato' ? (
+        <main id="contact-page-wrapper">
+          <ContactPage />
+        </main>
+      ) : normalizedPath === '/rejunte-polimerico' ? (
+        <main id="grout-product-page-wrapper">
+          <GroutProductPage />
         </main>
       ) : institutionalPage ? (
         <main id="institutional-page-wrapper">
