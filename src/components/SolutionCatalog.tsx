@@ -8,14 +8,14 @@ type CatalogItem = {
 };
 
 const CATALOG_ITEMS: CatalogItem[] = [
-  { file: '6.png', label: 'Argamassa Polimérica — necessidade', alt: 'Pessoa misturando argamassa em uma obra, com texto sobre demora, sujeira e desperdício' },
-  { file: '8.png', label: 'Argamassa Polimérica — solução', alt: 'Arte oficial da Argamassa Polimérica Hiperliga para assentamento de blocos e tijolos' },
-  { file: '1.png', label: 'Sela Trinca — necessidade', alt: 'Parede branca com uma trinca destacada e texto sobre trincas na parede' },
-  { file: '2.png', label: 'Sela Trinca — solução', alt: 'Arte oficial da Argamassa Polimérica Sela Trinca Hiperliga' },
-  { file: '3.png', label: 'Massa Repara Paredes — necessidade', alt: 'Parede com pequeno furo e texto sobre pequenas imperfeições' },
-  { file: '4.png', label: 'Massa Repara Paredes — solução', alt: 'Arte oficial da Massa Repara Paredes Hiperliga' },
-  { file: '5.png', label: 'Reboco Polimérico — necessidade', alt: 'Parede com revestimento soltando e texto sobre parede esfarelando' },
-  { file: '7.png', label: 'Reboco Polimérico — solução', alt: 'Arte oficial do Reboco Polimérico Hiperliga' },
+  { file: '1.png', label: 'Necessidade 1 — problema', alt: 'Arte oficial da primeira necessidade apresentada para a obra' },
+  { file: '2.png', label: 'Solução 1', alt: 'Arte oficial da solução correspondente à primeira necessidade' },
+  { file: '3.png', label: 'Necessidade 2 — problema', alt: 'Arte oficial da segunda necessidade apresentada para a obra' },
+  { file: '4.png', label: 'Solução 2', alt: 'Arte oficial da solução correspondente à segunda necessidade' },
+  { file: '5.png', label: 'Necessidade 3 — problema', alt: 'Arte oficial da terceira necessidade apresentada para a obra' },
+  { file: '6.png', label: 'Solução 3', alt: 'Arte oficial da solução correspondente à terceira necessidade' },
+  { file: '7.png', label: 'Necessidade 4 — problema', alt: 'Arte oficial da quarta necessidade apresentada para a obra' },
+  { file: '8.png', label: 'Solução 4', alt: 'Arte oficial da solução correspondente à quarta necessidade' },
 ];
 
 export default function SolutionCatalog() {

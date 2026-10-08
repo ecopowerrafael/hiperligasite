@@ -23,8 +23,8 @@ export const SOLUTIONS_PAGE_DATA: SolutionDefinition[] = [
     productName: 'Argamassa Polimérica Cola Blocos E Tijolos Hiperliga 3 kg',
     brand: 'Hiperliga',
     description: 'Argamassa polimérica pronta para uso que substitui a argamassa convencional no assentamento de blocos e tijolos. Rende até 20 vezes mais que a argamassa tradicional, dispensa areia, cimento e água e é aplicada com bisnaga — obra mais rápida, mais limpa e com muito menos entulho. Alta aderência e excelente acabamento. Embalagem de 3 kg.',
-    solutionImage: '/images/products/drive-1TR041UBF2m6vJnnzfbh26Iax6RLNvZke.png',
-    solutionImageAlt: 'Sachê de 3 kg da Argamassa Polimérica Hiperliga',
+    solutionImage: '/images/solucoes/8.png',
+    solutionImageAlt: 'Arte oficial da solução de Argamassa Polimérica Hiperliga para assentamento de blocos e tijolos',
     productUrl: PRODUCTS_DATA.find((product) => product.id === 'hiperliga-3kg')?.storeUrl,
   },
   {
