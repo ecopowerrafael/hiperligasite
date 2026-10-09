@@ -7,7 +7,7 @@ const COMPANY_TITLE = 'Conheça o Grupo Hiperliga';
 const COMPANY_DESCRIPTION = 'Conheça a história do Grupo Hiperliga e suas marcas Hiperliga, Massa Mais e Granfinalle, com soluções para assentamento, acabamento e reparos.';
 const YOUTUBE_URL = 'https://youtube.com/shorts/3k4MttZpzEA';
 
-const BRANDS: Array<{ name: string; description: string; logo?: string }> = [
+const BRANDS: Array<{ name: string; description: string; logo?: string; logoScaleClass?: string }> = [
   {
     name: 'Hiperliga',
     description: 'Produtos para assentamento, acabamento e reparos, com soluções como argamassas poliméricas, rejuntes e massas para paredes e madeira.',
@@ -17,11 +17,13 @@ const BRANDS: Array<{ name: string; description: string; logo?: string }> = [
     name: 'Massa Mais',
     description: 'Soluções de argamassa polimérica para assentamento de blocos e tijolos e acabamento de pisos.',
     logo: 'https://massamais.com.br/wp-content/uploads/2026/04/ChatGPT-Image-15-de-abr.-de-2026-13_28_26.png',
+    logoScaleClass: 'scale-[3]',
   },
   {
     name: 'Granfinalle',
     description: 'Produtos para preparação e acabamento de superfícies, incluindo massa corrida e tinta.',
     logo: 'https://massamais.com.br/wp-content/uploads/2025/08/LOGO-transparente300esse.png',
+    logoScaleClass: 'scale-150',
   },
 ];
 
@@ -105,7 +107,7 @@ export default function CompanyPage() {
             {BRANDS.map((brand) => (
               <article key={brand.name} className="flex min-h-64 flex-col rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
                 <div className="flex h-20 items-center justify-center rounded-2xl bg-slate-50 px-5">
-                  {brand.logo ? <img src={brand.logo} alt={`Logo oficial ${brand.name}`} className="max-h-14 max-w-full object-contain" referrerPolicy="no-referrer" /> : <span className="font-display text-2xl font-extrabold text-brand-dark">{brand.name}</span>}
+                  {brand.logo ? <img src={brand.logo} alt={`Logo oficial ${brand.name}`} className={`max-h-14 max-w-full origin-center object-contain ${brand.logoScaleClass ?? ''}`} referrerPolicy="no-referrer" /> : <span className="font-display text-2xl font-extrabold text-brand-dark">{brand.name}</span>}
                 </div>
                 <h3 className="mt-6 font-display text-xl font-extrabold text-slate-900">{brand.name}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">{brand.description}</p>
