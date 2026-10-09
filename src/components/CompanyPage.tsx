@@ -16,10 +16,12 @@ const BRANDS: Array<{ name: string; description: string; logo?: string }> = [
   {
     name: 'Massa Mais',
     description: 'Soluções de argamassa polimérica para assentamento de blocos e tijolos e acabamento de pisos.',
+    logo: 'https://massamais.com.br/wp-content/uploads/2026/04/ChatGPT-Image-15-de-abr.-de-2026-13_28_26.png',
   },
   {
     name: 'Granfinalle',
     description: 'Produtos para preparação e acabamento de superfícies, incluindo massa corrida e tinta.',
+    logo: 'https://massamais.com.br/wp-content/uploads/2025/08/LOGO-transparente300esse.png',
   },
 ];
 
