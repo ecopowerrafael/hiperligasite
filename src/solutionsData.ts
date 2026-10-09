@@ -23,7 +23,7 @@ export const SOLUTIONS_PAGE_DATA: SolutionDefinition[] = [
     productName: 'Argamassa Polimérica Cola Blocos E Tijolos Hiperliga 3 kg',
     brand: 'Hiperliga',
     description: 'Argamassa polimérica pronta para uso que substitui a argamassa convencional no assentamento de blocos e tijolos. Rende até 20 vezes mais que a argamassa tradicional, dispensa areia, cimento e água e é aplicada com bisnaga — obra mais rápida, mais limpa e com muito menos entulho. Alta aderência e excelente acabamento. Embalagem de 3 kg.',
-    solutionImage: '/images/solucoes/8.png',
+    solutionImage: '/images/solucoes/7.png',
     solutionImageAlt: 'Arte oficial da solução de Argamassa Polimérica Hiperliga para assentamento de blocos e tijolos',
     productUrl: PRODUCTS_DATA.find((product) => product.id === 'hiperliga-3kg')?.storeUrl,
   },
@@ -34,8 +34,8 @@ export const SOLUTIONS_PAGE_DATA: SolutionDefinition[] = [
     productName: 'Argamassa Polimérica Acabamento Piso e Laje Hiperliga',
     brand: 'Hiperliga',
     description: 'Argamassa polimérica pronta para uso para regularização e acabamento final de pisos e lajes. Nivela a superfície, tem alta resistência mecânica e ótima aderência, dispensando areia e cimento — ideal para contrapiso de acabamento em áreas internas e externas.',
-    solutionImage: '/images/products/drive-1dcm3zcgDkYOcb4AHQ6cXOagBFNlKaEKY.png',
-    solutionImageAlt: 'Imagem oficial de acabamento para piso e laje Hiperliga',
+    solutionImage: '/images/solucoes/3.png',
+    solutionImageAlt: 'Arte oficial da solução de acabamento para piso e laje Hiperliga',
   },
   {
     id: 'massa-corrida',
@@ -44,8 +44,8 @@ export const SOLUTIONS_PAGE_DATA: SolutionDefinition[] = [
     productName: 'Massa Corrida Branca Granfinalle',
     brand: 'Granfinalle',
     description: 'Massa corrida branca de alta cobertura para nivelar e dar acabamento em paredes e tetos internos. Fácil de aplicar e de lixar, com secagem rápida, deixa a superfície lisa e uniforme, pronta para receber a pintura.',
-    solutionImage: '/images/products/drive-1i4kqCqQ8GT4acDQ3boS9ymonxj4kz85o.png',
-    solutionImageAlt: 'Imagem oficial da Massa Corrida Branca Granfinalle',
+    solutionImage: '/images/solucoes/5.png',
+    solutionImageAlt: 'Arte oficial da solução Massa Corrida Branca Granfinalle',
   },
   {
     id: 'massa-repara-paredes',
@@ -73,3 +73,11 @@ export const solutionCta = (solution: SolutionDefinition) => ({
   label: solution.productUrl ? 'Conhecer produto' : 'Solicitar orientação',
   href: solution.productUrl ?? whatsappFor(solution.productName),
 });
+
+export const SOLUTION_DISPLAY_ORDER = [
+  'argamassa-polimerica-3kg',
+  'sela-trinca',
+  'acabamento-piso-laje',
+  'massa-corrida',
+  'massa-repara-paredes',
+] as const;

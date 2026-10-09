@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
 import { ArrowUpRight, MessageSquare } from 'lucide-react';
 import { EXPERT_CONTACT_WHATSAPP } from '../data';
-import { solutionCta, SOLUTIONS_PAGE_DATA } from '../solutionsData';
-import SolutionCatalog from './SolutionCatalog';
+import { solutionCta, SOLUTIONS_PAGE_DATA, SOLUTION_DISPLAY_ORDER } from '../solutionsData';
+
+const displayedSolutions = SOLUTION_DISPLAY_ORDER
+  .map((id) => SOLUTIONS_PAGE_DATA.find((solution) => solution.id === id))
+  .filter((solution): solution is (typeof SOLUTIONS_PAGE_DATA)[number] => Boolean(solution));
 
 export default function SolutionsPage() {
   useEffect(() => {
@@ -41,7 +44,7 @@ export default function SolutionsPage() {
         </header>
 
         <div className="mt-16 space-y-10">
-          {SOLUTIONS_PAGE_DATA.map((solution, index) => {
+          {displayedSolutions.map((solution, index) => {
             const cta = solutionCta(solution);
             return (
               <article key={solution.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
@@ -74,8 +77,6 @@ export default function SolutionsPage() {
             );
           })}
         </div>
-
-        <SolutionCatalog />
 
         <div className="mt-16 rounded-3xl bg-primary px-6 py-10 text-center text-white shadow-lg sm:px-10">
           <h2 className="font-display text-2xl font-extrabold sm:text-3xl">Precisa de ajuda para escolher?</h2>
