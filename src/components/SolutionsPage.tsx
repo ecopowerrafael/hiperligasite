@@ -56,13 +56,19 @@ export default function SolutionsPage() {
                       <h2 className="mt-3 font-display text-2xl font-extrabold leading-tight sm:text-3xl">{solution.needTitle}</h2>
                       <p className="mt-4 leading-relaxed text-slate-300">{solution.needDescription}</p>
                     </div>
-                    <div className="mt-8 border-t border-white/10 pt-5 text-sm text-slate-400">Não foi fornecida uma imagem específica da necessidade na associação oficial. A solução está apresentada com a imagem oficial do produto.</div>
+                    {solution.needImage ? (
+                      <div className="mt-8 flex min-h-64 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-4">
+                        <img src={solution.needImage} alt={solution.needImageAlt ?? solution.needTitle} width="1692" height="2000" loading={index === 0 ? 'eager' : 'lazy'} className="max-h-72 w-full object-contain" />
+                      </div>
+                    ) : (
+                      <div className="mt-8 border-t border-white/10 pt-5 text-sm text-slate-400">Não foi fornecida uma imagem específica da necessidade na associação oficial. A solução está apresentada com a imagem oficial do produto.</div>
+                    )}
                   </div>
 
                   <div className="p-7 sm:p-10">
                     <p className="text-xs font-bold uppercase tracking-widest text-primary">Solução</p>
                     <div className="mt-5 flex min-h-64 items-center justify-center rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-slate-100 p-6">
-                      <img src={solution.solutionImage} alt={solution.solutionImageAlt} loading={index === 0 ? 'eager' : 'lazy'} className="max-h-72 w-full object-contain" />
+                      <img src={solution.solutionImage} alt={solution.solutionImageAlt} loading={index === 0 ? 'eager' : 'lazy'} className="max-h-[27rem] w-full object-contain" />
                     </div>
                     <p className="mt-6 text-xs font-bold uppercase tracking-widest text-slate-500">{solution.brand}</p>
                     <h3 className="mt-2 font-display text-2xl font-extrabold leading-tight text-slate-900">{solution.productName}</h3>

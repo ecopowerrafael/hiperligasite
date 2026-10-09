@@ -4,6 +4,8 @@ export type SolutionDefinition = {
   id: string;
   needTitle: string;
   needDescription: string;
+  needImage?: string;
+  needImageAlt?: string;
   productName: string;
   brand: string;
   description: string;
@@ -20,32 +22,38 @@ export const SOLUTIONS_PAGE_DATA: SolutionDefinition[] = [
     id: 'argamassa-polimerica-3kg',
     needTitle: 'Assentamento de blocos e tijolos',
     needDescription: 'Para quem precisa assentar blocos e tijolos com uma solução pronta para uso.',
+    needImage: '/images/solucoes/7.png',
+    needImageAlt: 'Imagem da necessidade relacionada ao assentamento de blocos e tijolos',
     productName: 'Argamassa Polimérica Cola Blocos E Tijolos Hiperliga 3 kg',
     brand: 'Hiperliga',
     description: 'Argamassa polimérica pronta para uso que substitui a argamassa convencional no assentamento de blocos e tijolos. Rende até 20 vezes mais que a argamassa tradicional, dispensa areia, cimento e água e é aplicada com bisnaga — obra mais rápida, mais limpa e com muito menos entulho. Alta aderência e excelente acabamento. Embalagem de 3 kg.',
-    solutionImage: '/images/solucoes/7.png',
-    solutionImageAlt: 'Arte oficial da solução de Argamassa Polimérica Hiperliga para assentamento de blocos e tijolos',
+    solutionImage: '/images/products/drive-1TR041UBF2m6vJnnzfbh26Iax6RLNvZke.png',
+    solutionImageAlt: 'Sachê de 3 kg da Argamassa Polimérica Hiperliga',
     productUrl: PRODUCTS_DATA.find((product) => product.id === 'hiperliga-3kg')?.storeUrl,
   },
   {
     id: 'acabamento-piso-laje',
     needTitle: 'Regularização e acabamento de pisos e lajes',
     needDescription: 'Para regularizar a superfície e executar o acabamento final de pisos e lajes conforme a indicação do produto.',
+    needImage: '/images/solucoes/3.png',
+    needImageAlt: 'Imagem da necessidade relacionada ao acabamento de pisos e lajes',
     productName: 'Argamassa Polimérica Acabamento Piso e Laje Hiperliga',
     brand: 'Hiperliga',
     description: 'Argamassa polimérica pronta para uso para regularização e acabamento final de pisos e lajes. Nivela a superfície, tem alta resistência mecânica e ótima aderência, dispensando areia e cimento — ideal para contrapiso de acabamento em áreas internas e externas.',
-    solutionImage: '/images/solucoes/3.png',
-    solutionImageAlt: 'Arte oficial da solução de acabamento para piso e laje Hiperliga',
+    solutionImage: '/images/products/drive-1dcm3zcgDkYOcb4AHQ6cXOagBFNlKaEKY.png',
+    solutionImageAlt: 'Imagem oficial de acabamento para piso e laje Hiperliga',
   },
   {
     id: 'massa-corrida',
     needTitle: 'Pequenas imperfeições em paredes e tetos internos',
     needDescription: 'Para preparar paredes e tetos internos antes da pintura, corrigindo pequenas imperfeições.',
+    needImage: '/images/solucoes/5.png',
+    needImageAlt: 'Imagem da necessidade relacionada a pequenas imperfeições em paredes e tetos internos',
     productName: 'Massa Corrida Branca Granfinalle',
     brand: 'Granfinalle',
     description: 'Massa corrida branca de alta cobertura para nivelar e dar acabamento em paredes e tetos internos. Fácil de aplicar e de lixar, com secagem rápida, deixa a superfície lisa e uniforme, pronta para receber a pintura.',
-    solutionImage: '/images/solucoes/5.png',
-    solutionImageAlt: 'Arte oficial da solução Massa Corrida Branca Granfinalle',
+    solutionImage: '/images/products/drive-1i4kqCqQ8GT4acDQ3boS9ymonxj4kz85o.png',
+    solutionImageAlt: 'Imagem oficial da Massa Corrida Branca Granfinalle',
   },
   {
     id: 'massa-repara-paredes',
