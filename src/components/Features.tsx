@@ -177,7 +177,7 @@ export default function Features() {
           </div>
           <div className="relative z-10 w-full md:w-auto shrink-0 flex flex-col sm:flex-row gap-4">
             <a
-              href="#calculadora"
+              href="/produtos/argamassa-polimerica/#calculadora"
               className="bg-primary hover:bg-primary-dark text-white font-sans font-semibold text-sm px-6 py-3.5 rounded-xl text-center transition-all duration-300 hover:shadow-lg"
             >
               Fazer uma Simulação Grátis

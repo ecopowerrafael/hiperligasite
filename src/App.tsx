@@ -8,7 +8,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Comparison from './components/Comparison';
-import EstimatorCalculator from './components/Calculator';
 import ProductCatalog from './components/ProductCatalog';
 import MediaSection from './components/MediaSection';
 import Certificacoes from './components/Certificacoes';
@@ -43,6 +42,16 @@ export default function App() {
     document.getElementById('seo-crawlable-prerender-layer')?.remove();
   }, []);
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const targetId = decodeURIComponent(hash.slice(1));
+    requestAnimationFrame(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }, [currentPath]);
+
   // Synchronize history popstate (Browser Back/Forward buttons)
   useEffect(() => {
     const handlePopState = () => {
@@ -64,9 +73,11 @@ export default function App() {
         // If it starts with "/" and is not a special subpath like wordpress (/loja)
         if (href && href.startsWith('/') && !href.startsWith('/loja') && !href.startsWith('#')) {
           e.preventDefault();
-          window.history.pushState(null, '', href);
-          setCurrentPath(href.toLowerCase());
-          window.scrollTo({ top: 0, behavior: 'instant' });
+          const destination = new URL(href, window.location.origin);
+          const nextPath = destination.pathname.toLowerCase();
+          window.history.pushState(null, '', `${destination.pathname}${destination.search}${destination.hash}`);
+          setCurrentPath(nextPath);
+          if (!destination.hash) window.scrollTo({ top: 0, behavior: 'instant' });
         }
       }
     };
@@ -143,9 +154,6 @@ export default function App() {
 
           {/* Legacy vs Innovation Comparison Table */}
           <Comparison />
-
-          {/* Interactive Estimator Calculator */}
-          <EstimatorCalculator />
 
           {/* Dynamic Product Catalogue Spec tab */}
           <ProductCatalog />
