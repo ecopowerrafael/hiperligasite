@@ -6,7 +6,7 @@ export type NavigationItem = {
 
 export const MAIN_NAVIGATION: NavigationItem[] = [
   { label: 'Início', href: '/' },
-  { label: 'Produtos', href: 'https://loja.hiperliga.com.br/', external: true },
+  { label: 'Produtos', href: '/produtos/' },
   { label: 'Soluções', href: '/solucoes/' },
   { label: 'Empresa', href: '/empresa/' },
   { label: 'Conteúdos', href: '/conteudos/' },

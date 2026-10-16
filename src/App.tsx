@@ -22,6 +22,9 @@ import CompanyPage from './components/CompanyPage';
 import ContentPage from './components/ContentPage';
 import ContactPage from './components/ContactPage';
 import GroutProductPage from './components/GroutProductPage';
+import ProductCatalogPage from './components/ProductCatalogPage';
+import ProductDetailPage from './components/ProductDetailPage';
+import { getCatalogProduct } from './catalogProducts';
 import { normalizePath } from './navigation';
 
 const INSTITUTIONAL_PAGES: Record<string, { title: string; description: string }> = {
@@ -80,6 +83,7 @@ export default function App() {
   const cleanKey = normalizedPath.replace(/^\//, '');
   const seoData = SEO_PAGES_DATA[cleanKey];
   const institutionalPage = INSTITUTIONAL_PAGES[normalizedPath];
+  const catalogProduct = normalizedPath.startsWith('/produtos/') ? getCatalogProduct(normalizedPath.replace('/produtos/', '')) : undefined;
 
   return (
     <div className="min-h-screen bg-brand-dark p-0 m-0 font-sans selection:bg-primary selection:text-white" id="hiper-liga-home-app">
@@ -112,6 +116,14 @@ export default function App() {
       ) : normalizedPath === '/rejunte-polimerico' ? (
         <main id="grout-product-page-wrapper">
           <GroutProductPage />
+        </main>
+      ) : normalizedPath === '/produtos' ? (
+        <main id="product-catalog-page-wrapper">
+          <ProductCatalogPage />
+        </main>
+      ) : catalogProduct && catalogProduct.slug !== 'rejunte-polimerico' ? (
+        <main id="product-detail-page-wrapper">
+          <ProductDetailPage product={catalogProduct} />
         </main>
       ) : institutionalPage ? (
         <main id="institutional-page-wrapper">

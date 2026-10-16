@@ -1,0 +1,33 @@
+HIPERLIGA
+TECNOLOGIA EM ARGAMASSA
+FICHA TÉCNICA
+Pendências de validação
+Pendências antes da publicação
+Itens que precisam de resposta da produção ou decisão comercial. Resolvidos, o documento fica publicável.
+Dados de referência de mercado (selo azul)
+Base Coat, Revestimento para EPS, Cola Cobogó, Cola Vidro, Repara Paredes e Rejunte foram preenchidos com dados
+de produtos equivalentes ou derivados da própria química da linha Hiperliga, por decisão do responsável em
+14/10/2026
+ Base Coat  DryLevis Base Coat Render (polimérico pronto para uso); secundárias: Holdflex Basecoat 33, Ibratin
+Basecoat.
+ Revestimento para EPS  derivado do Reboco Polimérico Hiperliga (densidade, secagem, cura); rendimento calculado
+para 12 mm.
+ Cola Cobogó e Cola Vidro — derivados da Argamassa Polimérica Hiperliga (cura, densidade); consumo calculado por
+metro de cordão 1,52,0 kg/m²  12,5 blocos/m²  0,13 kg/peça). Junta e rejuntamento: Quartzolit / Certa (bloco de
+vidro).
+ Repara Paredes — massas acrílicas de reparo Cal Hidra Reparo Rápido e similares).
+ Rejunte  Quartzolit Rejunte Acrílico e Kerakoll Rejuntalite Acrílico.
+Esses números são plausíveis para a categoria, não medições do produto Hiperliga. Recomenda-se um teste de
+consumo por produto 1 sachê em área conhecida) antes de imprimir em rótulo.
+Garantia
+Base Coat, EPS, Cola Cobogó e Cola Vidro estão sem prazo de garantia. Os demais produtos da linha declaram 10 anos
+— definir se vale para estes também.
+Inconsistências na planilha de SKUs
+ HP11003 usado para Argamassa 3 kg Cinza e Branco (mesmo SKU, EANs diferentes).
+ EAN 7908869000151 aparece na Argamassa Hiperliga 25 kg Cinza e na Massa Mais 30 kg Cinza.
+ EAN 7908869000434 aparece no Reboco Hiperliga 40 kg Cinza e no catálogo Massa Mais Reboco 40 kg e
+Acabamento Piso 40 kg).
+ Base Coat 3 kg Branco usa HP13003B  prefixo HP13 é o da Cola Cobogó.
+ Cola Vidro usa prefixo GF Granfinalle) em produto Hiperliga.
+ Sem EAN Cola Cobogó, Repara Paredes 150 g e 1 kg), Repara Madeira, Nivela Madeira.
+Hiperliga Materiais para Construção LTDA · Almirante Tamandaré  PR · SAC 41 985220748 · www.hiperliga.com.brRev. 02  14/10/2026 · pág. 17

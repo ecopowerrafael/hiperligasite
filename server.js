@@ -66,6 +66,16 @@ const SEO_METADATA = {
     solution: 'A página reúne as informações do produto e uma estimativa baseada exclusivamente na tabela de consumo fornecida pela Hiperliga.',
     schemaType: 'WebPage'
   },
+  '/produtos': {
+    title: 'Produtos Hiperliga | Catálogo Institucional',
+    description: 'Conheça nossas soluções para assentamento, revestimento, acabamento e reparos. Consulte as aplicações e informações técnicas de cada produto.',
+    canonical: 'https://hiperliga.com.br/produtos/',
+    h1: 'Produtos Hiperliga',
+    tagline: 'Conheça nossas soluções para assentamento, revestimento, acabamento e reparos.',
+    problem: 'Encontre o produto adequado para diferentes necessidades da obra e consulte sua apresentação técnica.',
+    solution: 'O catálogo reúne 14 famílias de produtos com páginas individuais e links para compra ou orientação.',
+    schemaType: 'WebPage'
+  },
   '/argamassa-polimerica': {
     title: 'Argamassa Polimérica Hiperliga | Cola Bloco Pronta para Alvenaria',
     description: 'Conheça a Argamassa Polimérica Hiperliga, a evolução para o assentamento de blocos e tijolos. Alta durabilidade, sem sujeira, pronta para uso e rendimento até 20x maior.',
@@ -137,6 +147,32 @@ const SEO_METADATA = {
     schemaType: 'Product'
   }
 };
+
+const CATALOG_PRODUCT_METADATA = Object.fromEntries([
+  ['argamassa-polimerica', 'Argamassa Polimérica Cola Blocos e Tijolos'],
+  ['sela-trinca', 'Argamassa Sela Trinca e Pequenos Reparos'],
+  ['reboco-polimerico', 'Reboco Polimérico'],
+  ['acabamento-piso-laje', 'Argamassa Polimérica Acabamento Piso e Laje'],
+  ['base-coat', 'Argamassa Base Coat'],
+  ['revestimento-eps', 'Revestimento Polimérico para EPS'],
+  ['cola-cobogo', 'Argamassa Cola Cobogó'],
+  ['cola-vidro', 'Cola Vidro'],
+  ['massa-repara-paredes', 'Massa Repara Paredes — Corrige Imperfeições'],
+  ['repara-madeira', 'Massa Calafetar / Repara Madeira — Restauração'],
+  ['nivela-madeira', 'Massa Nivela Madeira'],
+  ['rejunte-polimerico', 'Rejunte Polimérico Premium — Pronto para Uso'],
+  ['grafiato', 'Grafiato'],
+  ['textura', 'Textura'],
+].map(([slug, name]) => [slug === 'rejunte-polimerico' ? '/rejunte-polimerico' : `/produtos/${slug}`, {
+  title: `${name} | Hiperliga`,
+  description: `${name}. Consulte aplicações e informações técnicas do catálogo Hiperliga.`,
+  canonical: slug === 'rejunte-polimerico' ? 'https://hiperliga.com.br/rejunte-polimerico/' : `https://hiperliga.com.br/produtos/${slug}/`,
+  h1: name,
+  tagline: 'Apresentação e informações técnicas do produto Hiperliga.',
+  problem: 'Consulte as informações disponíveis para avaliar a aplicação do produto na sua obra.',
+  solution: 'A página reúne a apresentação do produto, informações técnicas disponíveis, galeria e canais de orientação.',
+  schemaType: 'WebPage'
+}]));
 
 const NEW_THEME_DEFINITIONS = [
   {
@@ -798,7 +834,7 @@ app.get('*', (req, res, next) => {
   }
 
   // Pre-render logic for specific search keywords
-  let meta = SEO_METADATA[normalizedPath];
+  let meta = SEO_METADATA[normalizedPath] || CATALOG_PRODUCT_METADATA[normalizedPath];
   if (!meta) {
     const slug = normalizedPath.replace(/^\//, '');
     const def = NEW_THEME_DEFINITIONS.find(t => t.slug === slug);
@@ -868,6 +904,15 @@ app.get('*', (req, res, next) => {
       <ul><li><a href="https://wa.me/554188883365?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+a+Argamassa+Polim%C3%A9rica+Hiperliga.">WhatsApp Suporte: +55 41 8888-3365</a></li><li><a href="mailto:contato@hiperliga.com.br">E-mail Comercial: contato@hiperliga.com.br</a></li><li>Fábrica Matriz: R. Antônio Camargo, 122 - Areias, Alm. Tamandaré - PR, 83514-140</li></ul>
       <h2>Inicie uma conversa</h2>
       <form><label for="contact-name">Nome</label><input id="contact-name" name="name" required /><label for="contact-sector">Setor</label><select id="contact-sector" name="sector" required><option>Compras</option><option>Vendas</option><option>Reclamações</option><option>Dúvidas</option></select><button type="submit">Iniciar conversa no WhatsApp</button></form>` : '';
+      const catalogPrerender = normalizedPath === '/produtos' ? `
+      <h2>Catálogo institucional</h2>
+      <p>Conheça nossas soluções para assentamento, revestimento, acabamento e reparos. Consulte as aplicações e informações técnicas de cada produto.</p>
+      <ul>${Object.entries(CATALOG_PRODUCT_METADATA).map(([route, product]) => `<li><a href="${route}/">${product.h1}</a></li>`).join('')}</ul>` : '';
+      const productPrerender = CATALOG_PRODUCT_METADATA[normalizedPath] ? `
+      <h2>${meta.h1}</h2>
+      <p>${meta.description}</p>
+      <p>Consulte as imagens disponíveis, o status da informação técnica e a ficha técnica em PDF fornecida no pacote institucional.</p>
+      <p><a href="https://loja.hiperliga.com.br/">Comprar na loja</a></p>` : '';
       const groutPrerender = normalizedPath === '/rejunte-polimerico' ? `
       <h2>Rejunte Polimérico Hiperliga</h2>
       <p>Rejunte polimérico pronto para uso na cor branca, indicado para áreas internas e externas. Dispensa mistura com água, com alta aderência, flexibilidade e resistência a mofo e manchas.</p>
@@ -890,6 +935,8 @@ app.get('*', (req, res, next) => {
       ${contentPrerender}
       ${contactPrerender}
       ${groutPrerender}
+      ${catalogPrerender}
+      ${productPrerender}
     </div>
       `;
       
