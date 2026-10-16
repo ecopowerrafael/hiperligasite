@@ -26,10 +26,17 @@ const PACKAGE_IMAGES: Record<string, string[]> = {
   'base-coat': ['fachada-aplicacao-fornecida.png', 'embalagem-generica.png', 'massa-branca-contexto.png', 'massa-cinza-contexto.png'],
   'revestimento-eps': ['eps-revestido-cinza.png', 'eps-revestido-branco.png', 'parede-acabada-contexto.png', 'ambiente-acabado-contexto.png'],
   'cola-cobogo': ['cobogos-aplicacao-fornecida.png', 'embalagem-generica.png'],
+  'cola-vidro': ['embalagem-generica.png'],
   'massa-repara-paredes': ['embalagem-150g.png', 'embalagem-1kg.png', 'aplicacao.png', 'produto-em-aplicacao.png', 'antes-depois.png', 'composicao-publicitaria.png'],
   'repara-madeira': ['embalagem-150g.png', 'produto-em-aplicacao.png', 'antes-depois.png'],
   'nivela-madeira': ['embalagem-150g.png', 'produto-na-bancada.png'],
   'rejunte-polimerico': ['embalagem-1kg.png', 'produto-em-aplicacao.png', 'arte-promocional.png'],
+  'grafiato': ['embalagem-generica.png'],
+  'textura': ['embalagem-generica.png'],
+};
+
+const PACKAGE_IMAGE_SOURCE: Record<string, string> = {
+  'cola-vidro': 'sela-trinca',
 };
 
 const PACKAGE_META = {
@@ -57,17 +64,17 @@ export const CATALOG_PRODUCTS: readonly CatalogProduct[] = [
   { slug: 'base-coat', name: 'Argamassa Base Coat', category: 'Argamassas', description: 'Camada base para placas cimentícias e sistemas de fachada.' },
   { slug: 'revestimento-eps', name: 'Revestimento Polimérico para EPS', category: 'Argamassas', description: 'Produto para proteção e acabamento de molduras e placas de EPS.' },
   { slug: 'cola-cobogo', name: 'Argamassa Cola Cobogó', category: 'Adesivos e Colas', description: 'Argamassa pronta para assentamento de cobogós e elementos vazados.' },
-  { slug: 'cola-vidro', name: 'Cola Vidro', category: 'Adesivos e Colas', description: 'Argamassa para assentamento de tijolos e blocos de vidro.', pendingImage: true },
+  { slug: 'cola-vidro', name: 'Cola Vidro', category: 'Adesivos e Colas', description: 'Argamassa para assentamento de tijolos e blocos de vidro.' },
   { slug: 'massa-repara-paredes', name: 'Massa Repara Paredes — Corrige Imperfeições', category: 'Reparos e Correções', description: 'Massa pronta para corrigir furos, buracos e pequenas imperfeições em paredes.', product: productById('repara-paredes-1kg') },
   { slug: 'repara-madeira', name: 'Massa Calafetar / Repara Madeira — Restauração', category: 'Produtos para Madeira', description: 'Massa para preencher fissuras e reparar danos em superfícies de madeira.', product: productById('repara-madeira-150g') },
   { slug: 'nivela-madeira', name: 'Massa Nivela Madeira', category: 'Produtos para Madeira', description: 'Massa branca de acabamento fino para madeira antes da pintura.', product: productById('nivela-madeira-150g') },
   { slug: 'rejunte-polimerico', name: 'Rejunte Polimérico Premium — Pronto para Uso', category: 'Rejuntes', description: 'Rejunte de base polimérica pronto para uso em áreas secas e molhadas.', product: productById('rejunte-polimerico-1kg') },
-  { slug: 'grafiato', name: 'Grafiato', category: 'Pinturas e Acabamentos', description: 'Revestimento acrílico texturizado com efeito riscado.', pendingImage: true },
-  { slug: 'textura', name: 'Textura', category: 'Pinturas e Acabamentos', description: 'Revestimento acrílico texturizado para acabamento decorativo interno e externo.', pendingImage: true },
+  { slug: 'grafiato', name: 'Grafiato', category: 'Pinturas e Acabamentos', description: 'Revestimento acrílico texturizado com efeito riscado.' },
+  { slug: 'textura', name: 'Textura', category: 'Pinturas e Acabamentos', description: 'Revestimento acrílico texturizado para acabamento decorativo interno e externo.' },
 ].map((entry) => ({
   ...entry,
-  image: PACKAGE_IMAGES[entry.slug]?.[0] ? `/images/produtos/${entry.slug}/${PACKAGE_IMAGES[entry.slug][0]}` : undefined,
-  images: PACKAGE_IMAGES[entry.slug]?.map((file) => `/images/produtos/${entry.slug}/${file}`),
+  image: PACKAGE_IMAGES[entry.slug]?.[0] ? `/images/produtos/${PACKAGE_IMAGE_SOURCE[entry.slug] ?? entry.slug}/${PACKAGE_IMAGES[entry.slug][0]}` : undefined,
+  images: PACKAGE_IMAGES[entry.slug]?.map((file) => `/images/produtos/${PACKAGE_IMAGE_SOURCE[entry.slug] ?? entry.slug}/${file}`),
   technicalSheet: CATALOG_TECHNICAL_SHEETS[entry.slug],
 }));
 
