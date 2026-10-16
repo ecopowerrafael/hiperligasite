@@ -7,9 +7,9 @@ const HERO_PHRASES = [
   'Melhor construção.'
 ];
 
-const TYPE_DELAY_MS = 85;
+const TYPE_DELAY_MS = 170;
 const DELETE_DELAY_MS = 45;
-const COMPLETE_PHRASE_DELAY_MS = 1800;
+const COMPLETE_PHRASE_DELAY_MS = 3600;
 
 export default function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0);
