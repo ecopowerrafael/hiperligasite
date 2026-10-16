@@ -39,6 +39,10 @@ export default function App() {
     window.location.pathname.toLowerCase()
   );
 
+  useEffect(() => {
+    document.getElementById('seo-crawlable-prerender-layer')?.remove();
+  }, []);
+
   // Synchronize history popstate (Browser Back/Forward buttons)
   useEffect(() => {
     const handlePopState = () => {

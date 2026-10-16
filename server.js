@@ -5,6 +5,21 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const CATALOG_TECHNICAL_SHEETS = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/catalogTechnicalStructured.json'), 'utf-8'));
+
+const escapeHtml = (value) => String(value).replace(/[&<>\"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
+const renderTechnicalSheet = (sheet) => `
+      <section aria-labelledby="technical-sheet-title">
+        <h2 id="technical-sheet-title">Ficha técnica</h2>
+        <p>${escapeHtml(sheet.subtitle)}</p>
+        <h3>Descrição</h3><p>${escapeHtml(sheet.description)}</p>
+        <h3>Indicações de uso</h3><ul>${sheet.indications.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+        <h3>Modo de aplicação</h3><ol>${sheet.applicationSteps.map((step) => `<li>${escapeHtml(step)}</li>`).join('')}</ol>
+        <h3>Especificações técnicas</h3><dl>${sheet.specs.map((spec) => `<div><dt>${escapeHtml(spec.label)}</dt><dd>${escapeHtml(spec.value)}</dd></div>`).join('')}</dl>
+        <h3>Limitações e cuidados</h3><ul>${sheet.limitations.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+        <h3>Embalagens</h3><table><thead><tr><th>Embalagem</th><th>Cor</th><th>SKU</th><th>EAN</th></tr></thead><tbody>${sheet.packages.map((item) => `<tr><td>${escapeHtml(item.packaging)}</td><td>${escapeHtml(item.color)}</td><td>${escapeHtml(item.sku)}</td><td>${escapeHtml(item.ean)}</td></tr>`).join('')}</tbody></table>
+        ${sheet.note ? `<p>${escapeHtml(sheet.note)}</p>` : ''}
+      </section>`;
 
 const app = express();
 // Default to port 3000, but allow environment override for general node hosting providers
@@ -170,7 +185,7 @@ const CATALOG_PRODUCT_METADATA = Object.fromEntries([
   h1: name,
   tagline: 'Apresentação e informações técnicas do produto Hiperliga.',
   problem: 'Consulte as informações disponíveis para avaliar a aplicação do produto na sua obra.',
-  solution: 'A página reúne a apresentação do produto, informações técnicas disponíveis, galeria e canais de orientação.',
+  solution: 'A página reúne a apresentação do produto, informações técnicas disponíveis e canais de orientação.',
   schemaType: 'WebPage'
 }]));
 
@@ -908,15 +923,13 @@ app.get('*', (req, res, next) => {
       <h2>Catálogo institucional</h2>
       <p>Conheça nossas soluções para assentamento, revestimento, acabamento e reparos. Consulte as aplicações e informações técnicas de cada produto.</p>
       <ul>${Object.entries(CATALOG_PRODUCT_METADATA).map(([route, product]) => `<li><a href="${route}/">${product.h1}</a></li>`).join('')}</ul>` : '';
-      const productPrerender = CATALOG_PRODUCT_METADATA[normalizedPath] ? `
-      <h2>${meta.h1}</h2>
+      const productSlug = normalizedPath === '/rejunte-polimerico' ? 'rejunte-polimerico' : normalizedPath.startsWith('/produtos/') ? normalizedPath.replace('/produtos/', '') : '';
+      const productSheet = CATALOG_TECHNICAL_SHEETS[productSlug];
+      const productPrerender = CATALOG_PRODUCT_METADATA[normalizedPath] && productSheet ? `
       <p>${meta.description}</p>
-      <p>Consulte as imagens disponíveis, o status da informação técnica e a ficha técnica em PDF fornecida no pacote institucional.</p>
+      ${renderTechnicalSheet(productSheet)}
       <p><a href="https://loja.hiperliga.com.br/">Comprar na loja</a></p>` : '';
       const groutPrerender = normalizedPath === '/rejunte-polimerico' ? `
-      <h2>Rejunte Polimérico Hiperliga</h2>
-      <p>Rejunte polimérico pronto para uso na cor branca, indicado para áreas internas e externas. Dispensa mistura com água, com alta aderência, flexibilidade e resistência a mofo e manchas.</p>
-      <p>Embalagem: 1 kg.</p>
       <h2>Calculadora de consumo</h2>
       <p>Informe a área, o formato da cerâmica e a largura da junta para estimar as embalagens de 1 kg conforme a tabela de consumo fornecida pela Hiperliga.</p>
       <form><label for="grout-area">Área a rejuntar (m²)</label><input id="grout-area" name="area" /><label for="grout-format">Tamanho da cerâmica</label><select id="grout-format" name="format"></select><label for="grout-joint">Largura da junta (mm)</label><select id="grout-joint" name="joint"></select><button type="submit">Calcular quantidade</button></form>` : '';

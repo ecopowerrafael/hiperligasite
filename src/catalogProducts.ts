@@ -12,11 +12,6 @@ export type CatalogProduct = {
   images?: string[];
   technicalSpecs?: { label: string; value: string }[];
   pendingImage?: boolean;
-  technicalStatus: string;
-  imageStatus: string;
-  imageNote: string;
-  sourcePdfPage: number;
-  pdfPath: string;
   technicalSheet: import('./catalogTechnicalStructured').TechnicalSheet;
 };
 
@@ -37,7 +32,7 @@ const PACKAGE_IMAGES: Record<string, string[]> = {
   'rejunte-polimerico': ['embalagem-1kg.png', 'produto-em-aplicacao.png', 'arte-promocional.png'],
 };
 
-const PACKAGE_META: Record<string, Pick<CatalogProduct, 'technicalStatus' | 'imageStatus' | 'imageNote' | 'sourcePdfPage'>> = {
+const PACKAGE_META = {
   'argamassa-polimerica': { technicalStatus: 'DADOS DE FÁBRICA', imageStatus: 'Identificação pelo rótulo', imageNote: 'Sachê de 3 kg e barrica de 30 kg identificáveis; kits separados das artes promocionais.', sourcePdfPage: 3 },
   'sela-trinca': { technicalStatus: 'DADOS DE FÁBRICA', imageStatus: 'Associação da cliente; embalagem genérica', imageNote: 'As embalagens são ilustrativas e não comprovam peso, cor ou produto exato.', sourcePdfPage: 4 },
   'reboco-polimerico': { technicalStatus: 'DADOS DE FÁBRICA', imageStatus: 'Associação da cliente; embalagem genérica', imageNote: 'A associação visual foi preservada conforme o mapeamento fornecido.', sourcePdfPage: 5 },
@@ -73,8 +68,6 @@ export const CATALOG_PRODUCTS: readonly CatalogProduct[] = [
   ...entry,
   image: PACKAGE_IMAGES[entry.slug]?.[0] ? `/images/produtos/${entry.slug}/${PACKAGE_IMAGES[entry.slug][0]}` : undefined,
   images: PACKAGE_IMAGES[entry.slug]?.map((file) => `/images/produtos/${entry.slug}/${file}`),
-  ...PACKAGE_META[entry.slug],
-  pdfPath: `/pdfs/produtos/${entry.slug}/ficha-tecnica.pdf`,
   technicalSheet: CATALOG_TECHNICAL_SHEETS[entry.slug],
 }));
 

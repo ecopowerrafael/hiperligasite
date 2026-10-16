@@ -1,0 +1,1506 @@
+{
+  "argamassa-polimerica": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Assentamento de alvenaria de vedação · pronta para uso",
+    "description": "Argamassa polimérica de alto desempenho, pronta para uso, para assentamento de blocos e tijolos em alvenaria de vedação. Dispensa água, areia, cal, cimento e qualquer mistura em obra: é aplicada diretamente da embalagem, em cordões, com o bico dosador. Aplicação limpa, rápida e com consumo muito inferior ao da argamassa convencional.",
+    "indications": [
+      "Assentamento de blocos de concreto, cerâmicos, argilosos ou similares (alvenaria de vedação)",
+      "Juntas de concretagem",
+      "União de soleiras executadas in loco sobre pavimentos de concreto",
+      "Fixação de chumbadores, calhas e guias",
+      "Colagem de elementos pré-moldados"
+    ],
+    "applicationSteps": [
+      "Execute a primeira fiada com argamassa convencional, nivelada e no prumo.",
+      "Os blocos devem estar limpos, secos, sem poeira e com faces regulares.",
+      "Corte o bico dosador e aplique dois cordões contínuos sobre a face horizontal do bloco.",
+      "Assente o bloco seguinte pressionando levemente; corrija prumo e nível de imediato.",
+      "Não aplique sobre blocos molhados nem sob chuva."
+    ],
+    "limitations": [
+      "Indicada para alvenaria de vedação. Para alvenaria estrutural, consulte o departamento técnico.",
+      "Blocos irregulares ou de tamanhos diferentes reduzem o rendimento e exigem correção com argamassa convencional.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "1,5 a 2,0 kg/m² de parede"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Densidade",
+        "value": "1,85 g/cm³"
+      },
+      {
+        "label": "Sistema",
+        "value": "Polimerização"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza RAL 7030 · Branco (RAL a confirmar)"
+      },
+      {
+        "label": "Norma de referência",
+        "value": "ABNT NBR 16590-1"
+      },
+      {
+        "label": "Início de cura",
+        "value": "10 minutos"
+      },
+      {
+        "label": "Resistência final",
+        "value": "A partir de 24 h (clima seco e quente)"
+      },
+      {
+        "label": "Garantia",
+        "value": "10 anos"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Resinas poliméricas, cargas minerais e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Cinza",
+        "sku": "HP11003",
+        "ean": "7908869000120"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Cinza",
+        "sku": "HP11025",
+        "ean": "7908869000151"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Cinza",
+        "sku": "HP11030",
+        "ean": "7908869000298"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Cinza",
+        "sku": "HP11040",
+        "ean": "7908869000168"
+      },
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Branco",
+        "sku": "HP11003",
+        "ean": "7908869001073"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Branco",
+        "sku": "HP110025",
+        "ean": "7908869001080"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Branco",
+        "sku": "HP110030",
+        "ean": "7908869001097"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Branco",
+        "sku": "HP110040",
+        "ean": "7908869001103"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Assentamento de blocos e tijolos em alvenaria de vedação"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Rendimento",
+        "value": "1,5 a 2,0 kg/m² de parede"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Sachê 3 kg e barricas de 25, 30 e 40 kg"
+      },
+      {
+        "label": "Cores",
+        "value": "Cinza RAL 7030 e branco (RAL a confirmar)"
+      }
+    ]
+  },
+  "sela-trinca": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Veda fissuras e trincas · interno e externo",
+    "description": "Argamassa polimérica pronta para uso, formulada para selar trincas e fissuras e executar pequenos reparos em alvenaria e reboco. Impermeável, flexível, aceita emendas, não desbota, é lavável e de alta resistência. Não necessita de água nem de mistura.",
+    "indications": [
+      "Selagem de trincas e fissuras em paredes, reboco e muros",
+      "Pequenos reparos em alvenaria antes da pintura",
+      "Uso interno e externo"
+    ],
+    "applicationSteps": [
+      "Abra a trinca em “V” com ferramenta apropriada e remova partes soltas e poeira.",
+      "Preencha a fissura apertando o sachê/aplicador até completar todo o volume.",
+      "Dê o acabamento com espátula, nivelando com a superfície.",
+      "Após a cura, lixe se necessário e aplique o acabamento (massa, textura ou tinta)."
+    ],
+    "limitations": [
+      "Trincas estruturais ou ativas (com movimentação) exigem avaliação da causa antes do reparo.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "Variável conforme largura e profundidade da fissura"
+      },
+      {
+        "label": "Densidade",
+        "value": "1,85 g/cm³"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza RAL 7030 · Branco"
+      },
+      {
+        "label": "Norma de referência",
+        "value": "ABNT NBR 16590-1"
+      },
+      {
+        "label": "Início de secagem",
+        "value": "12 minutos"
+      },
+      {
+        "label": "Resistência final",
+        "value": "A partir de 24 h"
+      },
+      {
+        "label": "Garantia",
+        "value": "10 anos"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Resinas poliméricas, cargas minerais e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Cinza",
+        "sku": "HP12003C",
+        "ean": "7908869000144"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Cinza",
+        "sku": "HP12025C",
+        "ean": "7908869000373"
+      },
+      {
+        "packaging": "Bisnaga 1 kg",
+        "color": "Branco",
+        "sku": "HP12001B",
+        "ean": "7908869001202"
+      },
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Branco",
+        "sku": "HP12003B",
+        "ean": "7908869001219"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Branco",
+        "sku": "HP12025B",
+        "ean": "7908869001226"
+      }
+    ],
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Selagem de trincas, fissuras e pequenos reparos"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Rendimento",
+        "value": "Variável conforme a fissura"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Sachê 3 kg, bisnaga 1 kg e barrica 25 kg"
+      },
+      {
+        "label": "Cores",
+        "value": "Cinza RAL 7030 e branco"
+      }
+    ]
+  },
+  "reboco-polimerico": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Revestimento final cinza ou branco · dispensa chapisco e reboco tradicional",
+    "description": "Reboco polimérico pronto para uso, aplicado em camada fina diretamente sobre a alvenaria. Substitui chapisco, emboço e reboco convencional em uma única etapa, entrega acabamento final cinza ou branco e deixa a parede impermeabilizada. Pintura opcional. Flexível, aceita emendas, não desbota, lavável.",
+    "indications": [
+      "Revestimento sobre bloco cerâmico ou de concreto",
+      "Revestimento sobre tijolos em geral (cerâmico, concreto, ecológico, refratário)",
+      "Revestimento sobre placas de gesso, madeira e cimentícias (drywall, wood frame)",
+      "Uso interno e externo"
+    ],
+    "applicationSteps": [
+      "Remova sobras secas de argamassa convencional, poeira e partes soltas; a base deve estar firme.",
+      "Com desempenadeira de aço, aplique a 1ª demão em camada fina e uniforme.",
+      "Aguarde a secagem antes da 2ª demão — aplicada lisa (desempenadeira) ou com rolo de textura.",
+      "Para engrossar em bases irregulares, use 2 a 3 demãos, sempre com secagem entre elas; camada única espessa pode escorrer.",
+      "Após a cura, aceita lixa e pintura convencional."
+    ],
+    "limitations": [
+      "Camada fina: não corrige grandes imperfeições nem falta de prumo da alvenaria.",
+      "Tijolos de tamanhos diferentes exigem mais de uma demão.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "1,5 a 3,0 kg/m² (≈ 1,5 kg/m² por demão)"
+      },
+      {
+        "label": "Espessura por demão",
+        "value": "1 a 2 mm (liso / rolo de textura)"
+      },
+      {
+        "label": "Densidade",
+        "value": "1,70 g/cm³"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza RAL 7030 · Branco RAL 9003"
+      },
+      {
+        "label": "Norma de referência",
+        "value": "ABNT NBR 15575"
+      },
+      {
+        "label": "Secagem por demão",
+        "value": "Início em 5 min · término em 30 min"
+      },
+      {
+        "label": "Cura",
+        "value": "6 h (25%) · 12 h (50%) · 18 h (75%) · 24 h (100%)"
+      },
+      {
+        "label": "Garantia",
+        "value": "10 anos"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Resinas poliméricas, cargas minerais e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Cinza",
+        "sku": "MM13003C",
+        "ean": "7908869000403"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Cinza",
+        "sku": "MM130025C",
+        "ean": "7908869000410"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Cinza",
+        "sku": "MM130030C",
+        "ean": "7908869000427"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Cinza",
+        "sku": "MM130040C",
+        "ean": "7908869000434"
+      },
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Branco",
+        "sku": "MM13003B",
+        "ean": "7908869000496"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Branco",
+        "sku": "MM130025B",
+        "ean": "7908869000502"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Branco",
+        "sku": "MM130030B",
+        "ean": "7908869000489"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Branco",
+        "sku": "MM130040B",
+        "ean": "7908869000519"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Revestimento final sobre blocos, tijolos e placas"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Rendimento",
+        "value": "1,5 a 3,0 kg/m²"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Sachê 3 kg e barricas de 25, 30 e 40 kg"
+      },
+      {
+        "label": "Cores",
+        "value": "Cinza RAL 7030 e branco RAL 9003"
+      }
+    ]
+  },
+  "acabamento-piso-laje": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Revestimento final e proteção de pisos · antiderrapante",
+    "description": "Revestimento de base polimérica pronto para uso, para acabamento final e proteção de pisos e lajes. Não precisa de água nem mistura. Impermeável, flexível, aceita emendas, não desbota, lavável, antiderrapante e de alta resistência. Alternativa de custo reduzido ao sistema epóxi.",
+    "indications": [
+      "Revestimento final e proteção de pisos em geral",
+      "Revestimento sobre piso bruto em concreto, contrapiso e cimento queimado",
+      "Recuperação de pisos (estrutural e acabamento)",
+      "Uso interno e externo"
+    ],
+    "applicationSteps": [
+      "A base deve estar firme, limpa, seca, sem óleo, poeira ou partes soltas.",
+      "Com desempenadeira de aço, aplique a 1ª demão com 1 mm de espessura.",
+      "Aguarde a cura (≈ 24 h) e aplique a demão de acabamento com 1 mm.",
+      "Para acabamento fino, lixe após a cura completa."
+    ],
+    "limitations": [
+      "Liberação ao tráfego somente após cura de 24 h da última demão.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "1,5 a 2,0 kg/m² (≈ 1,0 kg/m² por demão)"
+      },
+      {
+        "label": "Espessura",
+        "value": "1 mm + 1 mm (duas demãos)"
+      },
+      {
+        "label": "Densidade",
+        "value": "1,75 g/cm³"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza suave RAL 7030 · Branco"
+      },
+      {
+        "label": "Norma de referência",
+        "value": "ABNT NBR 15575"
+      },
+      {
+        "label": "Secagem por demão",
+        "value": "Início em 10 min · término em 40 min"
+      },
+      {
+        "label": "Intervalo entre demãos",
+        "value": "≈ 24 h"
+      },
+      {
+        "label": "Cura",
+        "value": "6 h (25%) · 12 h (50%) · 18 h (75%) · 24 h (100%)"
+      },
+      {
+        "label": "Garantia",
+        "value": "10 anos"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Resinas poliméricas e cargas minerais (sem pigmento — cor natural do minério)"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Cinza",
+        "sku": "HP15030C",
+        "ean": "7908869000465"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Cinza",
+        "sku": "HP15040C",
+        "ean": "7908869000472"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Branco",
+        "sku": "HP15030B",
+        "ean": "7908869001608"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Branco",
+        "sku": "HP15040B",
+        "ean": "7908869001615"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Acabamento e proteção de pisos e lajes"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Rendimento",
+        "value": "1,5 a 2,0 kg/m²"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Barricas de 30 e 40 kg"
+      },
+      {
+        "label": "Cores",
+        "value": "Cinza suave RAL 7030 e branco"
+      }
+    ]
+  },
+  "base-coat": {
+    "status": "DADOS DE REFERÊNCIA DE MERCADO",
+    "subtitle": "Camada base para placas cimentícias e sistemas de fachada",
+    "description": "Argamassa polimérica pronta para uso, formulada como camada base (base coat) sobre placas cimentícias e painéis de fachada, para embutir tela de fibra de vidro e regularizar a superfície antes do acabamento final. Dispensa água e mistura em obra.",
+    "indications": [
+      "Camada base sobre placas cimentícias (steel frame, wood frame)",
+      "Tratamento de juntas entre placas com tela de fibra de vidro",
+      "Regularização de superfície antes de textura, grafiato ou pintura"
+    ],
+    "applicationSteps": [
+      "A placa deve estar fixada, limpa, seca e com as juntas tratadas conforme o fabricante.",
+      "Aplique a 1ª demão com desempenadeira de aço e embuta a tela de fibra de vidro ainda com a massa fresca.",
+      "Após a secagem, aplique a 2ª demão cobrindo totalmente a tela.",
+      "Aguarde a cura antes do acabamento final."
+    ],
+    "limitations": [
+      "Não é acabamento final: receba textura, grafiato ou pintura após a cura.",
+      "Não indicado para superfícies sujeitas a imersão em água.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "≈ 1,0 kg/m² por demão (2 demãos: ≈ 2,0 kg/m²)"
+      },
+      {
+        "label": "Espessura",
+        "value": "≈ 2 mm na camada final (duas demãos com tela)"
+      },
+      {
+        "label": "Densidade",
+        "value": "≈ 1,75 g/cm³"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza · Branco"
+      },
+      {
+        "label": "Secagem ao toque",
+        "value": "≈ 5 h · secagem total ≈ 7 h por demão"
+      },
+      {
+        "label": "Liberação para acabamento",
+        "value": "48 h após a 2ª demão"
+      },
+      {
+        "label": "Temperatura de aplicação",
+        "value": "5 °C a 40 °C"
+      },
+      {
+        "label": "Norma de referência",
+        "value": "ABNT NBR 15575"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Emulsão acrílica, cargas minerais inertes e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Cinza",
+        "sku": "HP17003C",
+        "ean": "7908869001721"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Cinza",
+        "sku": "HP170025C",
+        "ean": "7908869001745"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Cinza",
+        "sku": "HP170030C",
+        "ean": "7908869001752"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Cinza",
+        "sku": "HP170040C",
+        "ean": "7908869001769"
+      },
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Branco",
+        "sku": "HP13003B",
+        "ean": "7908869001776"
+      },
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Branco",
+        "sku": "HP170025B",
+        "ean": "7908869001783"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Branco",
+        "sku": "HP170030B",
+        "ean": "7908869001790"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Branco",
+        "sku": "HP170040B",
+        "ean": "7908869001806"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Camada base sobre placas e sistemas de fachada"
+      },
+      {
+        "label": "Rendimento",
+        "value": "≈ 2,0 kg/m² em duas demãos"
+      },
+      {
+        "label": "Uso",
+        "value": "Antes de textura, grafiato ou pintura"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Sachê 3 kg e barricas de 25, 30 e 40 kg"
+      },
+      {
+        "label": "Cores",
+        "value": "Cinza e branco"
+      }
+    ]
+  },
+  "revestimento-eps": {
+    "status": "DADOS DE REFERÊNCIA DE MERCADO",
+    "subtitle": "Proteção e acabamento de molduras e placas de EPS",
+    "description": "Revestimento polimérico pronto para uso, desenvolvido para cobrir e proteger peças de EPS (isopor) — molduras, sancas, placas e elementos decorativos — criando uma casca rígida e aderente que aceita pintura e acabamento.",
+    "indications": [
+      "Revestimento de molduras, sancas e rodatetos de EPS",
+      "Proteção de placas de EPS em fachadas e paredes",
+      "Base para pintura sobre elementos de EPS"
+    ],
+    "applicationSteps": [
+      "A peça de EPS deve estar limpa, seca e livre de poeira.",
+      "Aplique com desempenadeira, espátula ou pincel em camada uniforme cobrindo toda a superfície.",
+      "Em peças expostas, aplique uma 2ª demão após a secagem da 1ª.",
+      "Após a cura, lixe levemente e pinte."
+    ],
+    "limitations": [
+      "Em molduras externas, aplique tela de fibra de vidro embutida na 1ª demão para reforço nas emendas.",
+      "Não aplique solventes sobre o EPS; o produto é à base de água e não ataca o isopor.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "≈ 1,5 kg/m² por demão · sachê 3 kg ≈ 1 m² em 2 demãos (≈ 10 m lineares de moldura com 10 cm)"
+      },
+      {
+        "label": "Espessura por demão",
+        "value": "1 a 2 mm"
+      },
+      {
+        "label": "Densidade",
+        "value": "≈ 1,70 g/cm³"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza · Branco"
+      },
+      {
+        "label": "Secagem por demão",
+        "value": "Início em 5 min · término em 30 min"
+      },
+      {
+        "label": "Cura",
+        "value": "24 h (100%)"
+      },
+      {
+        "label": "Pintura sobre o produto",
+        "value": "Após 24 h"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Emulsão acrílica, cargas minerais inertes e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Cinza",
+        "sku": "HP18003C",
+        "ean": "7908869001899"
+      },
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Branco",
+        "sku": "HP18003B",
+        "ean": "7908869001936"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Proteção e revestimento de molduras e placas de EPS"
+      },
+      {
+        "label": "Rendimento",
+        "value": "≈ 1,5 kg/m² por demão"
+      },
+      {
+        "label": "Cura",
+        "value": "24 h (100%)"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Sachê 3 kg"
+      },
+      {
+        "label": "Cores",
+        "value": "Cinza e branco"
+      }
+    ]
+  },
+  "cola-cobogo": {
+    "status": "DADOS DE REFERÊNCIA DE MERCADO",
+    "subtitle": "Assentamento de cobogós e elementos vazados · pronta para uso",
+    "description": "Argamassa polimérica pronta para uso, específica para assentamento de cobogós cerâmicos e de concreto. Abriu, começou a colar: sem água, sem mistura, com aplicação em cordão fino que mantém as juntas limpas e uniformes.",
+    "indications": [
+      "Assentamento de cobogós cerâmicos, de concreto e similares",
+      "Painéis e divisórias vazadas internas e externas"
+    ],
+    "applicationSteps": [
+      "Execute a primeira fiada nivelada e no prumo sobre base firme.",
+      "Aplique cordões contínuos nas faces de contato de cada peça.",
+      "Assente pressionando levemente; corrija o alinhamento de imediato.",
+      "Limpe o excesso com espátula antes da cura."
+    ],
+    "limitations": [
+      "Painéis altos ou expostos ao vento podem exigir reforço estrutural — consulte um profissional.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "≈ 0,13 kg por peça (cordão duplo) · sachê 3 kg ≈ 20 a 25 cobogós 20×20 cm (≈ 1 m²)"
+      },
+      {
+        "label": "Densidade",
+        "value": "≈ 1,85 g/cm³"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza"
+      },
+      {
+        "label": "Início de cura",
+        "value": "10 minutos"
+      },
+      {
+        "label": "Resistência final",
+        "value": "A partir de 24 h"
+      },
+      {
+        "label": "Temperatura de aplicação",
+        "value": "5 °C a 40 °C"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Emulsão acrílica, cargas minerais inertes e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Cinza",
+        "sku": "HP13003",
+        "ean": "—"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Assentamento de cobogós e elementos vazados"
+      },
+      {
+        "label": "Rendimento",
+        "value": "20 a 25 cobogós 20×20 cm por sachê de 3 kg"
+      },
+      {
+        "label": "Uso",
+        "value": "Painéis e divisórias internas e externas"
+      },
+      {
+        "label": "Embalagem",
+        "value": "Sachê 3 kg"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza"
+      }
+    ]
+  },
+  "cola-vidro": {
+    "status": "DADOS DE REFERÊNCIA DE MERCADO",
+    "subtitle": "Assentamento de tijolos e blocos de vidro",
+    "description": "Argamassa polimérica pronta para uso para assentamento de tijolos e blocos de vidro. Aplicação limpa em cordão, sem água nem mistura, com juntas uniformes.",
+    "indications": [
+      "Assentamento de tijolos e blocos de vidro em paredes, divisórias e boxes",
+      "Uso interno e externo"
+    ],
+    "applicationSteps": [
+      "Monte a primeira fiada sobre base nivelada e firme.",
+      "Aplique cordões contínuos nas faces de contato dos blocos.",
+      "Assente e alinhe de imediato; use espaçadores se necessário.",
+      "Remova o excesso com pano úmido antes da cura."
+    ],
+    "limitations": [
+      "Painéis acima de 1 m²: reforce com arame galvanizado ou barras a cada duas fiadas e respeite o limite de área do fabricante dos blocos.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "≈ 0,13 kg por bloco (cordão duplo) · sachê 3 kg ≈ 20 a 25 blocos 19×19×8 cm (≈ 1 m²)"
+      },
+      {
+        "label": "Largura de junta",
+        "value": "2 a 5 mm (rejuntar após a cura)"
+      },
+      {
+        "label": "Densidade",
+        "value": "≈ 1,85 g/cm³"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza"
+      },
+      {
+        "label": "Início de cura",
+        "value": "10 minutos"
+      },
+      {
+        "label": "Rejuntamento",
+        "value": "Após 24 h"
+      },
+      {
+        "label": "Resistência final",
+        "value": "A partir de 24 h · proteger de chuva e sol por 48 h"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Emulsão acrílica, cargas minerais inertes e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Sachê 3 kg",
+        "color": "Cinza",
+        "sku": "GF12003C",
+        "ean": "7908869002094"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Assentamento de tijolos e blocos de vidro"
+      },
+      {
+        "label": "Rendimento",
+        "value": "20 a 25 blocos 19×19×8 cm por sachê de 3 kg"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Embalagem",
+        "value": "Sachê 3 kg"
+      },
+      {
+        "label": "Cor",
+        "value": "Cinza"
+      }
+    ]
+  },
+  "massa-repara-paredes": {
+    "status": "DADOS DE REFERÊNCIA DE MERCADO",
+    "subtitle": "Sela trinca e massa corrida · pronta para uso",
+    "description": "Massa pronta para uso que une as funções de sela trinca e massa corrida em um único produto. Corrige furos, trincas e demais imperfeições em paredes sem retrair nem rachar. Fácil de aplicar e fácil de lixar.",
+    "indications": [
+      "Correção de furos, trincas e imperfeições em alvenaria, reboco, blocos de concreto e drywall",
+      "Preparação pontual de paredes antes da pintura",
+      "Uso interno e externo"
+    ],
+    "applicationSteps": [
+      "Limpe a área removendo poeira, partes soltas e tinta descascada.",
+      "Aplique a massa com espátula, pressionando para preencher furos e trincas.",
+      "Nivele com a superfície e remova o excesso.",
+      "Após a secagem, lixe levemente.",
+      "Pinte normalmente."
+    ],
+    "limitations": [
+      "Produto para reparo pontual; não substitui massa corrida em grandes áreas.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Rendimento",
+        "value": "Reparo pontual — variável conforme o dano (≈ 0,8 a 1,6 m² por kg em camada fina)"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco"
+      },
+      {
+        "label": "Acabamento",
+        "value": "Fosco, lixável"
+      },
+      {
+        "label": "Secagem ao toque",
+        "value": "≈ 2 h (camada fina)"
+      },
+      {
+        "label": "Lixamento",
+        "value": "Entre 4 h e 24 h após a aplicação"
+      },
+      {
+        "label": "Pintura",
+        "value": "Após 12 h do lixamento"
+      },
+      {
+        "label": "Temperatura de aplicação",
+        "value": "10 °C a 40 °C · UR abaixo de 90%"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Resina acrílica em emulsão, cargas minerais, água e aditivos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Bisnaga 150 g",
+        "color": "Branco",
+        "sku": "HP20001",
+        "ean": "—"
+      },
+      {
+        "packaging": "Balde 1 kg",
+        "color": "Branco",
+        "sku": "HP2001",
+        "ean": "—"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Correção de furos, trincas e imperfeições"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Rendimento",
+        "value": "Variável conforme o dano"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Bisnaga 150 g e balde 1 kg"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco"
+      }
+    ]
+  },
+  "repara-madeira": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Corrige fissuras e danos em madeira · 7 tonalidades",
+    "description": "Massa à base de água, pronta para uso, para restauração de madeira. Corrige imperfeições, fissuras e pequenos danos em portas, janelas, móveis e objetos de madeira. Disponível em sete tonalidades para receber verniz ou tinta.",
+    "indications": [
+      "Portas, janelas, batentes e rodapés",
+      "Móveis, mesas, cadeiras e camas",
+      "Objetos e peças de madeira em geral — uso interno"
+    ],
+    "applicationSteps": [
+      "Limpe a área e remova partes soltas, poeira e gordura.",
+      "Aplique com espátula preenchendo o dano; deixe a massa levemente saliente.",
+      "Em danos profundos, aplique em camadas de até 10 mm, respeitando a secagem entre elas.",
+      "Após a cura, lixe até nivelar e aplique verniz ou tinta."
+    ],
+    "limitations": [
+      "Uso interno.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Conteúdo",
+        "value": "150 g"
+      },
+      {
+        "label": "Base",
+        "value": "Água"
+      },
+      {
+        "label": "Cores",
+        "value": "7 tonalidades (à escolha)"
+      },
+      {
+        "label": "Acabamento",
+        "value": "Fosco"
+      },
+      {
+        "label": "Espessura por camada",
+        "value": "Até 10 mm"
+      },
+      {
+        "label": "Secagem",
+        "value": "10 horas"
+      },
+      {
+        "label": "Cura total",
+        "value": "24 horas"
+      },
+      {
+        "label": "Pós-cura",
+        "value": "Aceita lixa, tinta, verniz, furação e parafuso"
+      },
+      {
+        "label": "Retração",
+        "value": "Não retrai ao secar"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Bisnaga 150 g",
+        "color": "7 tonalidades",
+        "sku": "HP14001",
+        "ean": "—"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Restauração de portas, móveis e objetos de madeira"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno"
+      },
+      {
+        "label": "Conteúdo",
+        "value": "150 g"
+      },
+      {
+        "label": "Embalagem",
+        "value": "Bisnaga 150 g"
+      },
+      {
+        "label": "Cores",
+        "value": "7 tonalidades"
+      }
+    ]
+  },
+  "nivela-madeira": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Acabamento fino em madeira antes da pintura",
+    "description": "Massa branca de acabamento fino, pronta para uso, para nivelar superfícies de madeira que serão pintadas. Cobre furos rasos, marcas e irregularidades, substituindo o fundo nivelador em pequenos reparos.",
+    "indications": [
+      "Portas, janelas e móveis de madeira que receberão pintura",
+      "Correção de furos rasos, marcas e irregularidades superficiais"
+    ],
+    "applicationSteps": [
+      "Umedeça levemente a área; proteja pregos e parafusos com fundo anticorrosivo.",
+      "Aplique com espátula úmida, alisando no nível da superfície — sem excesso.",
+      "Remova o excesso com pano úmido.",
+      "Após a cura, lixe levemente e pinte."
+    ],
+    "limitations": [
+      "Para danos profundos ou acabamento envernizado, use a Massa Repara Madeira.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Conteúdo",
+        "value": "150 g"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco"
+      },
+      {
+        "label": "Profundidade por camada",
+        "value": "Até 2 mm"
+      },
+      {
+        "label": "Secagem ao toque",
+        "value": "30 minutos"
+      },
+      {
+        "label": "Cura total",
+        "value": "1 hora"
+      },
+      {
+        "label": "Uso externo",
+        "value": "Duas demãos"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Bisnaga 150 g",
+        "color": "Branco",
+        "sku": "HP15001",
+        "ean": "—"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Nivelamento de madeira antes da pintura"
+      },
+      {
+        "label": "Conteúdo",
+        "value": "150 g"
+      },
+      {
+        "label": "Profundidade",
+        "value": "Até 2 mm por camada"
+      },
+      {
+        "label": "Embalagem",
+        "value": "Bisnaga 150 g"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco"
+      }
+    ]
+  },
+  "rejunte-polimerico": {
+    "status": "DADOS DE REFERÊNCIA DE MERCADO",
+    "subtitle": "Base polimérica · áreas secas e molhadas",
+    "description": "Rejunte em pasta à base de polímeros, pronto para uso, para rejuntamento de porcelanatos, cerâmicas, pastilhas e pedras em áreas internas e externas, inclusive molhadas. Mais flexível que o rejunte cimentício, resistente à água, cor uniforme e fácil de aplicar e limpar.",
+    "indications": [
+      "Porcelanato, cerâmica, pastilha e pedras",
+      "Banheiros, cozinhas, lavanderias e áreas externas"
+    ],
+    "applicationSteps": [
+      "As juntas devem estar limpas, secas e livres de poeira e argamassa colante.",
+      "Homogeneíze o produto e aplique com desempenadeira de borracha, em diagonal às juntas.",
+      "Remova o excesso e aguarde o início da secagem.",
+      "Limpe com esponja levemente umedecida; finalize com pano seco após a secagem."
+    ],
+    "limitations": [
+      "Nunca limpe com produtos ácidos (ácido muriático).",
+      "Em superfícies foscas, antiderrapantes ou decoradas, teste antes.",
+      "Não indicado para piscinas ou imersão permanente em água.",
+      "Adquira todo o rejunte da obra em um único lote para uniformidade de cor.",
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Base",
+        "value": "Polimérica (resinas acrílicas, cargas minerais, pigmentos inorgânicos)"
+      },
+      {
+        "label": "Cores",
+        "value": "Branco · Cinza Platina · Palha · Areia · Preto"
+      },
+      {
+        "label": "Largura de junta",
+        "value": "1 a 4 mm"
+      },
+      {
+        "label": "Rendimento",
+        "value": "3 a 5 m²/kg (porcelanato 60×60, junta 2–3 mm)"
+      },
+      {
+        "label": "Densidade",
+        "value": "≈ 1,80 g/cm³"
+      },
+      {
+        "label": "Rejuntar após o assentamento",
+        "value": "72 h (argamassa colante convencional)"
+      },
+      {
+        "label": "Limpeza final",
+        "value": "Após 24 h"
+      },
+      {
+        "label": "Liberação ao tráfego e à água",
+        "value": "24 h"
+      },
+      {
+        "label": "Temperatura de aplicação",
+        "value": "5 °C a 30 °C"
+      },
+      {
+        "label": "Validade",
+        "value": "12 meses (embalagem fechada)"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Balde 1 kg",
+        "color": "Branco",
+        "sku": "HP16001",
+        "ean": "7908869002117"
+      },
+      {
+        "packaging": "Balde 1 kg",
+        "color": "Demais cores",
+        "sku": "—",
+        "ean": "—"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Porcelanatos, cerâmicas, pastilhas e pedras"
+      },
+      {
+        "label": "Uso",
+        "value": "Áreas internas e externas, inclusive molhadas"
+      },
+      {
+        "label": "Rendimento",
+        "value": "3 a 5 m²/kg"
+      },
+      {
+        "label": "Embalagem",
+        "value": "Balde 1 kg"
+      },
+      {
+        "label": "Cores",
+        "value": "Branco, cinza platina, palha, areia e preto"
+      }
+    ]
+  },
+  "grafiato": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Revestimento acrílico texturizado · efeito riscado",
+    "description": "Revestimento acrílico texturizado de alta performance para acabamento decorativo em ambientes internos e externos. Efeito riscado uniforme, disfarça imperfeições da base e dispensa massa fina. Hidrorrepelente, resistente a fungos e intempéries.",
+    "indications": [
+      "Fachadas, muros e paredes internas sobre reboco, massa ou base coat curados",
+      "Uso interno e externo"
+    ],
+    "applicationSteps": [
+      "Base firme, limpa, seca e curada (reboco novo: mín. 30 dias). Aplique selador ou tinta acrílica na cor do acabamento.",
+      "Homogeneíze o produto. Estenda com desempenadeira de aço em espessura igual ao grão maior.",
+      "Passe a desempenadeira plástica em movimentos contínuos para obter o efeito riscado.",
+      "Não aplique sob sol forte, chuva, vento, abaixo de 10 °C ou acima de 40 °C, nem com UR acima de 90%."
+    ],
+    "limitations": [
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Classificação",
+        "value": "ABNT NBR 11702 — tipo 4.6.2"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco (pode ser pigmentado)"
+      },
+      {
+        "label": "Diluição",
+        "value": "Até 5% de água, demão única"
+      },
+      {
+        "label": "Demãos",
+        "value": "1"
+      },
+      {
+        "label": "Consumo",
+        "value": "2,0 a 5,0 kg/m² conforme granulometria"
+      },
+      {
+        "label": "Secagem ao toque",
+        "value": "3 h"
+      },
+      {
+        "label": "Pintura sobre o produto",
+        "value": "24 h"
+      },
+      {
+        "label": "Cura total",
+        "value": "7 a 28 dias"
+      },
+      {
+        "label": "Validade",
+        "value": "24 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Emulsão acrílica, cargas minerais, espessantes, preservantes e pigmentos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Branco",
+        "sku": "GF16025",
+        "ean": "7908869002230"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Branco",
+        "sku": "GF16030",
+        "ean": "7908869002247"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Branco",
+        "sku": "GF16040",
+        "ean": "7908869002254"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Fachadas, muros e paredes internas"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Consumo",
+        "value": "2,0 a 5,0 kg/m²"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Barricas de 25, 30 e 40 kg"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco (pode ser pigmentado)"
+      }
+    ]
+  },
+  "textura": {
+    "status": "DADOS DE FÁBRICA",
+    "subtitle": "Revestimento acrílico texturizado · rolada ou lisa",
+    "description": "Revestimento acrílico texturizado para acabamento decorativo interno e externo, aplicado com rolo de textura ou desempenadeira. Disfarça imperfeições, é hidrorrepelente, lavável e resistente a fungos e intempéries.",
+    "indications": [
+      "Fachadas, muros e paredes internas sobre reboco, massa ou base coat curados",
+      "Uso interno e externo"
+    ],
+    "applicationSteps": [
+      "Base firme, limpa, seca e curada (reboco novo: mín. 30 dias). Em demão única, aplique selador na cor da textura.",
+      "Homogeneíze o produto. Textura rolada: aplique com rolo de textura em demãos uniformes.",
+      "Textura lisa: aplique com desempenadeira em camadas uniformes e alise.",
+      "Não aplique sob sol forte, chuva, vento, abaixo de 10 °C ou acima de 40 °C, nem com UR acima de 90%."
+    ],
+    "limitations": [
+      "Armazene em local coberto, seco e ventilado, na embalagem original fechada, entre 5 °C e 35 °C.",
+      "Mantenha fora do alcance de crianças e animais. Em contato com os olhos, lave com água em abundância."
+    ],
+    "specs": [
+      {
+        "label": "Classificação",
+        "value": "ABNT NBR 11702 — tipo 4.6.1"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco (pode ser pigmentado)"
+      },
+      {
+        "label": "Diluição",
+        "value": "Rolada: até 20% na 1ª e 10% na 2ª demão · Lisa: até 5%"
+      },
+      {
+        "label": "Demãos",
+        "value": "2"
+      },
+      {
+        "label": "Consumo",
+        "value": "1,9 a 2,1 kg/m²"
+      },
+      {
+        "label": "Secagem ao toque",
+        "value": "3 h · entre demãos 6 h"
+      },
+      {
+        "label": "Pintura sobre o produto",
+        "value": "24 h"
+      },
+      {
+        "label": "Cura total",
+        "value": "7 a 28 dias"
+      },
+      {
+        "label": "Validade",
+        "value": "24 meses (embalagem fechada)"
+      },
+      {
+        "label": "Composição",
+        "value": "Emulsão acrílica, cargas minerais, espessantes, preservantes e pigmentos"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Barrica 25 kg",
+        "color": "Branco",
+        "sku": "GF14025",
+        "ean": "7908869002179"
+      },
+      {
+        "packaging": "Barrica 30 kg",
+        "color": "Branco",
+        "sku": "GF14030",
+        "ean": "7908869002186"
+      },
+      {
+        "packaging": "Barrica 40 kg",
+        "color": "Branco",
+        "sku": "GF14040",
+        "ean": "7908869002193"
+      }
+    ],
+    "note": "Os tempos de secagem e cura são referências para 25 °C e 60 % UR e variam com clima, substrato e espessura aplicada.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Fachadas, muros e paredes internas"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno e externo"
+      },
+      {
+        "label": "Consumo",
+        "value": "1,9 a 2,1 kg/m²"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Barricas de 25, 30 e 40 kg"
+      },
+      {
+        "label": "Cor",
+        "value": "Branco (pode ser pigmentado)"
+      }
+    ]
+  }
+}
