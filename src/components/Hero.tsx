@@ -56,16 +56,23 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
+          {/* Brand Identification */}
+          <motion.p
+            variants={itemVariants}
+            className="text-sm sm:text-base font-bold uppercase tracking-[0.3em] text-primary"
+            id="hero-identification"
+          >
+            HIPERLIGA
+          </motion.p>
+
           {/* Main Title */}
           <motion.h1 
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-7xl font-display font-black text-white tracking-tight leading-tight max-w-4xl mx-auto drop-shadow-md"
             id="hero-main-title"
           >
-            Construa até <span className="text-primary relative inline-block">
-              3x mais rápido
-              <span className="absolute left-0 bottom-1 w-full h-1.5 bg-primary/40 rounded-full" />
-            </span> com desperdício zero.
+            Mais tecnologia.<br className="sm:hidden" />{' '}
+            Menos etapas. Melhor construção.
           </motion.h1>
 
           {/* Pitch Text */}
@@ -74,7 +81,7 @@ export default function Hero() {
             className="text-slate-200 font-sans text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed drop-shadow-sm font-medium"
             id="hero-description"
           >
-            Conheça a Hiperliga: a argamassa polimérica pronta para uso que substitui o cimento convencional. Reduza custos de logística, elimine infiltrações e economize até 50% no custo final da alvenaria estrutural e de vedação.
+            Tecnologia que transforma a maneira de construir.
           </motion.p>
         </motion.div>
       </div>
