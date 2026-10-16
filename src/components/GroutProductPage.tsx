@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ArrowDown, ArrowUpRight, MessageCircle, ShoppingBag } from 'lucide-react';
 import { EXPERT_CONTACT_WHATSAPP, MARKETPLACE_LINKS, PRODUCTS_DATA } from '../data';
 import GroutCalculator from './GroutCalculator';
+import { CATALOG_TECHNICAL_SHEETS } from '../catalogTechnical';
 
 const product = PRODUCTS_DATA.find((item) => item.id === 'rejunte-polimerico-1kg');
 
@@ -38,7 +39,7 @@ export default function GroutProductPage() {
   }, []);
 
   const whatsappHref = `${EXPERT_CONTACT_WHATSAPP.split('?')[0]}?text=${encodeURIComponent('Olá! Gostaria de tirar dúvidas sobre o Rejunte Polimérico Hiperliga.')}`;
-  const productImages = product.images ?? [product.image];
+  const technicalSheet = CATALOG_TECHNICAL_SHEETS['rejunte-polimerico'];
 
   return (
     <div className="bg-white text-slate-800">
@@ -46,7 +47,7 @@ export default function GroutProductPage() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center">
           <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
             <div className="flex min-h-[360px] items-center justify-center rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 p-6 sm:min-h-[480px]">
-              <img src={productImages[0]} alt={`${product.name} - embalagem de 1 kg`} className="max-h-[440px] w-full object-contain" width="800" height="800" referrerPolicy="no-referrer" />
+              <img src={product.image} alt={`${product.name} - embalagem de 1 kg`} className="max-h-[440px] w-full object-contain" width="800" height="800" referrerPolicy="no-referrer" />
             </div>
           </div>
           <div>
@@ -82,9 +83,10 @@ export default function GroutProductPage() {
       </section>
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="font-display text-3xl font-extrabold text-brand-dark">Galeria do produto</h2>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">{productImages.map((image, index) => <figure key={image} className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-4"><img src={image} alt={`${product.name} - imagem ${index + 1}`} width="800" height="800" loading={index === 0 ? 'eager' : 'lazy'} className="h-80 w-full object-contain" referrerPolicy="no-referrer" /><figcaption className="mt-3 text-center text-xs text-slate-500">Imagem {index + 1}</figcaption></figure>)}</div>
+        <div className="mx-auto max-w-7xl rounded-3xl border border-slate-200 bg-white p-7 sm:p-9">
+          <h2 className="font-display text-3xl font-extrabold text-brand-dark">Ficha técnica</h2>
+          <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm font-semibold leading-relaxed text-amber-900">Dados de referência de mercado: confirme as especificações com o fabricante antes de aplicar ou comprar.</p>
+          <pre className="mt-6 max-h-[48rem] overflow-auto whitespace-pre-wrap font-sans text-sm leading-7 text-slate-700">{technicalSheet}</pre>
         </div>
       </section>
     </div>

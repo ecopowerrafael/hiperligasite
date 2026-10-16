@@ -1,5 +1,6 @@
 import { EXPERT_CONTACT_WHATSAPP, PRODUCTS_DATA } from './data';
 import { Product } from './types';
+import { CATALOG_TECHNICAL_SHEETS } from './catalogTechnical';
 
 export type CatalogProduct = {
   slug: string;
@@ -16,6 +17,7 @@ export type CatalogProduct = {
   imageNote: string;
   sourcePdfPage: number;
   pdfPath: string;
+  technicalSheet: string;
 };
 
 const productById = (id: string) => PRODUCTS_DATA.find((product) => product.id === id);
@@ -73,6 +75,7 @@ export const CATALOG_PRODUCTS: readonly CatalogProduct[] = [
   images: PACKAGE_IMAGES[entry.slug]?.map((file) => `/images/produtos/${entry.slug}/${file}`),
   ...PACKAGE_META[entry.slug],
   pdfPath: `/pdfs/produtos/${entry.slug}/ficha-tecnica.pdf`,
+  technicalSheet: CATALOG_TECHNICAL_SHEETS[entry.slug],
 }));
 
 export const getCatalogProduct = (slug: string) => CATALOG_PRODUCTS.find((product) => product.slug === slug);
