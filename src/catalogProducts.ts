@@ -1,6 +1,6 @@
 import { EXPERT_CONTACT_WHATSAPP, PRODUCTS_DATA } from './data';
 import { Product } from './types';
-import { CATALOG_TECHNICAL_SHEETS } from './catalogTechnical';
+import { CATALOG_TECHNICAL_SHEETS } from './catalogTechnicalStructured';
 
 export type CatalogProduct = {
   slug: string;
@@ -17,7 +17,7 @@ export type CatalogProduct = {
   imageNote: string;
   sourcePdfPage: number;
   pdfPath: string;
-  technicalSheet: string;
+  technicalSheet: import('./catalogTechnicalStructured').TechnicalSheet;
 };
 
 const productById = (id: string) => PRODUCTS_DATA.find((product) => product.id === id);
