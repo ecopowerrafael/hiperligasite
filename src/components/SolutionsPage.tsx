@@ -73,7 +73,7 @@ export default function SolutionsPage() {
                     <p className="mt-6 text-xs font-bold uppercase tracking-widest text-slate-500">{solution.brand}</p>
                     <h3 className="mt-2 font-display text-2xl font-extrabold leading-tight text-slate-900">{solution.productName}</h3>
                     <p className="mt-4 leading-relaxed text-slate-600">{solution.description}</p>
-                    <a href={cta.href} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                    <a href={cta.href} target={solution.productUrl ? undefined : '_blank'} rel={solution.productUrl ? undefined : 'noopener noreferrer'} className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                       {solution.productUrl ? <ArrowUpRight className="h-4 w-4" /> : <MessageSquare className="h-4 w-4" />}
                       {cta.label}
                     </a>

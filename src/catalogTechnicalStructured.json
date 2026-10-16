@@ -513,6 +513,132 @@
       }
     ]
   },
+  "massa-corrida": {
+    "status": "DADOS DE REFERÊNCIA DE MERCADO",
+    "subtitle": "Massa niveladora PVA para interiores · pronta para uso",
+    "description": "Massa niveladora à base de resina PVA, indicada para nivelar e corrigir pequenas imperfeições em paredes e tetos de ambientes internos, proporcionando superfície lisa e uniforme para o acabamento final com tintas látex PVA ou acrílicas.",
+    "indications": [
+      "Nivelamento e correção de pequenas imperfeições em paredes e tetos internos",
+      "Aplicação sobre reboco, superfícies minerais, gesso, drywall e superfícies já pintadas em bom estado",
+      "Preparação de superfícies para pintura com tintas látex PVA ou acrílicas",
+      "Uso em ambientes internos secos"
+    ],
+    "applicationSteps": [
+      "A superfície deve estar firme, coesa, limpa, seca e sem poeira, gordura, mofo ou partes soltas.",
+      "Em reboco novo, aguarde a cura mínima de 28 dias; em superfícies porosas, aplique fundo preparador ou selador acrílico.",
+      "Homogeneíze bem o produto. A massa é pronta para uso; se necessário, dilua com até 5% de água limpa.",
+      "Aplique de 2 a 3 demãos finas e uniformes com desempenadeira de aço, espátula ou rolo de espuma.",
+      "Aguarde no mínimo 3 horas entre demãos e lixe com lixa d'água nº 180 a 220 entre demãos.",
+      "Após 24 horas da última demão, remova todo o pó do lixamento antes de aplicar a pintura de acabamento."
+    ],
+    "limitations": [
+      "Uso exclusivamente interno; não aplicar em áreas externas ou sujeitas a umidade constante.",
+      "Não aplicar sobre superfícies úmidas, em dias chuvosos ou com previsão de chuva.",
+      "Aplicar camadas finas e uniformes; camadas espessas retardam a secagem e podem trincar.",
+      "Trincas e buracos devem ser corrigidos previamente com massa de reparo adequada.",
+      "Armazene em local coberto, seco e ventilado, entre 5 °C e 35 °C, sem deixar congelar.",
+      "Mantenha fora do alcance de crianças e animais; utilize luvas, óculos de proteção e máscara contra pó durante o lixamento."
+    ],
+    "specs": [
+      {
+        "label": "Resina",
+        "value": "Acetato de polivinila (PVA)"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno (paredes e tetos)"
+      },
+      {
+        "label": "Cor",
+        "value": "Branca"
+      },
+      {
+        "label": "Acabamento",
+        "value": "Fosco e liso"
+      },
+      {
+        "label": "Teor de sólidos",
+        "value": "70 a 75% (massa)"
+      },
+      {
+        "label": "Densidade",
+        "value": "1,70 a 1,80 g/cm³ a 25 °C"
+      },
+      {
+        "label": "Viscosidade",
+        "value": "38.000 a 45.000 cps"
+      },
+      {
+        "label": "pH",
+        "value": "7,5 a 9,0"
+      },
+      {
+        "label": "Espessura por demão",
+        "value": "Até 0,5 mm em camadas finas"
+      },
+      {
+        "label": "Demãos",
+        "value": "2 a 3 demãos finas"
+      },
+      {
+        "label": "Secagem entre demãos",
+        "value": "Mínimo 3 horas"
+      },
+      {
+        "label": "Pintura sobre o produto",
+        "value": "Após 24 horas da última demão"
+      },
+      {
+        "label": "Rendimento com 2 demãos",
+        "value": "Balde 25 kg: 17 a 25 m² · galão 5,8 kg: 4 a 5,5 m²"
+      },
+      {
+        "label": "Validade",
+        "value": "24 meses na embalagem fechada"
+      },
+      {
+        "label": "Limpeza",
+        "value": "Água"
+      }
+    ],
+    "packages": [
+      {
+        "packaging": "Balde plástico 25 kg",
+        "color": "Branca",
+        "sku": "A confirmar",
+        "ean": "A confirmar"
+      },
+      {
+        "packaging": "Galão plástico 5,8 kg",
+        "color": "Branca",
+        "sku": "A confirmar",
+        "ean": "A confirmar"
+      }
+    ],
+    "note": "Dados técnicos orientativos conforme ficha técnica recebida. Tempos e rendimento variam conforme temperatura, umidade, substrato, espessura e técnica de aplicação.",
+    "summary": [
+      {
+        "label": "Indicação",
+        "value": "Nivelamento e correção de imperfeições em paredes e tetos internos"
+      },
+      {
+        "label": "Uso",
+        "value": "Interno"
+      },
+      {
+        "label": "Rendimento",
+        "value": "17 a 25 m² por balde de 25 kg com 2 demãos"
+      },
+      {
+        "label": "Embalagens",
+        "value": "Balde 25 kg e galão 5,8 kg"
+      },
+      {
+        "label": "Cor",
+        "value": "Branca"
+      }
+    ]
+  },
   "base-coat": {
     "status": "DADOS DE REFERÊNCIA DE MERCADO",
     "subtitle": "Camada base para placas cimentícias e sistemas de fachada",

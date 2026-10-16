@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 const HERO_PHRASES = [
   'Mais tecnologia.',
@@ -97,8 +98,8 @@ export default function Hero() {
       </video>
 
       {/* Dark semi-transparent color overlay ensuring perfect text contrast and readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/60 z-0 pointer-events-none" />
-      <div className="absolute inset-0 bg-slate-950/30 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-950/45 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-slate-950/18 z-0 pointer-events-none" />
       
       {/* Background Subtle Decorative Ambient Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[150px] pointer-events-none" />
@@ -146,6 +147,11 @@ export default function Hero() {
           >
             Tecnologia que transforma a maneira de construir.
           </motion.p>
+
+          <motion.div variants={itemVariants} className="flex flex-col items-center justify-center gap-3 pt-3 sm:flex-row">
+            <a href="/produtos/" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-950">Conheça os produtos <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></a>
+            <a href="#produtos" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/40 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:border-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-950">Explorar a linha <ArrowDown className="h-4 w-4" aria-hidden="true" /></a>
+          </motion.div>
         </motion.div>
       </div>
     </section>

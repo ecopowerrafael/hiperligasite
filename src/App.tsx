@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Comparison from './components/Comparison';
 import ProductCatalog from './components/ProductCatalog';
 import MediaSection from './components/MediaSection';
 import Certificacoes from './components/Certificacoes';
@@ -149,14 +148,11 @@ export default function App() {
           {/* Animated Hero Header */}
           <Hero />
 
+          {/* Product line showcase */}
+          <ProductCatalog />
+
           {/* Core Technical Advantages */}
           <Features />
-
-          {/* Legacy vs Innovation Comparison Table */}
-          <Comparison />
-
-          {/* Dynamic Product Catalogue Spec tab */}
-          <ProductCatalog />
 
           {/* Operational Media Interactive Tour */}
           <MediaSection />

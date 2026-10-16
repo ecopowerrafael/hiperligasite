@@ -1,41 +1,19 @@
-import { ArrowUpRight, ShoppingBag } from 'lucide-react';
-import { MARKETPLACE_LINKS } from '../data';
+import { ArrowUpRight, MessageCircle, ShoppingBag } from 'lucide-react';
+import { EXPERT_CONTACT_WHATSAPP, MARKETPLACE_LINKS } from '../data';
+
+const CHANNELS = [
+  { label: 'Loja oficial', description: 'Catálogo e compra direta', href: 'https://loja.hiperliga.com.br/', Icon: ShoppingBag },
+  { label: 'WhatsApp', description: 'Orientação e atendimento', href: EXPERT_CONTACT_WHATSAPP, Icon: MessageCircle },
+  ...Object.values(MARKETPLACE_LINKS).map((marketplace) => ({ label: marketplace.label, description: 'Encontre produtos Hiperliga', href: marketplace.href, Icon: ShoppingBag })),
+];
 
 export default function Marketplaces() {
   return (
-    <section id="marketplaces" className="bg-white py-20 text-slate-900 sm:py-24">
+    <section id="marketplaces" className="bg-white py-24 text-slate-900 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">Canais de compra</p>
-          <h2 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Encontre a Hiperliga nos marketplaces</h2>
-          <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">Compre nossos produtos também no Mercado Livre e na Shopee.</p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {Object.values(MARKETPLACE_LINKS).map((marketplace) => (
-            <a
-              key={marketplace.label}
-              href={marketplace.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex min-h-40 items-center justify-between gap-6 rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg sm:p-8"
-            >
-              <div className="flex items-center gap-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white p-3 shadow-sm">
-                  <img src={marketplace.logoSrc} alt={`Logotipo ${marketplace.label}`} className="max-h-full max-w-full object-contain" loading="lazy" />
-                </div>
-                <div>
-                  <h3 className="font-display text-xl font-extrabold text-slate-900">{marketplace.label}</h3>
-                  <p className="mt-1 text-sm text-slate-500">Anúncio do Rejunte Polimérico Hiperliga</p>
-                </div>
-              </div>
-              <div className="flex shrink-0 items-center gap-2 rounded-xl bg-primary px-4 py-3 text-xs font-bold text-white transition-colors group-hover:bg-primary-dark sm:px-5">
-                <ShoppingBag className="h-4 w-4" />
-                <span className="hidden sm:inline">{marketplace.buttonLabel}</span>
-                <ArrowUpRight className="h-4 w-4" />
-              </div>
-            </a>
-          ))}
+        <header className="grid gap-8 border-b border-slate-200 pb-12 lg:grid-cols-[1fr_0.8fr] lg:items-end"><div><p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-primary">Onde encontrar</p><h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-brand-dark sm:text-5xl">Escolha o canal mais conveniente.</h2></div><p className="max-w-md text-base leading-7 text-slate-600 lg:justify-self-end">Acesse a loja, encontre anúncios nos marketplaces ou fale diretamente com a equipe Hiperliga.</p></header>
+        <div className="mt-12 grid gap-px overflow-hidden border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-4">
+          {CHANNELS.map(({ label, description, href, Icon }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="group flex min-h-48 flex-col justify-between bg-white p-6 transition-colors hover:bg-brand-dark hover:text-white sm:p-7 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"><div className="flex items-start justify-between"><Icon className="h-6 w-6 text-primary group-hover:text-emerald-300" aria-hidden="true" /><ArrowUpRight className="h-4 w-4 text-slate-300 group-hover:text-white" aria-hidden="true" /></div><div><h3 className="font-display text-xl font-extrabold text-brand-dark group-hover:text-white">{label}</h3><p className="mt-2 text-sm text-slate-500 group-hover:text-slate-300">{description}</p></div></a>)}
         </div>
       </div>
     </section>

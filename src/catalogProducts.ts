@@ -46,6 +46,7 @@ const PACKAGE_IMAGES: Record<string, string[]> = {
   'rejunte-polimerico': ['embalagem-1kg.png', 'produto-em-aplicacao.png', 'arte-promocional.png'],
   'grafiato': ['embalagem-generica.png'],
   'textura': ['embalagem-generica.png'],
+  'massa-corrida': ['embalagem-generica.png'],
 };
 
 const PACKAGE_IMAGE_SOURCE: Record<string, string> = {
@@ -75,6 +76,7 @@ export const CATALOG_PRODUCTS: readonly CatalogProduct[] = [
   { slug: 'reboco-polimerico', name: 'Reboco Polimérico', category: 'Argamassas', description: 'Revestimento polimérico para acabamento final de paredes, disponível em cinza e branco.', product: productById('reboco-polimerico') },
   { slug: 'acabamento-piso-laje', name: 'Argamassa Polimérica Acabamento Piso e Laje', category: 'Argamassas', description: 'Revestimento polimérico para acabamento final e proteção de pisos e lajes.' },
   { slug: 'base-coat', name: 'Argamassa Base Coat', category: 'Pinturas e Acabamentos', description: 'Camada base para placas cimentícias e sistemas de fachada.' },
+  { slug: 'massa-corrida', name: 'Massa Corrida Granfinalle', category: 'Pinturas e Acabamentos', description: 'Massa niveladora PVA para corrigir e nivelar paredes e tetos em ambientes internos.' },
   { slug: 'revestimento-eps', name: 'Revestimento Polimérico para EPS', category: 'Argamassas', description: 'Produto para proteção e acabamento de molduras e placas de EPS.', isNew: true },
   { slug: 'cola-cobogo', name: 'Argamassa Cola Cobogó', category: 'Adesivos e Colas', description: 'Argamassa pronta para assentamento de cobogós e elementos vazados.' },
   { slug: 'cola-vidro', name: 'Cola Vidro', category: 'Adesivos e Colas', description: 'Argamassa para assentamento de tijolos e blocos de vidro.' },

@@ -21,10 +21,10 @@ export default function Comparison() {
             <span>Comparação Direta de Engenharia</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-            Troque <span className="text-gray-400">60 kg de Cimento Convencional</span> por apenas <span className="text-primary">3 kg de Hiperliga</span>
+            Compare os processos de <span className="text-gray-400">assentamento convencional</span> e <span className="text-primary">argamassa polimérica</span>
           </h2>
           <p className="text-gray-400 font-sans text-sm sm:text-base">
-            Parece mágica, mas é física e química avançadas. A argamassa polimérica atua em película fina de altíssima adesão, eliminando o preenchimento de frestas e gerando rigidez estrutural sem peso morto.
+            A escolha do sistema muda as etapas de preparo, aplicação e logística. Consulte a ficha técnica do produto para confirmar o consumo e as condições de uso em cada obra.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function Comparison() {
                 <div className="space-y-4 text-sm font-sans text-gray-300">
                   <div className="border-b border-white/5 pb-2">
                     <span className="text-gray-500 text-xs block uppercase tracking-wider font-mono">Consumo Médio por m²</span>
-                    <strong className="text-red-400 text-lg">25 kg a 30 kg / m²</strong>
+                    <strong className="text-red-400 text-lg">Varia conforme traço e superfície</strong>
                   </div>
                   <div className="border-b border-white/5 pb-2">
                     <span className="text-gray-500 text-xs block uppercase tracking-wider font-mono">Processo de Mistura</span>
@@ -64,11 +64,11 @@ export default function Comparison() {
                   </div>
                   <div className="border-b border-white/5 pb-2">
                     <span className="text-gray-500 text-xs block uppercase tracking-wider font-mono">Espessura da Junta</span>
-                    <span>10mm a 15mm de espessura (gera alto peso estrutural nas vigas).</span>
+                    <span>A espessura depende do sistema, do bloco e da especificação da obra.</span>
                   </div>
                   <div>
                     <span className="text-gray-500 text-xs block uppercase tracking-wider font-mono">Desperdício Comum</span>
-                    <span>Até 25% do material (massa seca na masseira, respingos no chão).</span>
+                    <span>As perdas dependem do preparo, transporte e aplicação no canteiro.</span>
                   </div>
                 </div>
               </div>
@@ -93,19 +93,19 @@ export default function Comparison() {
                 <div className="space-y-4 text-sm font-sans text-gray-300">
                   <div className="border-b border-primary/10 pb-2">
                     <span className="text-primary text-xs block uppercase tracking-wider font-mono">Consumo Médio por m²</span>
-                    <strong className="text-emerald-400 text-lg">Apenas 1.5 kg / m²</strong>
+                    <strong className="text-emerald-400 text-lg">Consulte a ficha do produto</strong>
                   </div>
                   <div className="border-b border-primary/10 pb-2">
                     <span className="text-gray-500 text-xs block uppercase tracking-wider font-mono">Processo de Mistura</span>
-                    <span className="text-white">Pronto para aplicação imediata. Sem betoneira, poeira, água ou energia.</span>
+                    <span className="text-white">Pronto para uso, com aplicação conforme a ficha técnica do produto.</span>
                   </div>
                   <div className="border-b border-primary/10 pb-2">
                     <span className="text-gray-500 text-xs block uppercase tracking-wider font-mono">Espessura da Junta</span>
-                    <span className="text-white">Apenas 1.5mm a 2.0mm de espessura (redução brusca e segura de carga).</span>
+                    <span className="text-white">Aplicação em cordões, respeitando as orientações técnicas do produto.</span>
                   </div>
                   <div>
                     <span className="text-gray-500 text-xs block uppercase tracking-wider font-mono">Desperdício Comum</span>
-                    <span className="text-emerald-300 font-semibold">Absolutamente 0% (toda a embalagem é aproveitada).</span>
+                    <span className="text-emerald-300 font-semibold">O aproveitamento depende da preparação e da técnica de aplicação.</span>
                   </div>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function Comparison() {
               <div className="text-left space-y-1">
                 <h4 className="text-white font-display font-bold text-sm">Por que essa diferença matemática acontece?</h4>
                 <p className="text-gray-400 text-xs leading-relaxed">
-                  A argamassa tradicional serve como preenchimento de irregularidades nos blocos usando volume físico bruto. A Hiperliga, por possuir alto teor de polímeros de ancoragem química de resinas acrílicas, deita-se em filetes autoadesivos densos, gerando resistência elástica superior com 90% menos espessura.
+                  Os sistemas têm formas diferentes de preparo e aplicação. A argamassa polimérica é aplicada pronta para uso; a argamassa convencional exige a preparação do traço indicado para a obra.
                 </p>
               </div>
             </div>
@@ -162,14 +162,14 @@ export default function Comparison() {
 
               {/* Floating contrast circle metric indicator */}
               <div className="absolute -bottom-1 -right-1 bg-primary text-white font-display text-xs p-3 rounded-tl-3xl shadow-xl flex flex-col items-center justify-center font-bold">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-white/70">Redução</span>
-                <span className="text-base">-95% de Peso</span>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-white/70">Consulte</span>
+                <span className="text-base">Ficha técnica</span>
               </div>
             </motion.div>
 
             {/* Quick interactive note */}
             <span className="text-gray-500 font-mono text-[10px] tracking-wider uppercase mt-3 block text-center">
-              🛡️ Testado e aprovado de acordo com as normas brasileiras de alvenaria.
+              Consulte as condições de uso e limitações na ficha técnica do produto.
             </span>
 
           </div>

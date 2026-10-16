@@ -44,22 +44,20 @@ export default function GroutProductPage() {
 
   return (
     <div className="bg-white text-slate-800">
-      <section className="bg-slate-50 px-4 pb-16 pt-32 sm:px-6 lg:px-8">
+      <section className="bg-white px-4 pb-16 pt-32 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-x-12 gap-y-8 lg:grid-cols-2 lg:items-start">
-          <div className="order-2 lg:order-1 lg:row-span-2"><div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-8">
-            <div className="flex min-h-[360px] items-center justify-center rounded-2xl bg-gradient-to-b from-slate-50 to-slate-100 p-6 sm:min-h-[480px]">
+          <div className="order-2 lg:order-1 lg:row-span-2"><div className="flex min-h-[360px] items-center justify-center bg-slate-50 p-6 sm:min-h-[500px] sm:p-10">
               <img src={product.image} alt={`${product.name} - embalagem de 1 kg`} className="max-h-[440px] w-full object-contain" width="800" height="800" referrerPolicy="no-referrer" />
-            </div>
           </div></div>
           <div className="order-1 lg:order-2">
-            <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-primary">Produto Hiperliga</p>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight text-brand-dark sm:text-5xl">Rejunte Polimérico Hiperliga</h1>
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">Produto Hiperliga</p>
+            <h1 className="mt-4 max-w-2xl font-display text-4xl font-extrabold leading-tight tracking-tight text-brand-dark sm:text-6xl">Rejunte Polimérico Hiperliga</h1>
           </div>
           <div className="order-3 lg:order-2">
             <p className="mt-5 text-lg leading-relaxed text-slate-600">{product.description}</p>
             <p className="mt-4 text-sm font-bold text-primary">Embalagem: 1 kg</p>
             <a href="#calculadora-rejunte" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-white transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">Calcular quantidade <ArrowDown className="h-4 w-4" aria-hidden="true" /></a>
-            <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6" aria-labelledby="grout-summary-title"><h2 id="grout-summary-title" className="font-display text-2xl font-extrabold text-brand-dark">Resumo técnico</h2><dl className="mt-5 divide-y divide-slate-200 rounded-2xl border border-slate-200">{technicalSheet.summary.map((item) => <div key={item.label} className="grid gap-1 px-4 py-3 sm:grid-cols-[7rem_1fr] sm:gap-4 even:bg-slate-50"><dt className="text-xs font-bold uppercase tracking-wide text-slate-500">{item.label}</dt><dd className="text-sm leading-6 text-slate-800">{item.value}</dd></div>)}</dl></section>
+            <section className="mt-10 border-t border-slate-200 pt-7" aria-labelledby="grout-summary-title"><h2 id="grout-summary-title" className="font-display text-2xl font-extrabold text-brand-dark">Resumo técnico</h2><dl className="mt-5 divide-y divide-slate-200 border-y border-slate-200">{technicalSheet.summary.map((item) => <div key={item.label} className="grid gap-1 py-3 sm:grid-cols-[7rem_1fr] sm:gap-4"><dt className="text-xs font-bold uppercase tracking-wide text-slate-500">{item.label}</dt><dd className="text-sm leading-6 text-slate-800">{item.value}</dd></div>)}</dl></section>
           </div>
         </div>
       </section>

@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-              A verdadeira revolução na construção civil brasileira. Argamassa polimérica de alto rendimento que entrega rapidez de assentamento, economia de logística e desperdício zero na sua obra.
+              Tecnologia em argamassa e acabamento para tornar diferentes etapas da obra mais práticas, com informação clara e atendimento próximo.
             </p>
 
             <div className="flex items-center gap-2 pt-2">
