@@ -12,8 +12,21 @@ export type CatalogProduct = {
   images?: string[];
   technicalSpecs?: { label: string; value: string }[];
   pendingImage?: boolean;
+  isNew?: boolean;
   technicalSheet: import('./catalogTechnicalStructured').TechnicalSheet;
 };
+
+export const PRODUCT_MENU_CATEGORIES = [
+  'Argamassas',
+  'Reparos e Correções',
+  'Pinturas e Acabamentos',
+  'Adesivos e Colas',
+  'Rejuntes',
+  'Produtos para Madeira',
+  'Novidades',
+] as const;
+
+export type ProductMenuCategory = typeof PRODUCT_MENU_CATEGORIES[number];
 
 const productById = (id: string) => PRODUCTS_DATA.find((product) => product.id === id);
 const whatsappFor = (name: string) => `${EXPERT_CONTACT_WHATSAPP.split('?')[0]}?text=${encodeURIComponent(`Olá! Gostaria de informações sobre ${name}.`)}`;
@@ -61,8 +74,8 @@ export const CATALOG_PRODUCTS: readonly CatalogProduct[] = [
   { slug: 'sela-trinca', name: 'Argamassa Sela Trinca e Pequenos Reparos', category: 'Reparos e Correções', description: 'Argamassa polimérica para vedação de fissuras, trincas e pequenos reparos.', product: productById('sela-trinca') },
   { slug: 'reboco-polimerico', name: 'Reboco Polimérico', category: 'Argamassas', description: 'Revestimento polimérico para acabamento final de paredes, disponível em cinza e branco.', product: productById('reboco-polimerico') },
   { slug: 'acabamento-piso-laje', name: 'Argamassa Polimérica Acabamento Piso e Laje', category: 'Argamassas', description: 'Revestimento polimérico para acabamento final e proteção de pisos e lajes.' },
-  { slug: 'base-coat', name: 'Argamassa Base Coat', category: 'Argamassas', description: 'Camada base para placas cimentícias e sistemas de fachada.' },
-  { slug: 'revestimento-eps', name: 'Revestimento Polimérico para EPS', category: 'Argamassas', description: 'Produto para proteção e acabamento de molduras e placas de EPS.' },
+  { slug: 'base-coat', name: 'Argamassa Base Coat', category: 'Pinturas e Acabamentos', description: 'Camada base para placas cimentícias e sistemas de fachada.' },
+  { slug: 'revestimento-eps', name: 'Revestimento Polimérico para EPS', category: 'Argamassas', description: 'Produto para proteção e acabamento de molduras e placas de EPS.', isNew: true },
   { slug: 'cola-cobogo', name: 'Argamassa Cola Cobogó', category: 'Adesivos e Colas', description: 'Argamassa pronta para assentamento de cobogós e elementos vazados.' },
   { slug: 'cola-vidro', name: 'Cola Vidro', category: 'Adesivos e Colas', description: 'Argamassa para assentamento de tijolos e blocos de vidro.' },
   { slug: 'massa-repara-paredes', name: 'Massa Repara Paredes — Corrige Imperfeições', category: 'Reparos e Correções', description: 'Massa pronta para corrigir furos, buracos e pequenas imperfeições em paredes.', product: productById('repara-paredes-1kg') },
@@ -79,6 +92,9 @@ export const CATALOG_PRODUCTS: readonly CatalogProduct[] = [
 }));
 
 export const getCatalogProduct = (slug: string) => CATALOG_PRODUCTS.find((product) => product.slug === slug);
+export const getProductsForMenuCategory = (category: ProductMenuCategory) => category === 'Novidades'
+  ? CATALOG_PRODUCTS.filter((product) => product.isNew)
+  : CATALOG_PRODUCTS.filter((product) => product.category === category);
 export const getCatalogProductPath = (product: CatalogProduct) => product.slug === 'rejunte-polimerico' ? '/rejunte-polimerico/' : `/produtos/${product.slug}/`;
 export const getCatalogProductStoreUrl = (product: CatalogProduct) => product.product?.storeUrl ?? 'https://loja.hiperliga.com.br/';
 export const getCatalogProductWhatsappUrl = (product: CatalogProduct) => whatsappFor(product.name);
