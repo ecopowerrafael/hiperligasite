@@ -1,6 +1,61 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 
+const HERO_PHRASES = [
+  'Mais tecnologia.',
+  'Menos etapas.',
+  'Melhor construção.'
+];
+
+const TYPE_DELAY_MS = 85;
+const DELETE_DELAY_MS = 45;
+const COMPLETE_PHRASE_DELAY_MS = 1800;
+
 export default function Hero() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handlePreferenceChange = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    handlePreferenceChange();
+    mediaQuery.addEventListener('change', handlePreferenceChange);
+    return () => mediaQuery.removeEventListener('change', handlePreferenceChange);
+  }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+
+    const currentPhrase = HERO_PHRASES[phraseIndex];
+    const isPhraseComplete = displayText === currentPhrase;
+    const delay = isDeleting
+      ? DELETE_DELAY_MS
+      : isPhraseComplete
+        ? COMPLETE_PHRASE_DELAY_MS
+        : TYPE_DELAY_MS;
+
+    const timer = window.setTimeout(() => {
+      if (isDeleting) {
+        const nextText = displayText.slice(0, -1);
+        setDisplayText(nextText);
+        if (!nextText) {
+          setIsDeleting(false);
+          setPhraseIndex((currentIndex) => (currentIndex + 1) % HERO_PHRASES.length);
+        }
+        return;
+      }
+
+      const nextText = currentPhrase.slice(0, displayText.length + 1);
+      setDisplayText(nextText);
+      if (nextText === currentPhrase) setIsDeleting(true);
+    }, delay);
+
+    return () => window.clearTimeout(timer);
+  }, [displayText, isDeleting, phraseIndex, prefersReducedMotion]);
+
   // Variants for staggered children
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,7 +98,7 @@ export default function Hero() {
 
       {/* Dark semi-transparent color overlay ensuring perfect text contrast and readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/60 z-0 pointer-events-none" />
-      <div className="absolute inset-0 bg-slate-950/40 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-slate-950/30 z-0 pointer-events-none" />
       
       {/* Background Subtle Decorative Ambient Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[150px] pointer-events-none" />
@@ -68,11 +123,19 @@ export default function Hero() {
           {/* Main Title */}
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-7xl font-display font-black text-white tracking-tight leading-tight max-w-4xl mx-auto drop-shadow-md"
+            className="min-h-[7.5rem] sm:min-h-[6rem] lg:min-h-[7.5rem] max-w-4xl mx-auto flex items-center justify-center text-3xl sm:text-5xl lg:text-7xl font-mono font-black text-white tracking-tight leading-tight drop-shadow-md"
             id="hero-main-title"
           >
-            Mais tecnologia.<br className="sm:hidden" />{' '}
-            Menos etapas. Melhor construção.
+            <span className="sr-only">Mais tecnologia. Menos etapas. Melhor construção.</span>
+            {prefersReducedMotion ? (
+              <span aria-hidden="true" className="flex flex-col items-center">
+                {HERO_PHRASES.map((phrase) => <span key={phrase}>{phrase}</span>)}
+              </span>
+            ) : (
+              <span aria-hidden="true" className="min-w-0 max-w-full break-words">
+                {displayText}<span className="ml-1 inline-block h-[1em] w-px animate-pulse bg-primary align-[-0.08em]" />
+              </span>
+            )}
           </motion.h1>
 
           {/* Pitch Text */}
