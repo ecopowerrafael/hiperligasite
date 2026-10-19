@@ -27,9 +27,10 @@ function ProductLinks({ category, mobile = false, onNavigate }: { category: Prod
           <a
             href={getCatalogProductPath(product)}
             onClick={onNavigate}
-            className={`${mobile ? 'block px-3 py-2.5 text-sm' : 'block rounded-xl border border-slate-200/80 px-3.5 py-3 text-sm'} text-slate-700 transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
+            className={`${mobile ? 'flex gap-2.5 px-3 py-2 text-sm' : 'flex gap-3 rounded-xl border border-slate-200/80 px-3 py-2 text-sm'} items-center text-slate-700 transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
           >
-            {product.name}
+            {product.image && <img src={product.image} alt="" aria-hidden="true" loading="lazy" decoding="async" className="h-8 w-8 shrink-0 rounded-md bg-white object-contain p-0.5" />}
+            <span className="min-w-0 line-clamp-2 leading-5">{product.name}</span>
           </a>
         </li>
       ))}
